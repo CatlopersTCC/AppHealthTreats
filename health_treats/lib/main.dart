@@ -12,6 +12,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      title: 'Splash Screen',
       home: SplashScreen(), // Defina a tela de splash como a tela inicial
     );
   }
@@ -32,6 +33,7 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
@@ -41,6 +43,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     // Simula um atraso para a tela de splash
     Future.delayed(const Duration(seconds: 3), () {
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => const TelaCadastro()), // Navega para a tela de cadastro
       );

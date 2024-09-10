@@ -1,16 +1,39 @@
+// Imports necessários
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:health_treats/login.dart';
+import 'package:health_treats/cadastro.dart';
 import 'package:health_treats/menu.dart';
 
-class TelaCadastro extends StatelessWidget {
-  const TelaCadastro({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
   
-@override
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+        home: HomeScreen());
+  }
+}
+
+
+class HomeScreen extends StatefulWidget {
+  
+  const HomeScreen({super.key});
+  
+  @override
+  // ignore: library_private_types_in_public_api
+  _MainAppState createState() => _MainAppState();
+}
+
+// Classe ue contém todo o conteúdo a ser exibido na tela
+class _MainAppState extends State<HomeScreen> {
+  bool _obscureText = true; // Controla a visibilidade da senha
+
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Health Treats || Cadastro', //Título que vai no app (quando emulado no navegador)
+      title: 'Health Treats || Login', //Título que vai no app (quando emulado no navegador)
       home: Scaffold(
         body: SingleChildScrollView(
           child: Column( //Cria uma coluna que receberá novos elementos
@@ -31,7 +54,7 @@ class TelaCadastro extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start, // Alinha o texto à esquerda
                       children: <Widget>[
                         Text( // Criando o texto que irá se sobrepor a imagem
-                          'Bem Vindo', // \n é quebra de linha
+                          'Bem Vindo de \nVolta!', // \n é quebra de linha
                           style: TextStyle( // Comando utilizado para estilizar o texto
                             fontSize: 50.0, // Definindo o tamanho da fonte
                             fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
@@ -58,7 +81,7 @@ class TelaCadastro extends StatelessWidget {
 
               const Center( // Comando utilizado para ditar que os elementos presentes dentro dele fiquem no centro
                 child: Text( // Criando um elemento de texto
-                  'Cadastro', // Texto a ser exibido na tela 
+                  'Login', // Texto a ser exibido na tela 
                   style: TextStyle( // Comando utilizado para estilizar o texto
                     fontSize: 30, // Definindo o tamanho da fonte
                     fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
@@ -76,7 +99,7 @@ class TelaCadastro extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start, // Alinha o texto à esquerda
                   children: <Widget>[ // Indica que widgets serão criados
                     const Text( // Criando o texto que irá acima de um TextFormField
-                      'Nome de usuário', // Texto a ser exibido
+                      'E-mail', // Texto a ser exibido
                       style: TextStyle( // Comando utilizado para estilizar o texto
                         fontSize: 18.0, // Definindo o tamanho da fonte
                         fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
@@ -92,7 +115,7 @@ class TelaCadastro extends StatelessWidget {
                     TextFormField( // Comando utilizado para a criação de um campo de um formulário de Login
                       keyboardType: TextInputType.emailAddress, // Comando que define o tipo de entrada de dado no teclado (Email)
                       inputFormatters: <TextInputFormatter>[ // Formatando o que será recebido do teclado
-                        FilteringTextInputFormatter.singleLineFormatter 
+                        FilteringTextInputFormatter.singleLineFormatter, 
                       ],
                                             
                       decoration: InputDecoration( //Decoração da caixa de entrada de dados
@@ -118,56 +141,7 @@ class TelaCadastro extends StatelessWidget {
                       ), // Fim da decoração do input
                     ), // Fim do forms
                     
-
                     const SizedBox(height: 20.0), // Comando utilizado para dar quebras de pixels na tela
-
-
-                    const Text( // Criando o texto que irá acima de um TextFormField
-                      'Email', // Texto a ser exibido
-                      style: TextStyle( // Comando utilizado para estilizar o texto
-                        fontSize: 18.0, // Definindo o tamanho da fonte
-                        fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
-
-                        // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                        // ignore: use_full_hex_values_for_flutter_colors
-                        color: Color(0xff000000), // Definindo a cor do texto
-                      ) // Fim do TextStyle
-                    ), // Fim do Text
-
-                    const SizedBox(height: 10.0), // Comando utilizado para dar quebras de pixels na tela 
-
-                    TextFormField( // Comando utilizado para a criação de um campo de um formulário de Login
-                      keyboardType: TextInputType.emailAddress, // Comando que define o tipo de entrada de dado no teclado (Email)
-                      inputFormatters: <TextInputFormatter>[ // Formatando o que será recebido do teclado
-                        FilteringTextInputFormatter.singleLineFormatter 
-                      ],
-
-                      decoration: InputDecoration( //Decoração da caixa de entrada de dados
-                        labelText: 'Digite aqui', // Hint a ser exibido dentro da caixa de entrada de dados
-                        labelStyle: const TextStyle(
-                          // ignore: use_full_hex_values_for_flutter_colors
-                          color: Color(0xff93B6EE),
-                        ),
-                         enabledBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dados quando não focado
-                            borderSide: BorderSide(color: Color(0xFF000000)), // Cor da borda quando não está focado
-                          ),
-
-                          focusedBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dado quando focada
-
-                            // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                            // ignore: use_full_hex_values_for_flutter_colors
-                            borderSide: BorderSide(color:  Color(0xff93B6EE)), // Cor da borda quando está focado
-                          ),
-
-                          border: OutlineInputBorder( // Estilizando a borda da caixa de entrada de dados em geral
-                            borderRadius: BorderRadius.circular(30.0), // Arredondamento das bordas
-                          ), // Fim da decoração da borda
-                      ), // Fim da decoração do input
-                    ), // Fim do forms
-
-
-                    const SizedBox(height: 20.0,),
-
 
                     const Text( // Criando o texto que irá acima de um TextFormField
                       'Senha', // Texto a ser exibido
@@ -185,6 +159,7 @@ class TelaCadastro extends StatelessWidget {
 
                     TextFormField( // Comando utilizado para a criação de um campo de um formulário de Login
                       keyboardType: TextInputType.text, // Comando que define o tipo de entrada de dado no teclado (tipo texto)
+                      obscureText: _obscureText, // Váriavel que fornece a opção de visibilidade de senha
                       inputFormatters: <TextInputFormatter>[
                         FilteringTextInputFormatter.singleLineFormatter // Formatando o que será recebido do teclado
                       ],
@@ -209,6 +184,21 @@ class TelaCadastro extends StatelessWidget {
                           border: OutlineInputBorder( // Estilizando a borda da caixa de entrada de dados em geral
                             borderRadius: BorderRadius.circular(30.0), // Arredondamento das bordas
                           ),
+
+                          suffixIcon: IconButton( // Icon de visualização de senha
+
+                            // O comando abaixo foi utlizado para retirar um sublinhado de aviso
+                            // ignore: use_full_hex_values_for_flutter_colors
+                            color: const Color(0xff93B6EE), // Cor do Icon
+                            icon: Icon(
+                              _obscureText ? Icons.visibility : Icons.visibility_off, // Função que deixa a senha visível/invisível
+                            ),
+                            onPressed: (){
+                              setState((){
+                                _obscureText = !_obscureText;
+                              });
+                            }
+                          ) // Fim do comando de estilização do Icon (junto com a função)
                       ), // Fim do TextStyle
                     ), // Fim do TextFormField
 
@@ -217,13 +207,11 @@ class TelaCadastro extends StatelessWidget {
                     SizedBox( // Definição de um espaço que servirá como botão
                       width: double.infinity, // Ocupa toda a largura disponível
                       child: ElevatedButton( // Criando o botão de entrar
-                        onPressed: () {
-                          Navigator.push(
+                        onPressed: () { // Método de navegação ao clicar no botão
+                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                                builder: (context) => const MenuApp()),
+                            MaterialPageRoute(builder: (context) => const MenuApp())
                           );
-                          print('Sucesso');
                         },
                         style: ElevatedButton.styleFrom( // Estilizando o botão
 
@@ -248,11 +236,11 @@ class TelaCadastro extends StatelessWidget {
 
                   const SizedBox(height: 20.0), // Comando utilizado para dar quebras de pixels na tela
 
-                  Align( // Comando para a definição de alinhamento
+                  Align( // Comando para a definição de alinhamento -- UTILIZADO PARA A PARTE DO "Não lembro a senha"
                     alignment: Alignment.centerRight, // Alinhando a posição do elemento
                     child: RichText(
                       text: TextSpan( // Comando de texto clicável
-                        text: 'Já tenho uma conta', // Texto a ser exibido na tela
+                        text: 'Não lembro a senha', // Texto a ser exibido na tela
                           style: const TextStyle( // Estilização do texto
                             fontSize: 20, // Definindo o tamanho da fonte
                             fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
@@ -262,14 +250,13 @@ class TelaCadastro extends StatelessWidget {
                             color: Color(0xff93B6EE), // Cor do texto
                             decoration: TextDecoration.underline, // Colocando o sublinhado
                           ),
-                           recognizer: TapGestureRecognizer()
-                         ..onTap = () { // Método ao clicar no texto
-                           Navigator.push(
-                             context,
-                             MaterialPageRoute(builder: (context) => const Login()),
-                           );
-                         // Colocar o caminho das outras páginas
-                         },
+                          recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          
+                        // Método ao clicar no texto
+                        // Ação a ser executada quando o texto for clicado
+                        // Colocar o caminho das outras páginas
+                        },
                       ), // Fim do TextSpan
                     ),
                   ), // Fim do Align
@@ -278,7 +265,7 @@ class TelaCadastro extends StatelessWidget {
                       onTap: () { // Metodo chamado ao clicar no icon
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const MenuApp()),
+                            MaterialPageRoute(builder: (context) => const TelaCadastro()),
                           );
                       },
                       child: const Align( // Comando para a definição de alinhamento
