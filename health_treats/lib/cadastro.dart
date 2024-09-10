@@ -34,7 +34,7 @@ class TelaCadastro extends StatelessWidget {
                           'Bem Vindo', // \n é quebra de linha
                           style: TextStyle( // Comando utilizado para estilizar o texto
                             fontSize: 50.0, // Definindo o tamanho da fonte
-                            fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
+                            fontFamily: 'RedHatDisplay-Bold', // Definindo o estilo da fonte (itálico, negrito, etc)
                             color: Colors.white, // Definindo a cor do texto
                             height: 1.4, // Definindo a altura, que servirá como espaçamento de uma linha a outra
                           ), // Fim do TextStyle
@@ -62,6 +62,7 @@ class TelaCadastro extends StatelessWidget {
                   style: TextStyle( // Comando utilizado para estilizar o texto
                     fontSize: 30, // Definindo o tamanho da fonte
                     fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
+                    fontFamily: 'RedHatDisplay-Bold',
 
                     // O comando abaixo foi utlizado para retirar um sublinhado de aviso
                     // ignore: use_full_hex_values_for_flutter_colors 
