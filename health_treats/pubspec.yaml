@@ -20,21 +20,3 @@ flutter:
   uses-material-design: true
   assets:
     - assets/img/
-
-  fonts:
-    - family: RedHatDisplay
-      fonts:
-        - assets: assets/fonts/RedHatDisplay-Black.ttf
-        - assets: assets/fonts/RedHatDisplay-BlackItalic.ttf
-        - assets: assets/fonts/RedHatDisplay-Bold.ttf
-        - assets: assets/fonts/RedHatDisplay-BoldItalic.ttf
-        - assets: assets/fonts/RedHatDisplay-ExtraBold.ttf
-        - assets: assets/fonts/RedHatDisplay-ExtraBoldItalic.ttf
-        - assets: assets/fonts/RedHatDisplay-Italic.ttf
-        - assets: assets/fonts/RedHatDisplay-Light.ttf
-        - assets: assets/fonts/RedHatDisplay-LightItalic.ttf
-        - assets: assets/fonts/RedHatDisplay-Medium.ttf
-        - assets: assets/fonts/RedHatDisplay-MediumItalic.ttf
-        - assets: assets/fonts/RedHatDisplay-Regular.ttf
-        - assets: assets/fonts/RedHatDisplay-SemiBold.ttf
-        - assets: assets/fonts/RedHatDisplay-SemiBoldItalic.ttf

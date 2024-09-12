@@ -53,7 +53,6 @@ class TelaCadastro extends StatelessWidget {
                   ) // Fim do comando de determinação de posição
                 ],
               ), // Fim do Stack
-
               const SizedBox(height: 15.0), // Comando utilizado para dar quebras de pixels na tela 
 
               const Center( // Comando utilizado para ditar que os elementos presentes dentro dele fiquem no centro
@@ -62,7 +61,6 @@ class TelaCadastro extends StatelessWidget {
                   style: TextStyle( // Comando utilizado para estilizar o texto
                     fontSize: 30, // Definindo o tamanho da fonte
                     fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
-                    fontFamily: 'RedHatDisplay-Bold',
 
                     // O comando abaixo foi utlizado para retirar um sublinhado de aviso
                     // ignore: use_full_hex_values_for_flutter_colors 
