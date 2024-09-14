@@ -266,6 +266,8 @@ class _TelaCadastroState extends State<TelaCadastro> {
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Por favor insira uma senha';
+                          } else if(value.length < 6){
+                            return 'A senha deve ter pelo menos 6 caracteres';
                           }
                           return null;
                         },
