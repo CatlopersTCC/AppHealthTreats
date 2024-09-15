@@ -48,9 +48,16 @@ class _MenuInicio extends State<MenuInicio> {
               controller: _searchController,
               decoration: InputDecoration(
                 hintText: 'Pesquisar',
-                prefixIcon: const Icon(Icons.search),
+                prefixIcon: const Icon(
+                  Icons.search, 
+                  color: Color(0xff93B6EE),
+                ),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(color:  Color(0xff93B6EE)),
+                  borderRadius: BorderRadius.circular(50.0),  
                 ),
               ),
               onChanged: (value) {
@@ -61,12 +68,12 @@ class _MenuInicio extends State<MenuInicio> {
             ),
             const SizedBox(height: 16.0),
             const Padding(
-              padding: EdgeInsets.all(30.0),
-              child: Column(
+              padding: EdgeInsets.all(10.0),
+              child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Nome de usuário',
+                    'Olá, [nome_usuário]',
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
