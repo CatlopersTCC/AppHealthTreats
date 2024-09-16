@@ -83,44 +83,125 @@ class _MenuInicio extends State<MenuInicio> {
                 ],
               ),
             ),
+
+            const SizedBox(height: 10.0,),
+          
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Card(
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 5, //Colocando intensidade na sombra
+              margin: const EdgeInsets.all(10),               
+              child: Column(
+                children: <Widget>[
+                    Image.asset(
+                      'assets/img/bebidasMenu.png',
+                      fit: BoxFit.cover,
+                    ),
+                ],
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 5,
+              margin: const EdgeInsets.all(10),               
+              child: Column(
+                children: <Widget>[
+                    Image.asset(
+                      'assets/img/salgadosMenu.png',
+                      fit: BoxFit.cover,
+                    ),
+                ],
+              ),
+            ),
+              ]
+              
+            ),
+          ),
+            
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 5,
+              margin: const EdgeInsets.all(10),               
+              child: Column(
+                children: <Widget>[
+                    Image.asset(
+                      'assets/img/docesMenu.png',
+                      fit: BoxFit.cover,
+                    ),
+                ],
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              elevation: 5,
+              margin: const EdgeInsets.all(10),               
+              child: Column(
+                children: <Widget>[
+                    Image.asset(
+                      'assets/img/massasMenu.png',
+                      fit: BoxFit.cover,
+                    ),
+                ],
+              ),
+            ),
+              ]
+              
+            ),
+          ),
+
           ],
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0), //Coloca padding simétrico, tanto na esquerda, como na direita
-        child: ClipRRect(
-          borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(30.0), // Arredonda apenas o canto superior esquerdo
-          topRight: Radius.circular(30.0), // Arredonda apenas o canto superior direito
-        ), 
-          child: BottomNavigationBar (
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: Icon(Icons.messenger_outline_rounded),
-                //Label não pode ser nula, se não dá erro
-                label: '',
-              ),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0), //Coloca padding simétrico, tanto na esquerda, como na direita
+      child: ClipRRect(
+        borderRadius: const BorderRadius.only(
+        topLeft: Radius.circular(30.0), // Arredonda apenas o canto superior esquerdo
+        topRight: Radius.circular(30.0), // Arredonda apenas o canto superior direito
+      ), 
+        child: BottomNavigationBar (
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.messenger_outline_rounded),
+              //Label não pode ser nula, se não dá erro
+              label: '',
+            ),
           
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined),
-                label: '',
-              ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined,),
+              label: '',
+            ),
           
-              BottomNavigationBarItem(
-                icon: Icon(Icons.add_circle_outline), 
-                label: '',
-              ),
-            ],
+            BottomNavigationBarItem(
+              icon: Icon(Icons.add_circle_outline), 
+              label: '',
+            ),
+          ],
           currentIndex: _selectedIndex, //Posição
-          selectedItemColor: Colors.blue, //Botão selecionado
-          unselectedItemColor: Colors.blue, //Botão deselecionado
-          backgroundColor: const Color.fromARGB(255, 252, 241, 241),
+          selectedItemColor: const Color(0XFF93B6EE), //Botão selecionado
+          unselectedItemColor: const Color(0XFF93B6EE), //Botão deselecionado
+          backgroundColor: const Color(0XFFF4F4F2),
           onTap: _onItemTapped, //Função acionada ao clicar
           showSelectedLabels: false, //Evita que a label apareça quando selecionado
           showUnselectedLabels: false, //Evita que a label apareça quando deselecionado
           ),
-          ),
-         )
+        ),
+      )
     );
   }
 }
