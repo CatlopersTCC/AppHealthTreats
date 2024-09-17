@@ -4,6 +4,7 @@ import 'package:health_treats/login.dart';
 import 'package:health_treats/doces.dart';
 import 'package:health_treats/massas.dart';
 import 'package:health_treats/salgados.dart';
+import 'package:health_treats/sobre.dart';
 
 class MenuApp extends StatelessWidget {
   const MenuApp({super.key});
@@ -47,7 +48,7 @@ class _MenuInicio extends State<MenuInicio> {
       body: SingleChildScrollView (
          padding: const EdgeInsets.all(20.0), //Espaçamento interno
           child: Column(
-           children: [
+           children:  [
             TextField( //Barra de pesquisa
               controller: _searchController,
               decoration: InputDecoration(
@@ -72,7 +73,6 @@ class _MenuInicio extends State<MenuInicio> {
                 ),
               ),
               onChanged: (value) {
-
                 //Lógica de pesquisa pode ser adicionada aqui
                 print('Texto digitado: $value');
               },
@@ -116,7 +116,7 @@ class _MenuInicio extends State<MenuInicio> {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               elevation: 5,
-              margin: const EdgeInsets.all(15),   
+              margin: const EdgeInsets.all(10.0),   
               child: SizedBox(
                 width: 200.0, // Largura do card
                 height: 126.0, // Altura do card            
@@ -146,7 +146,7 @@ class _MenuInicio extends State<MenuInicio> {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               elevation: 5,
-              margin: const EdgeInsets.all(15),   
+              margin: const EdgeInsets.all(10.0),   
               child: SizedBox(
                 width: 200.0, 
                 height: 126.0,            
@@ -185,7 +185,7 @@ class _MenuInicio extends State<MenuInicio> {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               elevation: 5,
-              margin: const EdgeInsets.all(15),   
+              margin: const EdgeInsets.all(10.0),   
               child: SizedBox(
                 width: 200.0, 
                 height: 126.0,            
@@ -215,7 +215,7 @@ class _MenuInicio extends State<MenuInicio> {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               elevation: 5,
-              margin: const EdgeInsets.all(15),   
+              margin: const EdgeInsets.all(10.0),   
               child: SizedBox(
                 width: 200.0, // Largura do card
                 height: 126.0, // Altura do card            
@@ -240,13 +240,15 @@ class _MenuInicio extends State<MenuInicio> {
 
           Center(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                  Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const Text(
                       'Conheça mais sobre nós!', // Título acima do card
-                  style: TextStyle(
+                    style: TextStyle(
                     fontSize: 18,
                     color: Color(0XFF353535),
                   ),
@@ -256,7 +258,7 @@ class _MenuInicio extends State<MenuInicio> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Doces()), //Trocar para o caminho real
+                MaterialPageRoute(builder: (context) => const SobreApp()), //Trocar para o caminho real
               );
             },
 
@@ -265,7 +267,6 @@ class _MenuInicio extends State<MenuInicio> {
                 borderRadius: BorderRadius.circular(10.0),
               ),
               elevation: 5,
-              margin: const EdgeInsets.all(10),  
               child: SizedBox(
                 width: 425.0, 
                 height: 262.0,            
