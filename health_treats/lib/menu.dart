@@ -75,7 +75,7 @@ class _MenuInicio extends State<MenuInicio> {
                     Icons.search, 
                     color: Color(0XFF353535),
                   ),
-                  border: OutlineInputBorder( //Quando não selecionada a barra de pesquisa
+                  enabledBorder: OutlineInputBorder( //Quando não selecionada a barra de pesquisa
                     borderSide: const BorderSide(
                       color:  Color(0XFF353535), //Cor da borda
                       width: 2.0, //Tamanho da da borda
@@ -85,13 +85,13 @@ class _MenuInicio extends State<MenuInicio> {
                   focusedBorder: OutlineInputBorder( //Quando selecionada a barra de pesquisa 
                     borderSide: const BorderSide(
                       color:  Color(0XFF353535),
-                      width: 2.0,
+                      width: 2.5,
                     ),
                     borderRadius: BorderRadius.circular(50.0),
                   ),
-                  contentPadding: EdgeInsets.symmetric(vertical: 10.0), //Centralizando texto verticalmente dentro da TextField
+                  contentPadding: const EdgeInsets.symmetric(vertical: 10.0), //Centralizando texto verticalmente dentro da TextField
                 ),
-                onChanged: (value) {
+                onChanged: (value) { //Atualiza simultaneamente à entrada de dados
                   //Lógica de pesquisa pode ser adicionada aqui
                   print('Texto digitado: $value');
                 },
@@ -228,7 +228,7 @@ class _MenuInicio extends State<MenuInicio> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Massas()), // Ao clicar envia para a página "Doces"
+                MaterialPageRoute(builder: (context) => const Massas()), // Ao clicar envia para a página "Massas"
               );
             },
 
@@ -280,7 +280,7 @@ class _MenuInicio extends State<MenuInicio> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SobreApp()), //Trocar para o caminho real
+                MaterialPageRoute(builder: (context) => const SobreApp()), //Manda o usuário para a tela "Sobre"
               );
             },
 

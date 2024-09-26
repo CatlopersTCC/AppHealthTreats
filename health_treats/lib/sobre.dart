@@ -71,7 +71,7 @@ class _SobreMenu extends State<SobreMenu> {
                     Icons.search, 
                     color: Color(0XFF353535),
                   ),
-                  border: OutlineInputBorder( //Quando não selecionada a barra de pesquisa
+                  enabledBorder: OutlineInputBorder( //Quando não selecionada a barra de pesquisa
                     borderSide: const BorderSide(
                       color:  Color(0XFF353535), //Cor da borda
                       width: 2.0, //Tamanho da da borda
@@ -81,7 +81,7 @@ class _SobreMenu extends State<SobreMenu> {
                   focusedBorder: OutlineInputBorder( //Quando selecionada a barra de pesquisa 
                     borderSide: const BorderSide(
                       color:  Color(0XFF353535),
-                      width: 2.0,
+                      width: 2.5,
                     ),
                     borderRadius: BorderRadius.circular(50.0),
                   ),
