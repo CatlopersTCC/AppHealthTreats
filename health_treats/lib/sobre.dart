@@ -131,24 +131,23 @@ class _SobreMenu extends State<SobreMenu> {
 
           SizedBox(height: 30.0,),
 
-           const Center(
+          const Center(
             child: Row(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Muito prazer, \n[nome_usuário]',
-                    style: TextStyle(
-                      fontSize: 25.0,
-                      fontWeight: FontWeight.bold,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Column(
+                  children: [
+                    Text(
+                      'Muito prazer, \n[nome_usuário]',
+                      style: TextStyle(
+                        fontSize: 25.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-              
-                ],
-              ),
-            ],
-          ),
+                  ]
+                ),
+              ]
+            ),
           ),
          ],
         ),
