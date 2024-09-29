@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_treats/menu.dart';
 
 class ComentariosApp extends StatelessWidget {
   const ComentariosApp({super.key});
@@ -6,33 +7,57 @@ class ComentariosApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Comentários || Page',
+      title: 'Health Treats || Comentários ',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const Comentarios(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class Comentarios extends StatelessWidget {
+  const Comentarios({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Teste'),
-      ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Olá, Mundo!',
-              style: TextStyle(fontSize: 24),
-            ),
-          ],
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            color:  Color(0xFF353535),
+          ),
+          onPressed: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const MenuApp(),
+              )
+            );
+          },
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.search,
+              color: Colors.black,
+            ),
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MenuApp(),
+                ),
+              );
+            },
+          )
+        ],
       ),
+      body: const Column(
+        
+        mainAxisAlignment: MainAxisAlignment.start,
+      )
     );
   }
 }
