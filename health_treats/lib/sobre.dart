@@ -58,7 +58,7 @@ class _SobreMenu extends State<SobreMenu> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView (
-        padding: const EdgeInsets.all(20.0), //Espaçamento interno
+        padding: const EdgeInsets.all(15.0), //Espaçamento interno
         child: Column(
           children: [
             SizedBox( //Definindo o tamanho da barra de pesquisa
@@ -140,18 +140,148 @@ class _SobreMenu extends State<SobreMenu> {
                     Text(
                       'Muito prazer, \n[nome_usuário]',
                       style: TextStyle(
-                        fontSize: 25.0,
+                        fontSize: 30.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ]
+                  ],
                 ),
               ]
             ),
           ),
+
+          const SizedBox(height: 30.0,),
+
+          Container(
+            width: double.infinity,
+            height: 450,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                const Text(
+                  'Nosso objetivo é ajudar pacientes com diabetes a manter uma vida estável e saudável, oferecendo produtos de alta qualidade.',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+
+                const SizedBox(height: 30.0),
+
+                Center(
+                  child: RichText(
+                    textAlign: TextAlign.center, 
+                    text: const TextSpan(
+                      text: '"Vida doce, \n escolhas', 
+                      style: TextStyle(
+                        color: Colors.black, 
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.w700
+                      ),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: ' saudáveis"',
+                          style: TextStyle(
+                            color: Color(0XFF93B6EE) ,
+                            fontWeight: FontWeight.bold
+                          ), 
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 30.0,),
+
+                Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft, // Alinha o container à esquerda
+                    child: Container(
+                      width: 300,
+                      height: 180,
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Ouviu um Miau?',
+                            style: TextStyle(
+                              fontSize: 30.0,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          SizedBox(height: 10,),
+                          Text(
+                            'A CatLopers é uma empresa com o objetivo de fornecer sistemas de qualidade e de alta durabilidade.',
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(width: 10), 
+                  
+                  Container(
+                    width: 160,
+                    height: 180,
+                    child: Center(
+                      child: Image.asset( //Comando que chama a imagem
+                        'assets/img/LogoDev2.png', // Caminho da Imagem de fundo que ocupará determinado espaço
+                        fit: BoxFit.cover, // Expande a imagem por todo espaço definido
+                        width: double.infinity, // Utilizado para usar 100% do tamanho determinado
+                      ),
+                    ),
+                  ),
+                ],
+              )
+              ]
+            ),
+          ),
+
+          const SizedBox(height: 30.0,),
+
+          SizedBox( // Definição de um espaço que servirá como botão
+            width: 230, // Ocupa toda a largura disponível
+            child: ElevatedButton( // Criando o botão de entrar
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MenuApp(),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom( // Estilizando o botão
+                // O comando abaixo foi utlizado para retirar um sublinhado de aviso
+                // ignore: use_full_hex_values_for_flutter_colors
+                backgroundColor: const Color(0xff93B6EE), // Cor de fundo do botão
+                padding: const EdgeInsets.symmetric(vertical: 20), // Ajusta o padding
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(5.0), // Definindo o arredondamento da borda
+                ),
+              ),
+              child: const Text( // Comando para a criação de texto
+                'Saiba mais!', // Texto a ser exibido dentro do botão
+                style: TextStyle( // Estilização do botão
+                  fontSize: 18.0, // Tamanho do texto
+                  fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
+                  color: Colors.white, // Cor do texto
+                ), // Fim do TextStyle
+              ), // Fim do Text
+            ), // Fim Elevated Button
+          ), // Fim do Sized Box
          ],
         ),
       ),
+
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0), //Coloca padding simétrico, tanto na esquerda, como na direita
         child: ClipRRect(
