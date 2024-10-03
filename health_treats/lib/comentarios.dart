@@ -7,6 +7,7 @@ class ComentariosApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Health Treats | Comentários ',
       theme: ThemeData(
         primarySwatch: Colors.blue,

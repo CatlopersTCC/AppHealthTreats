@@ -20,6 +20,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Health Treats | Login', //Título que vai no app (quando emulado no navegador)
       home: Scaffold(
         body: SingleChildScrollView(

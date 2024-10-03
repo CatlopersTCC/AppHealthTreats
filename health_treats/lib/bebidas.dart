@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:health_treats/comentarios.dart';
+import 'package:health_treats/menu.dart';
+import 'package:health_treats/sobre.dart';
 
 class Bebidas extends StatefulWidget {
   const Bebidas({super.key});
@@ -9,10 +12,38 @@ class Bebidas extends StatefulWidget {
 
 // Classe que contém todo o conteúdo a ser exibido na tela
 class _BebidasState extends State<Bebidas> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
+    setState(() {
+      _selectedIndex = index;
+    });
+
+    Widget destination; //Criando a variável
+    switch (index) {
+      case 0:
+        destination = const ComentariosApp(); //Caso 0 acontece se clicar no 1º botão da bottomNavigationBar
+      break;
+      case 1:
+        destination = const MenuApp(); //Caso 1 acontece se clicar no 2º botão da bottomNavigationBar
+      break;
+      case 2:
+        destination = const SobreApp(); //Caso 2 acontece se clicar no 3º botão da bottomNavigationBar
+      break;
+      default:
+        destination = MenuApp(); //Se não acontecer nenhuma das opções acima
+    }
+
+    Navigator.push( //Pegando o conteúdo da variável "destination" para redirecionar pro caso ocorrido (que indica para qual tela irá) 
+      context,
+      MaterialPageRoute(builder: (context) => destination),
+    );
+  }
  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Bebidas | Page', // Título que vai no app (quando emulado no navegador)
       home: Scaffold(
         body: SingleChildScrollView(
@@ -88,6 +119,41 @@ class _BebidasState extends State<Bebidas> {
 
               const SizedBox(height: 15.0), // Comando utilizado para dar quebras de pixels na tela 
             ]
+          ),
+        ),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0), //Coloca padding simétrico, tanto na esquerda, como na direita
+          child: ClipRRect(
+            borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(30.0), // Arredonda apenas o canto superior esquerdo
+            topRight: Radius.circular(30.0), // Arredonda apenas o canto superior direito
+            ), 
+            child: BottomNavigationBar (
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem( //Ícone 
+                  icon: Icon(Icons.messenger_outline_rounded),
+                  //Label não pode ser nula, se não dá erro
+                  label: '',
+                ),
+            
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home_outlined,),
+                  label: '',
+                ),
+            
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.add_circle_outline), 
+                  label: '',
+                ),
+              ],
+              currentIndex: _selectedIndex, //Posição
+              selectedItemColor: const Color(0XFF93B6EE), //Botão selecionado
+              unselectedItemColor: const Color(0XFF93B6EE), //Botão deselecionado
+              backgroundColor: const Color(0XFFF4F4F2),
+              onTap: _onItemTapped, //Função acionada ao clicar
+              showSelectedLabels: false, //Evita que a label apareça quando selecionado
+              showUnselectedLabels: false, //Evita que a label apareça quando deselecionado
+            ),
           ),
         ),
       ),

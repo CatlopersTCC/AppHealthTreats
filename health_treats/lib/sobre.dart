@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:health_treats/comentarios.dart';
 import 'package:health_treats/menu.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+// Método que abre o site da empresa
+void _launchURL() async {
+  const url = 'https://catloperstcc.github.io/CatlopersWebsite/';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Não foi possível abrir o link: $url';
+  }
+}
+
 
 class SobreApp extends StatelessWidget {
   const SobreApp({super.key});
@@ -8,6 +20,7 @@ class SobreApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Health Treats | Sobre',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -154,7 +167,7 @@ class _SobreMenu extends State<SobreMenu> {
 
           Container(
             width: double.infinity,
-            height: 450,
+            height: 494,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -265,14 +278,7 @@ class _SobreMenu extends State<SobreMenu> {
           SizedBox( // Definição de um espaço que servirá como botão
             width: 230, // Ocupa toda a largura disponível
             child: ElevatedButton( // Criando o botão de entrar
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const MenuApp(),
-                  ),
-                );
-              },
+              onPressed: _launchURL,
               style: ElevatedButton.styleFrom( // Estilizando o botão
                 // O comando abaixo foi utlizado para retirar um sublinhado de aviso
                 // ignore: use_full_hex_values_for_flutter_colors

@@ -17,6 +17,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Health Treats | Cadastro', // Título do app ao ser emulado
       home: Scaffold(
         body: SingleChildScrollView( // Scroll de tela
