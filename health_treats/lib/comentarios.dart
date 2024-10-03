@@ -7,7 +7,7 @@ class ComentariosApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Health Treats || Comentários ',
+      title: 'Health Treats | Comentários ',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

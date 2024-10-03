@@ -12,7 +12,7 @@ class MenuApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Health Treats || Menu',
+      title: 'Health Treats | Menu',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

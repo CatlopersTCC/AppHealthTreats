@@ -8,7 +8,7 @@ class SobreApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Health Treats || Sobre',
+      title: 'Health Treats | Sobre',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -167,30 +167,44 @@ class _SobreMenu extends State<SobreMenu> {
                   ),
                 ),
 
-                const SizedBox(height: 30.0),
+                const SizedBox(height: 50.0),
 
                 Center(
-                  child: RichText(
-                    textAlign: TextAlign.center, 
-                    text: const TextSpan(
-                      text: '"Vida doce, \n escolhas', 
-                      style: TextStyle(
-                        color: Colors.black, 
-                        fontSize: 30.0,
-                        fontWeight: FontWeight.w700
-                      ),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: ' saudáveis"',
-                          style: TextStyle(
-                            color: Color(0XFF93B6EE) ,
-                            fontWeight: FontWeight.bold
-                          ), 
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  elevation: 5,
+                  color: const Color.fromARGB(255, 230, 245, 255),
+                  margin: EdgeInsets.only(left: 60.0, right: 60.0),
+                    child: Padding(
+                      padding: EdgeInsets.all(20.0), // Adiciona padding ao Card
+                      child: Center(
+                        child: RichText(
+                          textAlign: TextAlign.center,
+                          text: const TextSpan(
+                            text: '"Vida doce, \n escolhas',
+                            style: TextStyle(
+                              color: Color(0XFF353535),
+                              fontSize: 30.0,
+                              fontWeight: FontWeight.w700,
+                            ),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: ' saudáveis"',
+                                style: TextStyle(
+                                  color: Color(0XFF93B6EE),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
                 ),
+
 
                 const SizedBox(height: 30.0,),
 

@@ -13,7 +13,7 @@ class _BebidasState extends State<Bebidas> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Health Treats || Bebidas', // Título que vai no app (quando emulado no navegador)
+      title: 'Bebidas | Page', // Título que vai no app (quando emulado no navegador)
       home: Scaffold(
         body: SingleChildScrollView(
           child: Column( // Cria uma coluna que receberá novos elementos
