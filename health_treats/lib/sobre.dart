@@ -13,7 +13,6 @@ void _launchURL() async {
   }
 }
 
-
 class SobreApp extends StatelessWidget {
   const SobreApp({super.key});
 
@@ -145,21 +144,24 @@ class _SobreMenu extends State<SobreMenu> {
           SizedBox(height: 30.0,),
 
           const Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Column(
-                  children: [
-                    Text(
-                      'Muito prazer, \n[nome_usuário]',
-                      style: TextStyle(
-                        fontSize: 30.0,
-                        fontWeight: FontWeight.bold,
+            child: Padding(
+              padding: EdgeInsets.all(12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        'Muito prazer, \n[nome_usuário]',
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ]
+                    ],
+                  ),
+                ]
+              ),
             ),
           ),
 
@@ -168,6 +170,7 @@ class _SobreMenu extends State<SobreMenu> {
           Container(
             width: double.infinity,
             height: 494,
+            margin: EdgeInsets.only(left: 12.0, right: 12.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -218,57 +221,57 @@ class _SobreMenu extends State<SobreMenu> {
                   ),
                 ),
 
+                const SizedBox(height: 50.0,),
 
-                const SizedBox(height: 30.0,),
+                  Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft, // Alinha o container à esquerda
+                      child: Container(
+                        width: 300,
+                        height: 180,
+                        child: const Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Ouviu um Miau?',
+                              style: TextStyle(
+                                fontSize: 30.0,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            SizedBox(height: 10,),
+                            Text(
+                              'A CatLopers é uma empresa com o objetivo de fornecer sistemas de qualidade e de alta durabilidade.',
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
 
-                Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Align(
-                    alignment: Alignment.centerLeft, // Alinha o container à esquerda
-                    child: Container(
-                      width: 300,
+                    const SizedBox(width: 10), 
+                    
+                    Container(
+                      width: 160,
                       height: 180,
-                      child: const Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Ouviu um Miau?',
-                            style: TextStyle(
-                              fontSize: 30.0,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                          SizedBox(height: 10,),
-                          Text(
-                            'A CatLopers é uma empresa com o objetivo de fornecer sistemas de qualidade e de alta durabilidade.',
-                            textAlign: TextAlign.justify,
-                            style: TextStyle(
-                              fontSize: 22.0,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
+                      margin: EdgeInsets.only(left: 15.0),
+                      child: Center(
+                        child: Image.asset( //Comando que chama a imagem
+                          'assets/img/LogoDev2.png', // Caminho da Imagem de fundo que ocupará determinado espaço
+                          fit: BoxFit.cover, // Expande a imagem por todo espaço definido
+                          width: double.infinity, // Utilizado para usar 100% do tamanho determinado
+                        ),
                       ),
                     ),
-                  ),
-
-                  const SizedBox(width: 10), 
-                  
-                  Container(
-                    width: 160,
-                    height: 180,
-                    child: Center(
-                      child: Image.asset( //Comando que chama a imagem
-                        'assets/img/LogoDev2.png', // Caminho da Imagem de fundo que ocupará determinado espaço
-                        fit: BoxFit.cover, // Expande a imagem por todo espaço definido
-                        width: double.infinity, // Utilizado para usar 100% do tamanho determinado
-                      ),
-                    ),
-                  ),
-                ],
-              )
+                  ],
+                )
               ]
             ),
           ),
@@ -298,6 +301,7 @@ class _SobreMenu extends State<SobreMenu> {
               ), // Fim do Text
             ), // Fim Elevated Button
           ), // Fim do Sized Box
+          const SizedBox(height: 15.0,),
          ],
         ),
       ),
