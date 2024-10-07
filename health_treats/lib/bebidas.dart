@@ -58,6 +58,7 @@ class _BebidasState extends State<Bebidas> {
                     width: double.infinity, // Utilizado para usar 100% do tamanho determinado
                     height: 400.0, // Define a altura da imagem
                   ),
+
                   GestureDetector( // Flecha
                     onTap: () {
                       Navigator.pop(context); // Volta para a página anterior, "apaga a sessão"
@@ -96,7 +97,8 @@ class _BebidasState extends State<Bebidas> {
                       ),
                     ),
                   ),
-                  const Positioned( // Comando utilizado para definir a posição de algum elemento (Nesse caso o elemento é um Text)
+
+                   Positioned( // Comando utilizado para definir a posição de algum elemento (Nesse caso o elemento é um Text)
                     top: 50.0, // Define a distância do Text para a margem superior
                     left: 30.0, // Define a distância do Text para a margem esquerda
                     child: Column( // Criando uma coluna para alocar o Text
@@ -113,8 +115,137 @@ class _BebidasState extends State<Bebidas> {
                         ),
                       ],
                     ),
-                  )
+                  ),
                 ],
+              ),
+
+              Center(
+                child: Row( //Card onde se encontrarão os produtos da tela de bebidas
+                mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      child: Card( //Card das bebidas
+                        color: Color(0XFFD9D9D9),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        elevation: 5,
+                        margin: const EdgeInsets.all(10.0),   
+                        child: SizedBox(
+                          width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card            
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(width: 15.0),
+
+                    Card( //Card das bebidas
+                      color: Color(0XFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      elevation: 5,
+                      margin: const EdgeInsets.all(10.0),   
+                      child: SizedBox(
+                        width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card             
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                    )
+                  ]
+                ),
+              ),
+
+              Center(
+                child: Row( //Card onde se encontrarão os produtos da tela de bebidas
+                mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      child: Card( //Card das bebidas
+                        color: Color(0XFFD9D9D9),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        elevation: 5,
+                        margin: const EdgeInsets.all(10.0),   
+                        child: SizedBox(
+                          width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card            
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(width: 15.0),
+
+                    Card( //Card das bebidas
+                      color: Color(0XFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      elevation: 5,
+                      margin: const EdgeInsets.all(10.0),   
+                      child: SizedBox(
+                        width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card             
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                    )
+                  ]
+                ),
+              ),
+
+              Center(
+                child: Row( //Card onde se encontrarão os produtos da tela de bebidas
+                mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      child: Card( //Card das bebidas
+                        color: Color(0XFFD9D9D9),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        elevation: 5,
+                        margin: const EdgeInsets.all(10.0),   
+                        child: SizedBox(
+                          width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card            
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(width: 25.0),
+
+                    Card( //Card das bebidas
+                      color: Color(0XFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      elevation: 5,
+                      margin: const EdgeInsets.all(10.0),   
+                      child: SizedBox(
+                        width: 170.0, // Largura do card
+                        height: 230.0, // Altura do card             
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                    )
+                  ]
+                ),
               ),
 
               const SizedBox(height: 15.0), // Comando utilizado para dar quebras de pixels na tela 
