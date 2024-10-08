@@ -123,7 +123,7 @@ class _SalgadosState extends State<Salgados> {
                   children: [
                     InkWell(
                       child: Card( //Card das bebidas
-                        color: Color(0XFFD9D9D9),
+                        color: const Color(0XFFD9D9D9),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -131,31 +131,83 @@ class _SalgadosState extends State<Salgados> {
                         margin: const EdgeInsets.all(10.0),   
                         child: SizedBox(
                           width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card            
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10.0),
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/salgadosMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Salgados',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       ),
                     ),
 
-                    SizedBox(width: 15.0),
+                    const SizedBox(width: 15.0),
 
-                    Card( //Card das bebidas
-                      color: Color(0XFFD9D9D9),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      elevation: 5,
-                      margin: const EdgeInsets.all(10.0),   
-                      child: SizedBox(
-                        width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card             
-                        child: ClipRRect(
+                    InkWell(
+                      child: Card( //Card das bebidas
+                        color: const Color(0XFFD9D9D9),
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
+                        elevation: 5,
+                        margin: const EdgeInsets.all(10.0),   
+                        child: SizedBox(
+                          width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/salgadosMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Salgados',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
-                    )
+                    ),
                   ]
                 ),
               ),
@@ -166,7 +218,7 @@ class _SalgadosState extends State<Salgados> {
                   children: [
                     InkWell(
                       child: Card( //Card das bebidas
-                        color: Color(0XFFD9D9D9),
+                        color: const Color(0XFFD9D9D9),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -174,31 +226,83 @@ class _SalgadosState extends State<Salgados> {
                         margin: const EdgeInsets.all(10.0),   
                         child: SizedBox(
                           width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card            
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10.0),
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/salgadosMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Salgados',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       ),
                     ),
 
-                    SizedBox(width: 15.0),
+                    const SizedBox(width: 15.0),
 
-                    Card( //Card das bebidas
-                      color: Color(0XFFD9D9D9),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      elevation: 5,
-                      margin: const EdgeInsets.all(10.0),   
-                      child: SizedBox(
-                        width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card             
-                        child: ClipRRect(
+                    InkWell(
+                      child: Card( //Card das bebidas
+                        color: const Color(0XFFD9D9D9),
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
+                        elevation: 5,
+                        margin: const EdgeInsets.all(10.0),   
+                        child: SizedBox(
+                          width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/salgadosMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Salgados',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
-                    )
+                    ),
                   ]
                 ),
               ),
@@ -209,7 +313,7 @@ class _SalgadosState extends State<Salgados> {
                   children: [
                     InkWell(
                       child: Card( //Card das bebidas
-                        color: Color(0XFFD9D9D9),
+                        color: const Color(0XFFD9D9D9),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -217,31 +321,83 @@ class _SalgadosState extends State<Salgados> {
                         margin: const EdgeInsets.all(10.0),   
                         child: SizedBox(
                           width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card            
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10.0),
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/salgadosMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Salgados',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       ),
                     ),
 
-                    SizedBox(width: 25.0),
+                    const SizedBox(width: 15.0),
 
-                    Card( //Card das bebidas
-                      color: Color(0XFFD9D9D9),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      elevation: 5,
-                      margin: const EdgeInsets.all(10.0),   
-                      child: SizedBox(
-                        width: 170.0, // Largura do card
-                        height: 230.0, // Altura do card             
-                        child: ClipRRect(
+                    InkWell(
+                      child: Card( //Card das bebidas
+                        color: const Color(0XFFD9D9D9),
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
+                        elevation: 5,
+                        margin: const EdgeInsets.all(10.0),   
+                        child: SizedBox(
+                          width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/salgadosMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Salgados',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
-                    )
+                    ),
                   ]
                 ),
               ),

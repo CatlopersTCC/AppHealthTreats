@@ -130,7 +130,7 @@ class _MenuInicio extends State<MenuInicio> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Bebidas()), // Ao clicar envia para a página "Doces"
+                MaterialPageRoute(builder: (context) => Bebidas()), // Ao clicar envia para a página "Doces"
               );
             },
  

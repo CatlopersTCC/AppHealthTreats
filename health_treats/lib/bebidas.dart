@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:health_treats/comentarios.dart';
 import 'package:health_treats/menu.dart';
 import 'package:health_treats/sobre.dart';
+// import 'package:health_treats/produtos.dart';
 
 class Bebidas extends StatefulWidget {
   const Bebidas({super.key});
@@ -12,6 +13,10 @@ class Bebidas extends StatefulWidget {
 
 // Classe que contém todo o conteúdo a ser exibido na tela
 class _BebidasState extends State<Bebidas> {
+  // String nomeProd = '';
+  // String valorProd = '';
+  // String pathImg = '';
+  // String descProd = '';
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
@@ -31,7 +36,7 @@ class _BebidasState extends State<Bebidas> {
         destination = const SobreApp(); //Caso 2 acontece se clicar no 3º botão da bottomNavigationBar
       break;
       default:
-        destination = MenuApp(); //Se não acontecer nenhuma das opções acima
+        destination = const MenuApp(); //Se não acontecer nenhuma das opções acima
     }
 
     Navigator.push( //Pegando o conteúdo da variável "destination" para redirecionar pro caso ocorrido (que indica para qual tela irá) 
@@ -98,7 +103,7 @@ class _BebidasState extends State<Bebidas> {
                     ),
                   ),
 
-                   Positioned( // Comando utilizado para definir a posição de algum elemento (Nesse caso o elemento é um Text)
+                   const Positioned( // Comando utilizado para definir a posição de algum elemento (Nesse caso o elemento é um Text)
                     top: 50.0, // Define a distância do Text para a margem superior
                     left: 30.0, // Define a distância do Text para a margem esquerda
                     child: Column( // Criando uma coluna para alocar o Text
@@ -125,7 +130,7 @@ class _BebidasState extends State<Bebidas> {
                   children: [
                     InkWell(
                       child: Card( //Card das bebidas
-                        color: Color(0XFFD9D9D9),
+                        color: const Color(0XFFD9D9D9),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -133,31 +138,83 @@ class _BebidasState extends State<Bebidas> {
                         margin: const EdgeInsets.all(10.0),   
                         child: SizedBox(
                           width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card            
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10.0),
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/BebidasMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Bebidas',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       ),
                     ),
 
-                    SizedBox(width: 15.0),
+                    const SizedBox(width: 15.0),
 
-                    Card( //Card das bebidas
-                      color: Color(0XFFD9D9D9),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      elevation: 5,
-                      margin: const EdgeInsets.all(10.0),   
-                      child: SizedBox(
-                        width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card             
-                        child: ClipRRect(
+                    InkWell(
+                      child: Card( //Card das bebidas
+                        color: const Color(0XFFD9D9D9),
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
+                        elevation: 5,
+                        margin: const EdgeInsets.all(10.0),   
+                        child: SizedBox(
+                          width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/BebidasMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Bebidas',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
-                    )
+                    ),
                   ]
                 ),
               ),
@@ -168,7 +225,7 @@ class _BebidasState extends State<Bebidas> {
                   children: [
                     InkWell(
                       child: Card( //Card das bebidas
-                        color: Color(0XFFD9D9D9),
+                        color: const Color(0XFFD9D9D9),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -176,31 +233,83 @@ class _BebidasState extends State<Bebidas> {
                         margin: const EdgeInsets.all(10.0),   
                         child: SizedBox(
                           width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card            
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10.0),
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/BebidasMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Bebidas',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       ),
                     ),
 
-                    SizedBox(width: 15.0),
+                    const SizedBox(width: 15.0),
 
-                    Card( //Card das bebidas
-                      color: Color(0XFFD9D9D9),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      elevation: 5,
-                      margin: const EdgeInsets.all(10.0),   
-                      child: SizedBox(
-                        width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card             
-                        child: ClipRRect(
+                    InkWell(
+                      child: Card( //Card das bebidas
+                        color: const Color(0XFFD9D9D9),
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
+                        elevation: 5,
+                        margin: const EdgeInsets.all(10.0),   
+                        child: SizedBox(
+                          width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/BebidasMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Bebidas',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
-                    )
+                    ),
                   ]
                 ),
               ),
@@ -211,7 +320,7 @@ class _BebidasState extends State<Bebidas> {
                   children: [
                     InkWell(
                       child: Card( //Card das bebidas
-                        color: Color(0XFFD9D9D9),
+                        color: const Color(0XFFD9D9D9),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
@@ -219,31 +328,83 @@ class _BebidasState extends State<Bebidas> {
                         margin: const EdgeInsets.all(10.0),   
                         child: SizedBox(
                           width: 170.0, // Largura do card
-                          height: 230.0, // Altura do card            
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10.0),
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/BebidasMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Bebidas',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
                           ),
                         ),
                       ),
                     ),
 
-                    SizedBox(width: 25.0),
+                    const SizedBox(width: 15.0),
 
-                    Card( //Card das bebidas
-                      color: Color(0XFFD9D9D9),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      elevation: 5,
-                      margin: const EdgeInsets.all(10.0),   
-                      child: SizedBox(
-                        width: 170.0, // Largura do card
-                        height: 230.0, // Altura do card             
-                        child: ClipRRect(
+                    InkWell(
+                      child: Card( //Card das bebidas
+                        color: const Color(0XFFD9D9D9),
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
+                        elevation: 5,
+                        margin: const EdgeInsets.all(10.0),   
+                        child: SizedBox(
+                          width: 170.0, // Largura do card
+                          height: 230.0, // Altura do card   
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              CircleAvatar(
+                                radius: 70.0,
+                                backgroundImage: AssetImage(
+                                  'assets/img/BebidasMenu.png',
+                                ),
+                              ),
+                              SizedBox(height: 18.0,),
+                              const Text( //Bebida
+                                'Bebidas',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0XFF353535),
+                                ),
+                              ),
+                              const SizedBox(height: 2.0,),
+                              const Text(
+                                'R\$5,00',
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                  color: Color(0XFF353535),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
-                    )
+                    ),
                   ]
                 ),
               ),

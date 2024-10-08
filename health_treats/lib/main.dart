@@ -3,7 +3,7 @@ import 'package:health_treats/menu.dart';
 
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MenuApp());
 }
 
 class MainApp extends StatelessWidget {
