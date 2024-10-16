@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   fluttertoast: ^8.0.9
+  sqflite: ^2.4.0
   url_launcher: ^6.0.20
 
 
@@ -22,3 +23,12 @@ flutter:
   uses-material-design: true
   assets:
     - assets/img/
+  
+  fonts:
+    - family: RedHatDisplay
+      fonts:
+        - asset: assets/fonts/RedHatDisplay-Regular.ttf
+        - asset: assets/fonts/RedHatDisplay-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/RedHatDisplay-Black.ttf
+        - asset: assets/fonts/RedHatDisplay-Medium.ttf

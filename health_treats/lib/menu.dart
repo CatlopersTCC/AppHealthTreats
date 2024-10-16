@@ -109,7 +109,8 @@ class _MenuInicio extends State<MenuInicio> {
                   Text(
                     'Olá, [nome_usuário]',
                     style: TextStyle(
-                      fontSize: 25.0,
+                      fontSize: 30.0,
+                      fontFamily: 'RedHatDisplay',
                       fontWeight: FontWeight.bold, //Negrito
                       color: Color(0XFF353535),
                     ),
@@ -272,9 +273,11 @@ class _MenuInicio extends State<MenuInicio> {
                     const Text(
                       'Conheça mais sobre nós!', // Título acima do card
                     style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0XFF353535),
-                  ),
+                      fontFamily: 'RedHatDisplay',
+                      fontWeight: FontWeight.w500,
+                      fontSize: 25.0,
+                      color: Color(0XFF353535),
+                    ),
                   ),
 
             InkWell(
