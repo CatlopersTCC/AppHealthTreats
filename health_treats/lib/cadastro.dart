@@ -55,7 +55,8 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           //Estilizando o texto
                           style: TextStyle(
                             fontSize: 50.0,
-                            fontFamily: 'RedHatDisplay-Bold',
+                            fontFamily: 'RedHatDisplay',
+                            fontWeight: FontWeight.bold,
                             color: Colors.white,
                             // Definindo a altura, que servirá como espaçamento de uma linha a outr
                             height: 1.4,
@@ -66,8 +67,10 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           'Sign to continue',
                           style: TextStyle(
                             fontSize: 30.0,
+                            fontFamily: 'RedHatDisplay',
+                            fontWeight: FontWeight.normal,
                             color: Colors.white,
-                            height: 0.9,
+                            height: 0.5,
                           ),
                         ),
                       ],
@@ -77,7 +80,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
               ),
 
               // Comando utilizado para dar quebras de pixels na tela 
-              const SizedBox(height: 15.0),
+              const SizedBox(height: 50.0),
 
               // Comando utilizado para ditar que os elementos presentes dentro dele fiquem no centro
               const Center(
@@ -85,8 +88,9 @@ class _TelaCadastroState extends State<TelaCadastro> {
                   'Cadastro',
                   style: TextStyle(
                     fontSize: 30,
+                    fontFamily: 'RedHatDisplay',
                     fontWeight: FontWeight.bold,
-                    color: Color(0xff000000),
+                    color: Color(0XFF353535),
                   ),
                 ),
               ),
@@ -94,7 +98,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
               // Comando utilizado para definir as distâncias de um elemento para a margem 
               Padding(
                 // Definido a distância das margens laterais
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(40.0),
                 // Envolve os TextFormFields com um Form
                 child: Form(  
                   // Associa a chave ao formulário
@@ -108,8 +112,9 @@ class _TelaCadastroState extends State<TelaCadastro> {
                         'Nome de usuário',
                         style: TextStyle(
                           fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff000000),
+                          fontFamily: 'RedHatDisplay',
+                          fontWeight: FontWeight.w500,
+                          color: Color(0XFF353535),
                         ),
                       ),
 
@@ -124,14 +129,14 @@ class _TelaCadastroState extends State<TelaCadastro> {
                         //Decoração da caixa de entrada de dados
                         decoration: InputDecoration(
                           // Hint
-                          labelText: 'Digite aqui',
+                          labelText: 'Digite aqui...',
                           labelStyle: const TextStyle(
                             color: Color(0xff93B6EE),
                           ),
                           // Definido o estilo da borda da caixa de entrada de dados quando não focado
                           enabledBorder: const OutlineInputBorder(
                             // Cor da borda quando não está focado
-                            borderSide: BorderSide(color: Color(0xFF000000)),
+                            borderSide: BorderSide(color: Color(0xff93B6EE)),
                           ),
                           // Definido o estilo da borda da caixa de entrada de dado quando focada
                           focusedBorder: const OutlineInputBorder(
@@ -174,8 +179,9 @@ class _TelaCadastroState extends State<TelaCadastro> {
                         'Email',
                         style: TextStyle(
                           fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff000000),
+                          fontFamily: 'RedHatDisplay',
+                          fontWeight: FontWeight.w500,
+                          color: Color(0XFF353535),
                         ),
                       ),
                       const SizedBox(height: 10.0),
@@ -185,12 +191,12 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           FilteringTextInputFormatter.singleLineFormatter
                         ],
                         decoration: InputDecoration(
-                          labelText: 'Digite aqui',
+                          labelText: 'Digite aqui...',
                           labelStyle: const TextStyle(
                             color: Color(0xff93B6EE),
                           ),
                           enabledBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFF000000)),
+                            borderSide: BorderSide(color: Color(0xff93B6EE)),
                           ),
                           focusedBorder: const OutlineInputBorder(
                             borderSide: BorderSide(color: Color(0xff93B6EE)),
@@ -228,8 +234,9 @@ class _TelaCadastroState extends State<TelaCadastro> {
                         'Senha',
                         style: TextStyle(
                           fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff000000),
+                          fontFamily: 'RedHatDisplay',
+                          fontWeight: FontWeight.w500,
+                          color: Color(0XFF353535),
                         ),
                       ),
                       const SizedBox(height: 10.0),
@@ -239,12 +246,12 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           FilteringTextInputFormatter.singleLineFormatter
                         ],
                         decoration: InputDecoration(
-                          labelText: 'Digite aqui',
+                          labelText: 'Digite aqui...',
                           labelStyle: const TextStyle(
                             color: Color(0xff93B6EE),
                           ),
                           enabledBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xFF000000)),
+                            borderSide: BorderSide(color: Color(0xff93B6EE)),
                           ),
                           focusedBorder: const OutlineInputBorder(
                             borderSide: BorderSide(color: Color(0xff93B6EE)),
@@ -307,6 +314,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                             'Entrar',
                             style: TextStyle(
                               fontSize: 18.0,
+                              fontFamily: 'RedHatDisplay',
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
@@ -314,7 +322,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                         ),
                       ),
 
-                      const SizedBox(height: 20.0),
+                      const SizedBox(height: 30.0),
 
                       // Comando para a definição de alinhamento -- UTILIZADO PARA A PARTE DO "Já tenho uma conta"
                       Align(
@@ -326,6 +334,8 @@ class _TelaCadastroState extends State<TelaCadastro> {
                             text: 'Já tem uma conta? ',
                             style: const TextStyle(
                               color: Color(0xff93B6EE),
+                              fontFamily: 'RedHatDisplay',
+                              fontWeight: FontWeight.bold,
                               fontSize: 16.0,
                               decoration: TextDecoration.underline,
                             ),

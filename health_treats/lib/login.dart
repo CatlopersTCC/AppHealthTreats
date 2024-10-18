@@ -42,7 +42,7 @@ class _LoginState extends State<Login> {
                       crossAxisAlignment: CrossAxisAlignment.start, // Alinha o texto à esquerda
                       children: <Widget>[
                         Text( // Criando o texto que irá se sobrepor a imagem
-                          'Bem Vindo de \nVolta!', // \n é quebra de linha
+                          'Bem Vindo \nde Volta!', // \n é quebra de linha
                           style: TextStyle( // Comando utilizado para estilizar o texto
                             fontSize: 50.0, // Definindo o tamanho da fonte
                             fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
@@ -65,18 +65,16 @@ class _LoginState extends State<Login> {
                 ],
               ), // Fim do Stack
 
-              const SizedBox(height: 15.0), // Comando utilizado para dar quebras de pixels na tela 
+              const SizedBox(height: 50.0), // Comando utilizado para dar quebras de pixels na tela 
 
               const Center( // Comando utilizado para ditar que os elementos presentes dentro dele fiquem no centro
                 child: Text( // Criando um elemento de texto
                   'Login', // Texto a ser exibido na tela 
                   style: TextStyle( // Comando utilizado para estilizar o texto
                     fontSize: 30, // Definindo o tamanho da fonte
-                    fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
-
-                    // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                    // ignore: use_full_hex_values_for_flutter_colors 
-                    color: Color(0xff000000), // Definindo a cor do texto
+                    fontFamily: 'RedHatDisplay',
+                    fontWeight: FontWeight.bold,
+                    color: Color(0XFF353535), // Definindo a cor do texto
                   ), // Fim do TextStyle
                 ), // Fim do Text
               ), // Fim do Center
@@ -89,14 +87,12 @@ class _LoginState extends State<Login> {
                     crossAxisAlignment: CrossAxisAlignment.start, // Alinha o texto à esquerda
                     children: <Widget>[ // Indica que widgets serão criados
                       const Text( // Criando o texto que irá acima de um TextFormField
-                        'E-mail', // Texto a ser exibido
+                        'Email', // Texto a ser exibido
                         style: TextStyle( // Comando utilizado para estilizar o texto
                           fontSize: 18.0, // Definindo o tamanho da fonte
-                          fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
-
-                          // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                          // ignore: use_full_hex_values_for_flutter_colors
-                          color: Color(0xff000000), // Definindo a cor do texto
+                          fontFamily: 'RedHatDisplay',
+                          fontWeight: FontWeight.w500,
+                          color: Color(0XFF353535), // Definindo a cor do texto
                         ) // Fim do TextStyle
                       ), // Fim do Text
 
@@ -108,13 +104,13 @@ class _LoginState extends State<Login> {
                           FilteringTextInputFormatter.deny(RegExp('[\\n]')), // Permitindo apenas uma linha de texto
                         ],
                         decoration: InputDecoration( //Decoração da caixa de entrada de dados
-                          labelText: 'Digite aqui', // Hint a ser exibido dentro da caixa de entrada de dados
+                          labelText: 'Digite aqui...', // Hint a ser exibido dentro da caixa de entrada de dados
                           labelStyle: const TextStyle(
                             // ignore: use_full_hex_values_for_flutter_colors
                             color: Color(0xff93B6EE),
                           ),
                           enabledBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dados quando não focado
-                            borderSide: BorderSide(color: Color(0xFF000000)), // Cor da borda quando não está focado
+                            borderSide: BorderSide(color: Color(0xff93B6EE)), // Cor da borda quando não está focado
                           ),
                           focusedBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dado quando focada
 
@@ -158,11 +154,9 @@ class _LoginState extends State<Login> {
                         'Senha', // Texto a ser exibido
                         style: TextStyle( // Comando utilizado para estilizar o texto
                           fontSize: 18.0, // Definindo o tamanho da fonte
-                          fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
-
-                          // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                          // ignore: use_full_hex_values_for_flutter_colors
-                          color: Color(0xff000000), // Definindo a cor do texto
+                          fontFamily: 'RedHatDisplay',
+                          fontWeight: FontWeight.w500,
+                          color: Color(0XFF353535), // Definindo a cor do texto
                         ) // Fim do TextStyle
                       ), // Fim do Text
 
@@ -171,13 +165,13 @@ class _LoginState extends State<Login> {
                       TextFormField( //Comando utilizado para a criação de um campo de um formulário de senha
                         obscureText: _obscureText, // Ocultar ou exibir o texto da senha
                         decoration: InputDecoration( // Decoração da caixa de entrada de dados
-                          labelText: 'Digite aqui', // Texto a ser exibido
+                          labelText: 'Digite aqui...', // Texto a ser exibido
                           labelStyle: const TextStyle(
                             // ignore: use_full_hex_values_for_flutter_colors
                             color: Color(0xff93B6EE), // Cor do texto que ficará na label
                           ),
                           enabledBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dados quando não focado
-                            borderSide: BorderSide(color: Color(0xFF000000)), // Cor da borda quando não está focado
+                            borderSide: BorderSide(color: Color(0xff93B6EE)), // Cor da borda quando não está focado
                           ),
                           focusedBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dado quando focada
                             // ignore: use_full_hex_values_for_flutter_colors
@@ -249,14 +243,15 @@ class _LoginState extends State<Login> {
                           'Entrar', // Texto a ser exibido dentro do botão
                           style: TextStyle( // Estilização do botão
                             fontSize: 18.0, // Tamanho do texto
-                            fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
+                            fontFamily: 'RedHatDisplay',
+                            fontWeight: FontWeight.bold,
                             color: Colors.white, // Cor do texto
                           ), // Fim do TextStyle
                         ), // Fim do Text
                       ), // Fim Elevated Button
                     ), // Fim do Sized Box
 
-                  const SizedBox(height: 20.0), // Comando utilizado para dar quebras de pixels na tela
+                  const SizedBox(height: 30.0), // Comando utilizado para dar quebras de pixels na tela
 
                   Align( // Comando para a definição de alinhamento -- UTILIZADO PARA A PARTE DO "Não lembro a senha"
                     alignment: Alignment.centerRight, // Alinhando a posição do elemento
@@ -264,11 +259,9 @@ class _LoginState extends State<Login> {
                       text: TextSpan( // Comando de texto clicável
                         text: 'Não lembro a senha', // Texto a ser exibido na tela
                           style: const TextStyle( // Estilização do texto
-                            fontSize: 20, // Definindo o tamanho da fonte
-                            fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
-
-                            // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                            // ignore: use_full_hex_values_for_flutter_colors
+                            fontSize: 16, // Definindo o tamanho da fonte
+                            fontFamily: 'RedHatDisplay',
+                            fontWeight: FontWeight.bold,
                             color: Color(0xff93B6EE), // Cor do texto
                             decoration: TextDecoration.underline, // Colocando o sublinhado
                           ),

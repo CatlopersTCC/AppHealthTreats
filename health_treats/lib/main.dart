@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:health_treats/cadastro.dart';
 import 'package:health_treats/menu.dart';
 
 
 void main() {
-  runApp(const MenuApp());
+  runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Splash Screen',
-      home: SplashScreen(), // Defina a tela de splash como a tela inicial
+      home: TelaCadastro(), // Defina a tela de splash como a tela inicial
     );
   }
 }
