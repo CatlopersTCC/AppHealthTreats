@@ -42,19 +42,21 @@ class _LoginState extends State<Login> {
                       crossAxisAlignment: CrossAxisAlignment.start, // Alinha o texto à esquerda
                       children: <Widget>[
                         Text( // Criando o texto que irá se sobrepor a imagem
-                          'Bem Vindo \nde Volta!', // \n é quebra de linha
+                          'Bem vindo \nde volta!', // \n é quebra de linha
                           style: TextStyle( // Comando utilizado para estilizar o texto
                             fontSize: 50.0, // Definindo o tamanho da fonte
                             fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
                             color: Colors.white, // Definindo a cor do texto
-                            height: 1.4, // Definindo a altura, que servirá como espaçamento de uma linha a outra
+                            height: 1.2, // Definindo a altura, que servirá como espaçamento de uma linha a outra
                           ), // Fim do TextStyle
                         ), // Fim do Text
 
                         Text( //Criando um novo texto que também irá se sobrepor a imagem de fundo
-                          'Sign to continue', // Texto que será exibido
+                          'sign to continue', // Texto que será exibido
                           style: TextStyle( // Comando utilizado para estilizar o texto
-                            fontSize: 30.0, // Definindo o tamanho da fonte
+                            fontFamily: 'RedHatDisplay',
+                            fontWeight: FontWeight.normal,
+                            fontSize: 26.0, // Definindo o tamanho da fonte
                             color: Colors.white, // Definindo a cor do texto
                             height: 0.9, // Definindo a altura, que, nesse caso, servirá de espaçamento de um Text ao outro
                           ), // Fim do TextStyle
@@ -65,7 +67,7 @@ class _LoginState extends State<Login> {
                 ],
               ), // Fim do Stack
 
-              const SizedBox(height: 50.0), // Comando utilizado para dar quebras de pixels na tela 
+              const SizedBox(height: 30.0), // Comando utilizado para dar quebras de pixels na tela 
 
               const Center( // Comando utilizado para ditar que os elementos presentes dentro dele fiquem no centro
                 child: Text( // Criando um elemento de texto
@@ -87,7 +89,7 @@ class _LoginState extends State<Login> {
                     crossAxisAlignment: CrossAxisAlignment.start, // Alinha o texto à esquerda
                     children: <Widget>[ // Indica que widgets serão criados
                       const Text( // Criando o texto que irá acima de um TextFormField
-                        'Email', // Texto a ser exibido
+                        'E-mail', // Texto a ser exibido
                         style: TextStyle( // Comando utilizado para estilizar o texto
                           fontSize: 18.0, // Definindo o tamanho da fonte
                           fontFamily: 'RedHatDisplay',
@@ -96,7 +98,7 @@ class _LoginState extends State<Login> {
                         ) // Fim do TextStyle
                       ), // Fim do Text
 
-                      const SizedBox(height: 10.0), // Comando utilizado para dar quebras de pixels na tela 
+                      const SizedBox(height: 2.0), // Comando utilizado para dar quebras de pixels na tela 
 
                       TextFormField( // Comando utilizado para a criação de um campo de um formulário de Login
                         keyboardType: TextInputType.emailAddress, // Comando que define o tipo de entrada de dado no teclado (Email)
@@ -106,17 +108,19 @@ class _LoginState extends State<Login> {
                         decoration: InputDecoration( //Decoração da caixa de entrada de dados
                           labelText: 'Digite aqui...', // Hint a ser exibido dentro da caixa de entrada de dados
                           labelStyle: const TextStyle(
-                            // ignore: use_full_hex_values_for_flutter_colors
                             color: Color(0xff93B6EE),
                           ),
                           enabledBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dados quando não focado
-                            borderSide: BorderSide(color: Color(0xff93B6EE)), // Cor da borda quando não está focado
+                            borderSide: BorderSide(color: 
+                              Color(0xff93B6EE),
+                              width: 1.5,
+                            ), // Cor da borda quando não está focado
                           ),
                           focusedBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dado quando focada
-
-                            // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                            // ignore: use_full_hex_values_for_flutter_colors
-                            borderSide: BorderSide(color:  Color(0xff93B6EE)), // Cor da borda quando está focado
+                            borderSide: BorderSide(
+                              color:  Color(0xff93B6EE),
+                              width: 1.5,
+                            ), // Cor da borda quando está focado
                           ),
 
                           border: OutlineInputBorder( // Estilizando a borda da caixa de entrada de dados em geral
@@ -125,7 +129,8 @@ class _LoginState extends State<Login> {
                           errorBorder:  const OutlineInputBorder(
                             borderSide: BorderSide(
                               // Alterando a cor do erro para azul
-                              color: Color(0xff93B6EE),  
+                              color: Color.fromARGB(255, 27, 115, 255),  
+                              width: 1.5,
                             ),
                           ),
                           // Estilizando a caixa de entrada quando dá erro -> focado
@@ -133,6 +138,7 @@ class _LoginState extends State<Login> {
                             borderSide: BorderSide(
                               // Alterando a cor do erro para azul
                               color: Color(0xff93B6EE),
+                              width: 1.5,
                             ),
                           ),
                         ), // Fim da decoração do input
@@ -140,9 +146,9 @@ class _LoginState extends State<Login> {
                           RegExp emailRegex = RegExp(
                             r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
                           if (value == null || value.isEmpty) {
-                            return 'Por favor insira um email válido';
+                            return 'Por favor, insira um email.';
                           } else if (!emailRegex.hasMatch(value)) {
-                            return 'Email inválido';
+                            return 'Email inválido.';
                           }
                           return null;
                         },
@@ -160,7 +166,7 @@ class _LoginState extends State<Login> {
                         ) // Fim do TextStyle
                       ), // Fim do Text
 
-                      const SizedBox(height: 10.0), // Comando utilizado para dar quebras de pixels na tela 
+                      const SizedBox(height: 2.0), // Comando utilizado para dar quebras de pixels na tela 
 
                       TextFormField( //Comando utilizado para a criação de um campo de um formulário de senha
                         obscureText: _obscureText, // Ocultar ou exibir o texto da senha
@@ -171,29 +177,36 @@ class _LoginState extends State<Login> {
                             color: Color(0xff93B6EE), // Cor do texto que ficará na label
                           ),
                           enabledBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dados quando não focado
-                            borderSide: BorderSide(color: Color(0xff93B6EE)), // Cor da borda quando não está focado
+                            borderSide: BorderSide(
+                              color: Color(0xff93B6EE),
+                              width: 1.5,
+                            ), // Cor da borda quando não está focado
                           ),
                           focusedBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dado quando focada
-                            // ignore: use_full_hex_values_for_flutter_colors
-                            borderSide: BorderSide(color:  Color(0xff93B6EE)), // Cor da borda quando está focado
+                            borderSide: BorderSide(
+                              color:  Color(0xff93B6EE),
+                              width: 1.5,
+                            ), // Cor da borda quando está focado
                           ),
                           border: OutlineInputBorder( // Estilizando a borda da caixa de entrada de dados em geral
                             borderRadius: BorderRadius.circular(30.0), // Arredondamento das bordas
                           ),
                            errorBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xff93B6EE),  // Alterar a cor do erro para azul
+                              color: Color.fromARGB(255, 27, 115, 255),  // Alterar a cor do erro para azul
+                              width: 1.5,
                             ),
                           ),
                           // Borda de erro quando o campo está focado
                           focusedErrorBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0xff93B6EE),  // Outra cor para quando o campo está focado
+                              width: 1.5,
                             ),
                           ),
                           suffixIcon: IconButton( // Ícone para ocultar ou mostrar a senha
                             icon: Icon(
-                              _obscureText ? Icons.visibility : Icons.visibility_off, // Mudar ícone de acordo com o estado
+                              _obscureText ? Icons.visibility_off_outlined : Icons.visibility_outlined, // Mudar ícone de acordo com o estado
                               color: const Color(0xFF93B6EE),
                             ),
                             onPressed: () {
@@ -205,15 +218,15 @@ class _LoginState extends State<Login> {
                         ),
                         validator: (value) { // Validação do campo de senha
                           if (value == null || value.isEmpty) {
-                            return 'Por favor insira uma senha';
+                            return 'Por favor, insira uma senha.';
                           } else if (value.length < 6) {
-                            return 'A senha deve ter pelo menos 6 caracteres';
+                            return 'A senha deve conter ao menos 6 caracteres.';
                           }
                           return null;
                         },
                       ), // Fim do forms
 
-                    const SizedBox(height: 20.0), // Comando utilizado para dar quebras de pixels na tela
+                    const SizedBox(height: 25.0), // Comando utilizado para dar quebras de pixels na tela
 
                     SizedBox( // Definição de um espaço que servirá como botão
                       width: double.infinity, // Ocupa toda a largura disponível
@@ -230,9 +243,6 @@ class _LoginState extends State<Login> {
                             }
                           },
                         style: ElevatedButton.styleFrom( // Estilizando o botão
-
-                          // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                          // ignore: use_full_hex_values_for_flutter_colors
                           backgroundColor: const Color(0xff93B6EE), // Cor de fundo do botão
                           padding: const EdgeInsets.symmetric(vertical: 15), // Ajusta o padding
                           shape: RoundedRectangleBorder(
@@ -244,65 +254,58 @@ class _LoginState extends State<Login> {
                           style: TextStyle( // Estilização do botão
                             fontSize: 18.0, // Tamanho do texto
                             fontFamily: 'RedHatDisplay',
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.normal,
                             color: Colors.white, // Cor do texto
                           ), // Fim do TextStyle
                         ), // Fim do Text
                       ), // Fim Elevated Button
                     ), // Fim do Sized Box
 
-                  const SizedBox(height: 30.0), // Comando utilizado para dar quebras de pixels na tela
+                  const SizedBox(height: 110.0), // Comando utilizado para dar quebras de pixels na tela
 
-                  Align( // Comando para a definição de alinhamento -- UTILIZADO PARA A PARTE DO "Não lembro a senha"
-                    alignment: Alignment.centerRight, // Alinhando a posição do elemento
-                    child: RichText(
-                      text: TextSpan( // Comando de texto clicável
-                        text: 'Não lembro a senha', // Texto a ser exibido na tela
-                          style: const TextStyle( // Estilização do texto
-                            fontSize: 16, // Definindo o tamanho da fonte
-                            fontFamily: 'RedHatDisplay',
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xff93B6EE), // Cor do texto
-                            decoration: TextDecoration.underline, // Colocando o sublinhado
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween, // Distribui os elementos para as extremidades
+                      children: <Widget>[
+                        GestureDetector( // Captação de gesto para o ícone
+                          onTap: () { // Método chamado ao clicar no ícone
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const TelaCadastro()),
+                            );
+                          },
+                          child: const Icon( // Chamando um ícone
+                            Icons.arrow_back, // Definindo o ícone
+                            size: 30.0, // Tamanho do ícone
+                            color: Color(0xff93B6EE), // Cor do ícone
                           ),
-                          recognizer: TapGestureRecognizer()
-                        ..onTap = () {
-                          
-                        // Método ao clicar no texto
-                        // Ação a ser executada quando o texto for clicado
-                        // Colocar o caminho das outras páginas
-                        },
-                      ), // Fim do TextSpan
-                    ),
-                  ), // Fim do Align
-
-                    GestureDetector( // Captação de gesto para o icon
-                      onTap: () { // Metodo chamado ao clicar no icon
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const TelaCadastro()),
-                          );
-                      },
-                      child: const Align( // Comando para a definição de alinhamento
-                        alignment: Alignment.centerLeft, // Alinhando a posição do elemento
-                        child: Icon( // Chamando um Icon
-                          Icons.arrow_back, // Definindo o tamanho do Icon
-                          size: 30.0, // Tamanho do Icon
-
-                          // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                          // ignore: use_full_hex_values_for_flutter_colors
-                          color: Color(0xff93B6EE), // Cor do Icon
                         ),
-
-                        // FIM DOS COMANDOS ANTERIORES
-
-
+                        Align( // Comando para a definição de alinhamento
+                          alignment: Alignment.centerRight, // Alinhando a posição do elemento
+                          child: RichText(
+                            text: TextSpan( // Comando de texto clicável
+                              text: 'Não lembro a senha', // Texto a ser exibido na tela
+                              style: const TextStyle( // Estilização do texto
+                                fontSize: 16, // Definindo o tamanho da fonte
+                                fontFamily: 'RedHatDisplay',
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xff93B6EE), // Cor do texto
+                                decoration: TextDecoration.underline, // Colocando o sublinhado
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  // Método ao clicar no texto
+                                  // Ação a ser executada quando o texto for clicado
+                                  // Colocar o caminho das outras páginas
+                                },
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                  ],
-                )
+                    ],
+                  )
+                ),
               ),
-            ),
             ],
           ),
         ),

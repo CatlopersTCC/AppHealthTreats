@@ -107,7 +107,7 @@ class _MenuInicio extends State<MenuInicio> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Olá, [nome_usuário]',
+                    'Olá, Nome',
                     style: TextStyle(
                       fontSize: 30.0,
                       fontFamily: 'RedHatDisplay',
@@ -275,7 +275,7 @@ class _MenuInicio extends State<MenuInicio> {
                     style: TextStyle(
                       fontFamily: 'RedHatDisplay',
                       fontWeight: FontWeight.w500,
-                      fontSize: 25.0,
+                      fontSize: 20.0,
                       color: Color(0XFF353535),
                     ),
                   ),

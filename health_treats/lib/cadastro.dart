@@ -12,6 +12,7 @@ class TelaCadastro extends StatefulWidget {
 }
 
 class _TelaCadastroState extends State<TelaCadastro> {
+    bool _obscureText = true; // Controla a visibilidade da senha
   final _formKey = GlobalKey<FormState>();  // Chave para o formulário
 
   @override
@@ -26,6 +27,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
             children: <Widget>[ // Indica que widgets serão criados
               Stack( //Foi utilizado para possibilitar a sobreposição do texto sobre a imagem
                 children: <Widget>[
+                  
                   // Chamando a imagem
                   Image.asset(
                     // Caminho da imagem
@@ -51,7 +53,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                       children: <Widget>[
                         Text(
                           // Criando o texto que irá se sobrepor a imagem
-                          'Bem Vindo',
+                          'Bem vindo!',
                           //Estilizando o texto
                           style: TextStyle(
                             fontSize: 50.0,
@@ -64,9 +66,9 @@ class _TelaCadastroState extends State<TelaCadastro> {
                         ),
 
                         Text(
-                          'Sign to continue',
+                          'sign to continue',
                           style: TextStyle(
-                            fontSize: 30.0,
+                            fontSize: 37.0,
                             fontFamily: 'RedHatDisplay',
                             fontWeight: FontWeight.normal,
                             color: Colors.white,
@@ -118,7 +120,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                         ),
                       ),
 
-                      const SizedBox(height: 10.0),
+                      const SizedBox(height: 3.0),
 
                       // Comando utilizado para a criação de um campo de um formulário de Login
                       TextFormField(
@@ -136,12 +138,18 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           // Definido o estilo da borda da caixa de entrada de dados quando não focado
                           enabledBorder: const OutlineInputBorder(
                             // Cor da borda quando não está focado
-                            borderSide: BorderSide(color: Color(0xff93B6EE)),
+                            borderSide: BorderSide(
+                              color: Color(0xff93B6EE), 
+                              width: 1.5,
+                            ),
                           ),
                           // Definido o estilo da borda da caixa de entrada de dado quando focada
                           focusedBorder: const OutlineInputBorder(
                             // Cor da borda quando está focado
-                            borderSide: BorderSide(color: Color(0xff93B6EE)),
+                            borderSide: BorderSide(
+                              color: Color(0xff93B6EE),
+                              width: 1.5
+                            ),
                           ),
                           // Estilizando a borda da caixa de entrada de dados em geral
                           border: OutlineInputBorder(
@@ -152,7 +160,8 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           errorBorder:  const OutlineInputBorder(
                             borderSide: BorderSide(
                               // Alterando a cor do erro para azul
-                              color: Color(0xff93B6EE),  
+                              color: Color.fromARGB(255, 27, 115, 255),
+                              width: 1.5,  
                             ),
                           ),
                           // Estilizando a caixa de entrada quando dá erro -> focado
@@ -160,6 +169,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                             borderSide: BorderSide(
                               // Alterando a cor do erro para azul
                               color: Color(0xff93B6EE),
+                              width: 1.5,
                             ),
                           ),
                         ),
@@ -167,7 +177,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                         validator: (value) {
                           // Condicional para a validação
                           if (value == null || value.isEmpty) {
-                            return 'Por favor insira um Nome';
+                            return 'Por favor, insira seu nome.';
                           }
                           return null;
                         },
@@ -176,7 +186,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                       const SizedBox(height: 20.0),
 
                       const Text(
-                        'Email',
+                        'E-mail',
                         style: TextStyle(
                           fontSize: 18.0,
                           fontFamily: 'RedHatDisplay',
@@ -184,7 +194,8 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           color: Color(0XFF353535),
                         ),
                       ),
-                      const SizedBox(height: 10.0),
+                      const SizedBox(height: 2.0),
+
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
                         inputFormatters: <TextInputFormatter>[
@@ -196,23 +207,31 @@ class _TelaCadastroState extends State<TelaCadastro> {
                             color: Color(0xff93B6EE),
                           ),
                           enabledBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff93B6EE)),
+                            borderSide: BorderSide(
+                              color: Color(0xff93B6EE), 
+                              width: 1.5,
+                            ),
                           ),
                           focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff93B6EE)),
+                            borderSide: BorderSide(
+                              color: Color(0xff93B6EE), 
+                              width: 1.5,
+                            ),
                           ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ),
                           errorBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xff93B6EE),  // Alterar a cor do erro para azul
+                              color: Color.fromARGB(255, 27, 115, 255),  // Alterar a cor do erro para azul
+                              width: 1.5,
                             ),
                           ),
                           // Borda de erro quando o campo está focado
                           focusedErrorBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0xff93B6EE),  // Outra cor para quando o campo está focado
+                              width: 1.5,
                             ),
                           ),
                         ),
@@ -220,9 +239,9 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           RegExp emailRegex = RegExp(
                             r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
                           if (value == null || value.isEmpty) {
-                            return 'Por favor insira um email válido';
+                            return 'Por favor, insira um email.';
                           } else if (!emailRegex.hasMatch(value)) {
-                            return 'Email inválido';
+                            return 'Email inválido.';
                           }
                           return null;
                         },
@@ -239,49 +258,68 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           color: Color(0XFF353535),
                         ),
                       ),
-                      const SizedBox(height: 10.0),
-                      TextFormField(
-                        keyboardType: TextInputType.text,
-                        inputFormatters: <TextInputFormatter>[
-                          FilteringTextInputFormatter.singleLineFormatter
-                        ],
-                        decoration: InputDecoration(
-                          labelText: 'Digite aqui...',
+
+                      const SizedBox(height: 2.0),
+
+                      TextFormField( // Comando utilizado para a criação de um campo de um formulário de senha
+                        obscureText: _obscureText, // Ocultar ou exibir o texto da senha
+                        decoration: InputDecoration( // Decoração da caixa de entrada de dados
+                          labelText: 'Digite aqui...', // Texto a ser exibido
                           labelStyle: const TextStyle(
-                            color: Color(0xff93B6EE),
+                            color: Color(0xff93B6EE), // Cor do texto que ficará na label
                           ),
-                          enabledBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff93B6EE)),
-                          ),
-                          focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Color(0xff93B6EE)),
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                          ),
-                          errorBorder: const OutlineInputBorder(
+                          enabledBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dados quando não focado
                             borderSide: BorderSide(
-                              color: Color(0xff93B6EE),  // Alterar a cor do erro para azul
+                              color: Color(0xff93B6EE), 
+                              width: 1.5
+                            ), // Cor da borda quando não está focado
+                          ),
+                          focusedBorder: const OutlineInputBorder( // Definido o estilo da borda da caixa de entrada de dado quando focada
+                            borderSide: BorderSide(
+                              color:  Color(0xff93B6EE), 
+                              width: 1.5
+                            ), // Cor da borda quando está focado
+                          ),
+                          border: OutlineInputBorder( // Estilizando a borda da caixa de entrada de dados em geral
+                            borderRadius: BorderRadius.circular(80.0), // Arredondamento das bordas
+                          ),
+                           errorBorder: const OutlineInputBorder(
+                            
+                            borderSide: BorderSide(
+                              color: Color.fromARGB(255, 27, 115, 255),  // Alterar a cor do erro para azul
+                              width: 1.5,
                             ),
                           ),
                           // Borda de erro quando o campo está focado
                           focusedErrorBorder: const OutlineInputBorder(
                             borderSide: BorderSide(
                               color: Color(0xff93B6EE),  // Outra cor para quando o campo está focado
+                              width: 1.5,
                             ),
                           ),
+                          suffixIcon: IconButton( // Ícone para ocultar ou mostrar a senha
+                            icon: Icon(
+                              _obscureText ? Icons.visibility_off_outlined : Icons.visibility_outlined, // Mudar ícone de acordo com o estado
+                              color: const Color(0xFF93B6EE),
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                _obscureText = !_obscureText; // Alterar visibilidade ao clicar no ícone
+                              });
+                            },
+                          ),
                         ),
-                        validator: (value) {
+                        validator: (value) { // Validação do campo de senha
                           if (value == null || value.isEmpty) {
-                            return 'Por favor insira uma senha';
-                          } else if(value.length < 6){
-                            return 'A senha deve ter pelo menos 6 caracteres';
+                            return 'Por favor, insira uma senha.';
+                          } else if (value.length < 6) {
+                            return 'A senha deve ter pelo menos 6 caracteres.';
                           }
                           return null;
                         },
                       ),
 
-                      const SizedBox(height: 20.0),
+                      const SizedBox(height: 25.0),
 
                       // Definição de um espaço que servirá como botão
                       SizedBox(
@@ -315,43 +353,61 @@ class _TelaCadastroState extends State<TelaCadastro> {
                             style: TextStyle(
                               fontSize: 18.0,
                               fontFamily: 'RedHatDisplay',
-                              fontWeight: FontWeight.bold,
+                              fontWeight: FontWeight.normal,
                               color: Colors.white,
                             ),
                           ),
                         ),
                       ),
 
-                      const SizedBox(height: 30.0),
+                      const SizedBox(height: 50.0),
 
-                      // Comando para a definição de alinhamento -- UTILIZADO PARA A PARTE DO "Já tenho uma conta"
-                      Align(
-                        // Alinhando a posição do elemento
-                        alignment: Alignment.centerRight,
-                        child: RichText(  
-                          // Comando de texto clicável
-                          text: TextSpan(
-                            text: 'Já tem uma conta? ',
-                            style: const TextStyle(
-                              color: Color(0xff93B6EE),
-                              fontFamily: 'RedHatDisplay',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16.0,
-                              decoration: TextDecoration.underline,
-                            ),
-                            
-                          // Ação ao clicar no texto
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween, // Distribui os elementos para as extremidades
+                        children: <Widget>[
+                          GestureDetector( // Captação de gesto para o ícone
+                            onTap: () { // Método chamado ao clicar no ícone
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Login(),
-                                ),
+                                MaterialPageRoute(builder: (context) => const MenuApp()),
                               );
                             },
+                            child: const Icon( // Chamando um ícone
+                              Icons.arrow_back, // Definindo o ícone
+                              size: 30.0, // Tamanho do ícone
+                              color: Color(0xff93B6EE), // Cor do ícone
+                            ),
                           ),
-                        ),
+                        // Comando para a definição de alinhamento
+                        Align(
+                          // Alinhando a posição do elemento
+                          alignment: Alignment.centerRight,
+                          child: RichText(  
+                            // Comando de texto clicável
+                            text: TextSpan(
+                              text: 'Já tem uma conta? ',
+                              style: const TextStyle(
+                                color: Color(0xff93B6EE),
+                                fontFamily: 'RedHatDisplay',
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.0,
+                                decoration: TextDecoration.underline,
+                              ),
+                              
+                              // Ação ao clicar no texto
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Login(),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ),
+                        ]
                       ),
                     ],
                   ),
