@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_treats/cadastro.dart';
-import 'package:health_treats/menu.dart';
+//import 'package:health_treats/menu.dart';
 
 
 void main() {
@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3), () {
       // ignore: use_build_context_synchronously
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const MenuApp()), // Navega para a tela de cadastro
+        MaterialPageRoute(builder: (context) => const TelaCadastro()), // Navega para a tela de cadastro
       );
     });
   }
@@ -64,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
               'assets/img/Splash.png', // Caminho da Imagem de fundo que ocupará determinado espaço
               fit: BoxFit.cover, // Expande a imagem por todo espaço definido
               width: double.infinity, // Utilizado para usar 100% do tamanho determinado
-              height: 630.0 // Define a altura da imagem
+              height: double.infinity, // Define a altura da imagem
             ),
           ],
         ),

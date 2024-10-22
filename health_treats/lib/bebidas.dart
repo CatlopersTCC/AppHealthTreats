@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:health_treats/comentarios.dart';
 import 'package:health_treats/menu.dart';
 import 'package:health_treats/sobre.dart';
-// import 'package:health_treats/produtos.dart';
+import 'package:health_treats/produtos.dart';
+import 'package:health_treats/infoProdutos.dart';
 
 class Bebidas extends StatefulWidget {
   const Bebidas({super.key});
@@ -13,10 +14,10 @@ class Bebidas extends StatefulWidget {
 
 // Classe que contém todo o conteúdo a ser exibido na tela
 class _BebidasState extends State<Bebidas> {
-  // String nomeProd = '';
-  // String valorProd = '';
-  // String pathImg = '';
-  // String descProd = '';
+  String nomeProd = '';
+  String valorProd = '';
+  String pathImg = '';
+  String descProd = '';
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
@@ -131,6 +132,24 @@ Widget build(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
+                    onTap: (){
+                      nomeProd = 'Produto 1';
+                      valorProd = 'R\$20.00';
+                      pathImg = 'assets/img/salgadinho.png';
+                      descProd = 'Descrição rápida';
+
+                      Produtos produtos = Produtos(
+                        nomeProd, valorProd, pathImg, descProd
+                      );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => InfoProdutos(),
+                          settings: RouteSettings(arguments: produtos)
+                        ),
+                      );
+                    },
                     child: Card(
                       color: const Color(0XFFD9D9D9),
                       shape: RoundedRectangleBorder(
@@ -174,6 +193,24 @@ Widget build(BuildContext context) {
                   const SizedBox(width: 15.0), //Espaçamento lateral entre um card e outro
 
                   InkWell(
+                    onTap: (){
+                      nomeProd = 'Produto 1';
+                      valorProd = 'R\$20.00';
+                      pathImg = 'assets/img/salgadinho.png';
+                      descProd = 'Descrição rápida';
+
+                      Produtos produtos = Produtos(
+                        nomeProd, valorProd, pathImg, descProd
+                      );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => InfoProdutos(),
+                          settings: RouteSettings(arguments: produtos)
+                        ),
+                      );
+                    },
                     child: Card(
                       color: const Color(0XFFD9D9D9),
                       shape: RoundedRectangleBorder(
@@ -223,6 +260,24 @@ Widget build(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
+                    onTap: (){
+                      nomeProd = 'Produto 1';
+                      valorProd = 'R\$20.00';
+                      pathImg = 'assets/img/salgadinho.png';
+                      descProd = 'Descrição rápida';
+
+                      Produtos produtos = Produtos(
+                        nomeProd, valorProd, pathImg, descProd
+                      );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => InfoProdutos(),
+                          settings: RouteSettings(arguments: produtos)
+                        ),
+                      );
+                    },
                     child: Card(
                       color: const Color(0XFFD9D9D9),
                       shape: RoundedRectangleBorder(
@@ -266,6 +321,24 @@ Widget build(BuildContext context) {
                   const SizedBox(width: 15.0),
 
                   InkWell(
+                    onTap: (){
+                      nomeProd = 'Produto 1';
+                      valorProd = 'R\$20.00';
+                      pathImg = 'assets/img/salgadinho.png';
+                      descProd = 'Descrição rápida';
+
+                      Produtos produtos = Produtos(
+                        nomeProd, valorProd, pathImg, descProd
+                      );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => InfoProdutos(),
+                          settings: RouteSettings(arguments: produtos)
+                        ),
+                      );
+                    },
                     child: Card(
                       color: const Color(0XFFD9D9D9),
                       shape: RoundedRectangleBorder(
@@ -314,6 +387,24 @@ Widget build(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
+                    onTap: (){
+                      nomeProd = 'Produto 1';
+                      valorProd = 'R\$20.00';
+                      pathImg = 'assets/img/salgadinho.png';
+                      descProd = 'Descrição rápida';
+
+                      Produtos produtos = Produtos(
+                        nomeProd, valorProd, pathImg, descProd
+                      );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => InfoProdutos(),
+                          settings: RouteSettings(arguments: produtos)
+                        ),
+                      );
+                    },
                     child: Card(
                       color: const Color(0XFFD9D9D9),
                       shape: RoundedRectangleBorder(
@@ -357,6 +448,24 @@ Widget build(BuildContext context) {
                   const SizedBox(width: 15.0),
 
                   InkWell(
+                    onTap: (){
+                      nomeProd = 'Produto 1';
+                      valorProd = 'R\$20.00';
+                      pathImg = 'assets/img/salgadinho.png';
+                      descProd = 'Descrição rápida';
+
+                      Produtos produtos = Produtos(
+                        nomeProd, valorProd, pathImg, descProd
+                      );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => InfoProdutos(),
+                          settings: RouteSettings(arguments: produtos)
+                        ),
+                      );
+                    },
                     child: Card(
                       color: const Color(0XFFD9D9D9),
                       shape: RoundedRectangleBorder(
