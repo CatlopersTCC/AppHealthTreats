@@ -33,27 +33,27 @@ class _MenuInicio extends State<MenuInicio> {
   TextEditingController _searchController = TextEditingController();
   int _selectedIndex = 0;
 
-  void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
+  void _onItemTapped(int index) { // Função realizada ao clicar em qualquer item da bottomNavigationBar
     setState(() {
       _selectedIndex = index;
     });
 
-    Widget destination; //Criando a variável
+    Widget destination; // Criando a variável que controla o redirecionamento
     switch (index) {
       case 0:
-        destination = const ComentariosApp(); //Caso 0 acontece se clicar no 1º botão da bottomNavigationBar
+        destination = const ComentariosApp(); // Caso 0 acontece se clicar no 1º botão da bottomNavigationBar
       break;
       case 1:
-        destination = const MenuApp(); //Caso 1 acontece se clicar no 2º botão da bottomNavigationBar
+        destination = const MenuApp(); // Caso 1 acontece se clicar no 2º botão da bottomNavigationBar
       break;
       case 2:
-        destination = const SobreApp(); //Caso 2 acontece se clicar no 3º botão da bottomNavigationBar
+        destination = const SobreApp(); // Caso 2 acontece se clicar no 3º botão da bottomNavigationBar
       break;
       default:
-        destination = MenuApp(); //Se não acontecer nenhuma das opções acima
+        destination = MenuApp(); // Se não acontecer nenhuma das opções acima
     }
 
-    Navigator.push( //Pegando o conteúdo da variável "destination" para redirecionar pro caso ocorrido (que indica para qual tela irá) 
+    Navigator.push( // Pegando o conteúdo da variável "destination" para redirecionar pro caso ocorrido (que indica para qual tela irá) 
       context,
       MaterialPageRoute(builder: (context) => destination),
     );
@@ -62,37 +62,37 @@ class _MenuInicio extends State<MenuInicio> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView (
-         padding: const EdgeInsets.all(20.0), //Espaçamento interno
-          child: Column(
+      body: SingleChildScrollView ( // Código para adicionar a barra de rolagem lateral
+         padding: const EdgeInsets.all(20.0), // Espaçamento interno
+          child: Column( // Organiza os filhos em coluna
            children:  [
-            SizedBox( //Definindo o tamanho da barra de pesquisa
+            SizedBox( // Definindo o tamanho da barra de pesquisa
             height: 35.0,
-              child: TextField( //Barra de pesquisa
+              child: TextField( // Barra de pesquisa
                 cursorHeight: 15.0, //Altura que o cursor vai ter dentro do TextField
-                controller: _searchController,
+                controller: _searchController, // Controller utilizada
                 decoration: InputDecoration(
                   prefixIcon: const Icon(
                     Icons.search, 
                     color: Color(0XFF353535),
                   ),
-                  enabledBorder: OutlineInputBorder( //Quando não selecionada a barra de pesquisa
+                  enabledBorder: OutlineInputBorder( // Quando não selecionada a barra de pesquisa
                     borderSide: const BorderSide(
-                      color:  Color(0XFF353535), //Cor da borda
+                      color:  Color(0XFF353535), // Cor da borda
                       width: 2.0, //Tamanho da da borda
                     ),
                     borderRadius: BorderRadius.circular(50.0),
                   ),
-                  focusedBorder: OutlineInputBorder( //Quando selecionada a barra de pesquisa 
+                  focusedBorder: OutlineInputBorder( // Quando selecionada a barra de pesquisa 
                     borderSide: const BorderSide(
                       color:  Color(0XFF353535),
                       width: 2.5,
                     ),
-                    borderRadius: BorderRadius.circular(50.0),
+                    borderRadius: BorderRadius.circular(50.0), // Arredondamento das bordas
                   ),
-                  contentPadding: const EdgeInsets.symmetric(vertical: 10.0), //Centralizando texto verticalmente dentro da TextField
+                  contentPadding: const EdgeInsets.symmetric(vertical: 10.0), // Centralizando texto verticalmente dentro da TextField
                 ),
-                onChanged: (value) { //Atualiza simultaneamente à entrada de dados
+                onChanged: (value) { // Atualiza simultaneamente à entrada de dados
                   //Lógica de pesquisa pode ser adicionada aqui
                   print('Texto digitado: $value');
                 },
@@ -103,14 +103,14 @@ class _MenuInicio extends State<MenuInicio> {
             
             const Padding(
               padding: EdgeInsets.all(10.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Row( // Organiza os filhos em linha
+                crossAxisAlignment: CrossAxisAlignment.start, // Instrução para o texto se posicionar na esquerda, a posição inicial
                 children: <Widget>[
                   Text(
                     'Olá, Nome',
-                    style: TextStyle(
+                    style: TextStyle( // Estilização do texto
                       fontSize: 30.0,
-                      fontFamily: 'RedHatDisplay',
+                      fontFamily: 'RedHatDisplay', // Fonte utilizada no projeto
                       fontWeight: FontWeight.bold, //Negrito
                       color: Color(0XFF353535),
                     ),
@@ -122,21 +122,21 @@ class _MenuInicio extends State<MenuInicio> {
             const SizedBox(height: 10.0,),
           
           Center(
-            child: Row( //Deixando um card ao lado do outro
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            child: Row( // Deixando um card ao lado do outro
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espaçando um card do outro
               children: [
-
             // Tornando card clicável
             InkWell(
-            onTap: () {
+            onTap: () { // Função executada ao clicar
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Bebidas()), // Ao clicar envia para a página "Doces"
+                MaterialPageRoute(builder: (context) => Bebidas()), // Ao clicar direciona para a página "Doces"
               );
             },
- 
-           child: Card( //Card das bebidas
-              shape: RoundedRectangleBorder(
+
+           // Card das bebidas
+           child: Card(
+              shape: RoundedRectangleBorder( // Arredondando as bordas do card
                 borderRadius: BorderRadius.circular(10.0),
               ),
               elevation: 5,
@@ -144,11 +144,11 @@ class _MenuInicio extends State<MenuInicio> {
               child: SizedBox(
                 width: 200.0, // Largura do card
                 height: 126.0, // Altura do card            
-                  child: ClipRRect(
+                  child: ClipRRect( // Recorta os cantos de um widget filho
                     borderRadius: BorderRadius.circular(10.0),
                       child: Image.asset(
                         'assets/img/bebidasMenu.png',
-                      fit: BoxFit.cover,
+                      fit: BoxFit.cover, // Expande a imagem para ocupar o elemento pai inteiro
                       width: 200.0, // Largura da imagem
                       height: 127.0, // Altura da imagem
                     ),
@@ -158,14 +158,15 @@ class _MenuInicio extends State<MenuInicio> {
             ),
 
             InkWell(
-            onTap: () {
+            onTap: () { // Função executada ao clicar
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Salgados()), // Ao clicar envia para a página "Doces"
+                MaterialPageRoute(builder: (context) => const Salgados()), // Ao clicar envia para a página "Salgados"
               );
             },
 
-            child: Card( //Card dos salgados
+            //Card dos salgados
+            child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
@@ -191,20 +192,21 @@ class _MenuInicio extends State<MenuInicio> {
             ),
           ),
 
-          Center( // 
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Center( // Centraliza todos os elementos dentro da estrutura
+            child: Row( 
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espaça um card do outro
               children: [
 
             InkWell(
-            onTap: () {
+            onTap: () { // Função executada ao clicar
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const Doces()), // Ao clicar envia para a página "Doces"
               );
             },
 
-            child: Card( //Card dos doces
+            // Card dos doces
+            child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
@@ -234,11 +236,12 @@ class _MenuInicio extends State<MenuInicio> {
               );
             },
 
-            child: Card( //Card das massas
+            // Card das massas
+            child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
-              elevation: 5,
+              elevation: 5, // Adiciona sombra ao elemento
               margin: const EdgeInsets.all(10.0),   
               child: SizedBox(
                 width: 200.0, // Largura do card
@@ -284,11 +287,12 @@ class _MenuInicio extends State<MenuInicio> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SobreApp()), //Manda o usuário para a tela "Sobre"
+                MaterialPageRoute(builder: (context) => const SobreApp()), // Redireciona o usuário para a tela "Sobre"
               );
             },
-
-            child: Card( //Card Sobre Health Treats
+            
+            // Card Sobre Health Treats
+            child: Card( 
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
               ),
@@ -309,13 +313,12 @@ class _MenuInicio extends State<MenuInicio> {
               ),
             ),
 
+                  ]
+                ),
               ]
             ),
-           ]
-          ),
           )
          ],
-
         ),
       ),
       bottomNavigationBar: Padding(
@@ -327,9 +330,9 @@ class _MenuInicio extends State<MenuInicio> {
       ), 
         child: BottomNavigationBar (
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem( //Ícone 
+            BottomNavigationBarItem( // Ícone 
               icon: Icon(Icons.messenger_outline_rounded),
-              //Label não pode ser nula, se não dá erro
+              // Label não pode ser nula, se não dá erro
               label: '',
             ),
           
@@ -343,13 +346,13 @@ class _MenuInicio extends State<MenuInicio> {
               label: '',
             ),
           ],
-        currentIndex: _selectedIndex, //Posição
-        selectedItemColor: const Color(0XFF93B6EE), //Botão selecionado
-        unselectedItemColor: const Color(0XFF93B6EE), //Botão deselecionado
+        currentIndex: _selectedIndex, // Posição
+        selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
+        unselectedItemColor: const Color(0XFF93B6EE), // Botão deselecionado
         backgroundColor: const Color(0XFFF4F4F2),
-        onTap: _onItemTapped, //Função acionada ao clicar
-        showSelectedLabels: false, //Evita que a label apareça quando selecionado
-        showUnselectedLabels: false, //Evita que a label apareça quando deselecionado
+        onTap: _onItemTapped, // Função acionada ao clicar
+        showSelectedLabels: false, // Evita que a label apareça quando selecionado
+        showUnselectedLabels: false, // Evita que a label apareça quando deselecionado
         ),
       ),
       )
