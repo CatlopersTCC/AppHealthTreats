@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:health_treats/cadastro.dart';
-//import 'package:health_treats/menu.dart';
+import 'package:health_treats/menu.dart';
 
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MenuApp());
 }
 
 class MainApp extends StatelessWidget {
