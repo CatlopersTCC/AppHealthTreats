@@ -98,7 +98,7 @@ class _MenuInicio extends State<MenuInicio> {
                 },
               ),
             ),
-
+            
             const SizedBox(height: 16.0),
             
             const Padding(

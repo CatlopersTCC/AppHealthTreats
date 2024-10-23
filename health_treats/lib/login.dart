@@ -283,7 +283,7 @@ class _LoginState extends State<Login> {
                           alignment: Alignment.centerRight, // Alinhando a posição do elemento
                           child: RichText(
                             text: TextSpan( // Comando de texto clicável
-                              text: 'Não lembro a senha', // Texto a ser exibido na tela
+                              text: 'Entrar sem cadastro', // Texto a ser exibido na tela
                               style: const TextStyle( // Estilização do texto
                                 fontSize: 16, // Definindo o tamanho da fonte
                                 fontFamily: 'RedHatDisplay',
@@ -293,6 +293,12 @@ class _LoginState extends State<Login> {
                               ),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
+                                  Navigator.push(
+                                  context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const MenuApp(),
+                                    ),
+                                  );
                                   // Método ao clicar no texto
                                   // Ação a ser executada quando o texto for clicado
                                   // Colocar o caminho das outras páginas

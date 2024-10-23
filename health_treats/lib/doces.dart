@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_treats/comentarios.dart';
 import 'package:health_treats/menu.dart';
+import 'package:health_treats/pesquisa.dart';
 import 'package:health_treats/sobre.dart';
 import 'package:health_treats/produtos.dart';
 import 'package:health_treats/infoProdutos.dart';
@@ -87,7 +88,10 @@ Widget build(BuildContext context) {
            // Barra de pesquisa
           GestureDetector(
             onTap: () {
-              Navigator.pop(context); // Volta para a página anterior, "apaga a sessão"
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PesquisaApp()),
+              );
             },
             child: const Align(
               alignment: Alignment.centerRight, // Alinha o texto à direita
