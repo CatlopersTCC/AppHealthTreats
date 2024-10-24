@@ -4,7 +4,7 @@ import 'package:health_treats/menu.dart';
 
 
 void main() {
-  runApp(const MenuApp());
+  runApp(const MainApp()); //Trocar para a tela de Splash
 }
 
 class MainApp extends StatelessWidget {
@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Splash Screen',
-      home: TelaCadastro(), // Defina a tela de splash como a tela inicial
+      home: SplashScreen(), // Defina a tela de splash como a tela inicial
     );
   }
 }
@@ -55,17 +55,21 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // Cor de fundo da tela de splash
+      backgroundColor: Color(0XFF93B6EE), // Cor de fundo da tela de splash
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
-              'assets/img/Splash.png', // Caminho da Imagem de fundo que ocupará determinado espaço
+              'assets/img/HealthTreatsLogo.png', // Caminho da Imagem de fundo que ocupará determinado espaço
               fit: BoxFit.cover, // Expande a imagem por todo espaço definido
-              width: double.infinity, // Utilizado para usar 100% do tamanho determinado
-              height: double.infinity, // Define a altura da imagem
+              width: 150, // Utilizado para usar 100% do tamanho determinado
+              height: 150, // Define a altura da imagem
             ),
+            // CircularProgressIndicator(
+            //   valueColor: AlwaysStoppedAnimation<Color>(Colors.blue), // Cor da bolinha
+            //   strokeWidth: 6.0, // Largura da borda
+            // ),
           ],
         ),
       ),
