@@ -526,7 +526,7 @@ Widget build(BuildContext context) {
           child: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: Icon(Icons.messenger_outline_rounded),
+                icon: Icon(Icons.question_answer_outlined),
                 label: '',
               ),
               BottomNavigationBarItem(

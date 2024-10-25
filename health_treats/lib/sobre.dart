@@ -141,20 +141,20 @@ class _SobreMenu extends State<SobreMenu> {
             ),
           ),
 
-          SizedBox(height: 30.0,),
-
           const Center(
             child: Padding(
-              padding: EdgeInsets.all(12.0),
+              padding: EdgeInsets.all(21.5),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Column(
                     children: [
                       Text(
-                        'Muito prazer, \n[nome_usuário]',
+                        'Muito prazer, \nNome',
                         style: TextStyle(
-                          fontSize: 30.0,
+                          fontSize: 45.0,
+                          color: Color(0XFF353535),
+                          fontFamily: 'RedHatDisplay',
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -165,12 +165,10 @@ class _SobreMenu extends State<SobreMenu> {
             ),
           ),
 
-          const SizedBox(height: 30.0,),
-
           Container(
             width: double.infinity,
             height: 494,
-            margin: EdgeInsets.only(left: 12.0, right: 12.0),
+            margin: EdgeInsets.only(left: 21.5, right: 21.5),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -178,12 +176,14 @@ class _SobreMenu extends State<SobreMenu> {
                   'Nosso objetivo é ajudar pacientes com diabetes a manter uma vida estável e saudável, oferecendo produtos de alta qualidade.',
                   textAlign: TextAlign.justify,
                   style: TextStyle(
-                    fontSize: 22.0,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 27.0,
+                    color: Color(0XFF353535),
+                    fontFamily: 'RedHatDisplay',
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
 
-                const SizedBox(height: 50.0),
+                const SizedBox(height: 20.0),
 
                 Center(
                   child: Card(
@@ -191,7 +191,7 @@ class _SobreMenu extends State<SobreMenu> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   elevation: 5,
-                  color: const Color.fromARGB(255, 230, 245, 255),
+                  color: const Color(0xFFF8F8F8),
                   margin: EdgeInsets.only(left: 60.0, right: 60.0),
                     child: Padding(
                       padding: EdgeInsets.all(20.0), // Adiciona padding ao Card
@@ -203,6 +203,7 @@ class _SobreMenu extends State<SobreMenu> {
                             style: TextStyle(
                               color: Color(0XFF353535),
                               fontSize: 30.0,
+                              fontFamily: 'RedHatDisplay  ',
                               fontWeight: FontWeight.w700,
                             ),
                             children: <TextSpan>[
@@ -283,8 +284,6 @@ class _SobreMenu extends State<SobreMenu> {
             child: ElevatedButton( // Criando o botão de entrar
               onPressed: _launchURL,
               style: ElevatedButton.styleFrom( // Estilizando o botão
-                // O comando abaixo foi utlizado para retirar um sublinhado de aviso
-                // ignore: use_full_hex_values_for_flutter_colors
                 backgroundColor: const Color(0xff93B6EE), // Cor de fundo do botão
                 padding: const EdgeInsets.symmetric(vertical: 20), // Ajusta o padding
                 shape: RoundedRectangleBorder(
@@ -295,7 +294,8 @@ class _SobreMenu extends State<SobreMenu> {
                 'Saiba mais!', // Texto a ser exibido dentro do botão
                 style: TextStyle( // Estilização do botão
                   fontSize: 18.0, // Tamanho do texto
-                  fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
+                  fontFamily: 'RedHatDisplay', // Fonte estilizada
+                  fontWeight: FontWeight.normal, // Definindo o estilo da fonte (itálico, negrito, etc)
                   color: Colors.white, // Cor do texto
                 ), // Fim do TextStyle
               ), // Fim do Text
@@ -316,27 +316,27 @@ class _SobreMenu extends State<SobreMenu> {
           child: BottomNavigationBar (
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem( //Ícone 
-                icon: Icon(Icons.messenger_outline_rounded),
+                icon: Icon(Icons.question_answer_outlined),
                 //Label não pode ser nula, se não dá erro
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined,),
+                icon: Icon(Icons.home_outlined),
                 label: '',
               ),
           
               BottomNavigationBarItem(
-                icon: Icon(Icons.add_circle_outline), 
+                icon: Icon(Icons.add_circle_rounded), 
                 label: '',
               ),
             ],
-            currentIndex: _selectedIndex, //Posição
-            selectedItemColor: const Color(0XFF93B6EE), //Botão selecionado
-            unselectedItemColor: const Color(0XFF93B6EE), //Botão deselecionado
+            currentIndex: _selectedIndex, // Posição
+            selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
+            unselectedItemColor: const Color(0XFF93B6EE), // Botão deselecionado
             backgroundColor: const Color(0XFFF4F4F2),
-            onTap: _onItemTapped, //Função acionada ao clicar
-            showSelectedLabels: false, //Evita que a label apareça quando selecionado
-            showUnselectedLabels: false, //Evita que a label apareça quando deselecionado
+            onTap: _onItemTapped, // Função acionada ao clicar
+            showSelectedLabels: false, // Evita que a label apareça quando selecionado
+            showUnselectedLabels: false, // Evita que a label apareça quando deselecionado
           ),
         ),
       )

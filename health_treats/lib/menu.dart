@@ -331,13 +331,13 @@ class _MenuInicio extends State<MenuInicio> {
         child: BottomNavigationBar (
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem( // Ícone 
-              icon: Icon(Icons.messenger_outline_rounded),
+              icon: Icon(Icons.question_answer_outlined),
               // Label não pode ser nula, se não dá erro
               label: '',
             ),
           
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined,),
+              icon: Icon(Icons.home_rounded,),
               label: '',
             ),
           

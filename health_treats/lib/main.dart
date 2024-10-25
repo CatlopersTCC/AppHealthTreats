@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_treats/cadastro.dart';
-import 'package:health_treats/menu.dart';
+// import 'package:health_treats/menu.dart';
 
 
 void main() {
@@ -58,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Color(0XFF93B6EE), // Cor de fundo da tela de splash
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center, // Centralizando a coluna e seus filhos
           children: <Widget>[
             Image.asset(
               'assets/img/HealthTreatsLogo.png', // Caminho da Imagem de fundo que ocupará determinado espaço
@@ -66,10 +66,13 @@ class _SplashScreenState extends State<SplashScreen> {
               width: 150, // Utilizado para usar 100% do tamanho determinado
               height: 150, // Define a altura da imagem
             ),
-            // CircularProgressIndicator(
-            //   valueColor: AlwaysStoppedAnimation<Color>(Colors.blue), // Cor da bolinha
-            //   strokeWidth: 6.0, // Largura da borda
-            // ),
+            Container(
+              margin: EdgeInsets.all(50.0), // Definindo a distância entre a animação de carregamento
+              child: CircularProgressIndicator( // Criando animação de carregamento
+                valueColor: AlwaysStoppedAnimation<Color>(Colors.white), // Cor da animação de carregamento
+                strokeWidth: 6.0, // Largura da borda
+              ),
+            ),
           ],
         ),
       ),
