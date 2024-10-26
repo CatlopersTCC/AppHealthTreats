@@ -120,6 +120,7 @@ Widget build(BuildContext context) {
                   style: TextStyle( // Comando utilizado para estilizar o texto
                     fontSize: 50.0, // Definindo o tamanho da fonte
                     fontWeight: FontWeight.bold, // Definindo o estilo da fonte (itálico, negrito, etc)
+                    fontFamily: 'RedHatDisplay', // Fonte estilizada
                     color: Colors.white, // Definindo a cor do texto
                     height: 1.4, // Definindo a altura, que servirá como espaçamento de uma linha a outra
                   ),
@@ -140,8 +141,7 @@ Widget build(BuildContext context) {
                       nomeProd = 'Produto 1';
                       valorProd = 'R\$20.00';
                       pathImg = 'assets/img/salgadinho.png';
-                      descProd = 'Descrição rápida';
-
+                      descProd = 'Carne moída. Couve-flor. Cebola picada. Sal. Pimenta-do-reino. Salsinha. Manteiga.';
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd
                       );
@@ -177,6 +177,7 @@ Widget build(BuildContext context) {
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -185,6 +186,7 @@ Widget build(BuildContext context) {
                               'R\$5,00',
                               style: TextStyle(
                                 fontSize: 16.0,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -238,6 +240,7 @@ Widget build(BuildContext context) {
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -246,6 +249,7 @@ Widget build(BuildContext context) {
                               'R\$5,00',
                               style: TextStyle(
                                 fontSize: 16.0,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -305,6 +309,7 @@ Widget build(BuildContext context) {
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -313,6 +318,7 @@ Widget build(BuildContext context) {
                               'R\$5,00',
                               style: TextStyle(
                                 fontSize: 16.0,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -366,6 +372,7 @@ Widget build(BuildContext context) {
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -374,6 +381,7 @@ Widget build(BuildContext context) {
                               'R\$5,00',
                               style: TextStyle(
                                 fontSize: 16.0,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -432,6 +440,7 @@ Widget build(BuildContext context) {
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -440,6 +449,7 @@ Widget build(BuildContext context) {
                               'R\$5,00',
                               style: TextStyle(
                                 fontSize: 16.0,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -493,6 +503,7 @@ Widget build(BuildContext context) {
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),
@@ -501,6 +512,7 @@ Widget build(BuildContext context) {
                               'R\$5,00',
                               style: TextStyle(
                                 fontSize: 16.0,
+                                fontFamily: 'RedHatDisplay',
                                 color: Color(0XFF353535),
                               ),
                             ),

@@ -150,7 +150,7 @@ class _SobreMenu extends State<SobreMenu> {
                   Column(
                     children: [
                       Text(
-                        'Muito prazer, \nNome',
+                        'Muito prazer, \nNome.',
                         style: TextStyle(
                           fontSize: 45.0,
                           color: Color(0XFF353535),
@@ -203,7 +203,7 @@ class _SobreMenu extends State<SobreMenu> {
                             style: TextStyle(
                               color: Color(0XFF353535),
                               fontSize: 30.0,
-                              fontFamily: 'RedHatDisplay  ',
+                              fontFamily: 'RedHatDisplay',
                               fontWeight: FontWeight.w700,
                             ),
                             children: <TextSpan>[
@@ -211,6 +211,7 @@ class _SobreMenu extends State<SobreMenu> {
                                 text: ' saudáveis"',
                                 style: TextStyle(
                                   color: Color(0XFF93B6EE),
+                                  fontFamily: 'RedHatDisplay',
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -222,38 +223,32 @@ class _SobreMenu extends State<SobreMenu> {
                   ),
                 ),
 
-                const SizedBox(height: 50.0,),
+                const SizedBox(height: 20.0,),
 
                   Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Align(
-                      alignment: Alignment.centerLeft, // Alinha o container à esquerda
-                      child: Container(
-                        width: 300,
-                        height: 180,
-                        child: const Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Ouviu um Miau?',
-                              style: TextStyle(
-                                fontSize: 30.0,
-                                fontWeight: FontWeight.w700,
-                              ),
+                    SizedBox(
+                      width: 300,
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Ouviu um Miau?',
+                            style: TextStyle(
+                              fontSize: 30.0,
+                              fontWeight: FontWeight.w700,
                             ),
-                            SizedBox(height: 10,),
-                            Text(
-                              'A CatLopers é uma empresa com o objetivo de fornecer sistemas de qualidade e de alta durabilidade.',
-                              textAlign: TextAlign.justify,
-                              style: TextStyle(
-                                fontSize: 22.0,
-                                fontWeight: FontWeight.w600,
-                              ),
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            'A CatLopers é uma empresa com o objetivo de fornecer sistemas de qualidade e de alta durabilidade.',
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              fontWeight: FontWeight.w600,
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
 
@@ -267,7 +262,7 @@ class _SobreMenu extends State<SobreMenu> {
                         child: Image.asset( //Comando que chama a imagem
                           'assets/img/LogoDev2.png', // Caminho da Imagem de fundo que ocupará determinado espaço
                           fit: BoxFit.cover, // Expande a imagem por todo espaço definido
-                          width: double.infinity, // Utilizado para usar 100% do tamanho determinado
+                            width: double.infinity, // Utilizado para usar 100% do tamanho determinado
                         ),
                       ),
                     ),
@@ -277,7 +272,7 @@ class _SobreMenu extends State<SobreMenu> {
             ),
           ),
 
-          const SizedBox(height: 30.0,),
+          const SizedBox(height: 80.0,),
 
           SizedBox( // Definição de um espaço que servirá como botão
             width: 230, // Ocupa toda a largura disponível
@@ -298,9 +293,9 @@ class _SobreMenu extends State<SobreMenu> {
                   fontWeight: FontWeight.normal, // Definindo o estilo da fonte (itálico, negrito, etc)
                   color: Colors.white, // Cor do texto
                 ), // Fim do TextStyle
-              ), // Fim do Text
-            ), // Fim Elevated Button
-          ), // Fim do Sized Box
+              ),
+            ),
+          ), 
           const SizedBox(height: 15.0,),
          ],
         ),
