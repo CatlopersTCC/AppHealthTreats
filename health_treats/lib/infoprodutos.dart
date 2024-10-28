@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:health_treats/comentarios.dart';
 import 'package:health_treats/menu.dart';
 import 'package:health_treats/pesquisa.dart';
@@ -12,34 +13,87 @@ class InfoProdutos extends StatefulWidget {
   _InfoState createState() => _InfoState();
 }
 
-// Classe que contém todo o conteúdo a ser exibido na tela
 class _InfoState extends State<InfoProdutos> {
-  
-  int _selectedIndex = 0; // Variável começa nula
+  int _selectedIndex = 0;
+  int _currentPage = 0;
+  PageController _pageController = PageController(initialPage: 0);
 
-  void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
+  void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
 
-    Widget destination; //Criando a variável
+    Widget destination;
     switch (index) {
       case 0:
-        destination = const ComentariosApp(); //Caso 0 acontece se clicar no 1º botão da bottomNavigationBar
+        destination = const ComentariosApp();
       break;
       case 1:
-        destination = const MenuApp(); //Caso 1 acontece se clicar no 2º botão da bottomNavigationBar
+        destination = const MenuApp();
       break;
       case 2:
-        destination = const SobreApp(); //Caso 2 acontece se clicar no 3º botão da bottomNavigationBar
+        destination = const SobreApp();
       break;
       default:
-        destination = const MenuApp(); //Se não acontecer nenhuma das opções acima
+        destination = const MenuApp();
     }
 
-    Navigator.push( //Pegando o conteúdo da variável "destination" para redirecionar pro caso ocorrido (que indica para qual tela irá) 
+    Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => destination),
+    );
+  }
+
+  // Função que cria cada comentário com o nome, texto, estrelas, like e deslike
+  Widget _buildComment({required String name, required String text, required int rating}) {
+    return Card(
+      margin: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              name,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18.0,
+                color: Color(0xFF353535),
+              ),
+            ),
+            const SizedBox(height: 4.0),
+            RatingBarIndicator(
+              rating: rating.toDouble(),
+              itemBuilder: (context, _) => const Icon(Icons.star, color: Color(0xFF93B6EE)),
+              itemCount: 5,
+              itemSize: 20.0,
+              direction: Axis.horizontal,
+            ),
+            const SizedBox(height: 8.0),
+            Text(
+              text,
+              style: TextStyle(fontSize: 16.0, color: Color(0xFF353535)),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.thumb_up_alt_outlined, color: Color(0xFF93B6EE)),
+                  onPressed: () {
+                    // Ação do like
+                  },
+                ),
+                IconButton(
+                  icon: const Icon(Icons.thumb_down_alt_outlined, color: Color(0xFF93B6EE)),
+                  onPressed: () {
+                    // Ação do deslike
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 
@@ -126,10 +180,10 @@ class _InfoState extends State<InfoProdutos> {
               ),
             ),
             ),
-
-            // Informações do produto
+            
+             // Informações do produto
             Padding(
-              padding: const EdgeInsets.only(top: 280.0, left: 18.0), // Ajuste a margem superior conforme necessário
+              padding: const EdgeInsets.only(top: 280.0, left: 21.5), // Ajuste a margem superior conforme necessário
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -142,7 +196,9 @@ class _InfoState extends State<InfoProdutos> {
                       color: Color(0xFF353535),
                     ),
                   ),
+                  
                   SizedBox(height: 6.0),
+                  
                   Text(
                     produtos.desc,
                     style: TextStyle(
@@ -155,40 +211,124 @@ class _InfoState extends State<InfoProdutos> {
                 ],
               ),
             ),
+
+            // Adiciona seção de comentários com PageView
+            Padding(
+              padding: const EdgeInsets.only(top: 400.0, left: 21.5),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    'Comentários',
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontFamily: 'RedHatDisplay',
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF353535),
+                    ),
+                  ),
+
+                  SizedBox(height: 6.0),
+
+                  Container(
+                    padding: EdgeInsets.only(right: 21.5),
+                    height: 484.0,
+                    child: PageView(
+                      controller: _pageController,
+                      onPageChanged: (index) {
+                        setState(() {
+                          _currentPage = index;
+                        });
+                      },
+                      children: [
+                        // Página 1 de comentários
+                        Column(
+                          children: [
+                            _buildComment(name: 'Gama Russi', text: 'Ótimo produto, recomendo!', rating: 5),
+                            _buildComment(name: 'Marina Sarjani', text: 'Muito bom, mas poderia ser mais barato.', rating: 4),
+                            _buildComment(name: 'Gustavo Henrique', text: 'Gostei bastante, mas tive alguns problemas.', rating: 3),
+                          ],
+                        ),
+                        // Página 2 de comentários
+                        Column(
+                          children: [
+                            _buildComment(name: 'Militão da Silva', text: 'Cumpre o que promete.', rating: 4),
+                            _buildComment(name: 'Kevin dos Santos', text: 'Não gostei, esperava mais.', rating: 2),
+                            _buildComment(name: 'Daniel Biondi', text: 'Excelente! Melhor compra do ano!', rating: 5),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Padding(
+                    padding: EdgeInsets.only(right: 21.5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        IconButton(
+                          icon: Icon(Icons.arrow_back, color: _currentPage == 0 ? Colors.grey : Color(0xFF93B6EE)),
+                          onPressed: () {
+                            if (_currentPage > 0) {
+                              _pageController.previousPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.easeIn,
+                              );
+                            }
+                          },
+                        ),
+                        IconButton(
+                          icon: Icon(Icons.arrow_forward, color: _currentPage == 1 ? Colors.grey : Color(0xFF93B6EE)),
+                          onPressed: () {
+                            if (_currentPage < 1) {
+                              _pageController.nextPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.easeIn,
+                              );
+                            }
+                          },
+                        ),
+
+                        SizedBox(height: 20.0)
+
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0), //Coloca padding simétrico, tanto na esquerda, como na direita
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: ClipRRect(
           borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(30.0), // Arredonda apenas o canto superior esquerdo
-            topRight: Radius.circular(30.0), // Arredonda apenas o canto superior direito
-          ), 
-          child: BottomNavigationBar (
+            topLeft: Radius.circular(30.0),
+            topRight: Radius.circular(30.0),
+          ),
+          child: BottomNavigationBar(
             items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem( //Ícone 
+              BottomNavigationBarItem(
                 icon: Icon(Icons.question_answer_outlined),
-                //Label não pode ser nula, se não dá erro
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.home_outlined),
                 label: '',
               ),
-          
               BottomNavigationBarItem(
-                icon: Icon(Icons.add_circle_outline), 
+                icon: Icon(Icons.add_circle_outline),
                 label: '',
               ),
             ],
-            currentIndex: _selectedIndex, // Posição
-            selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
-            unselectedItemColor: const Color(0XFF93B6EE), // Botão deselecionado
+            currentIndex: _selectedIndex,
+            selectedItemColor: const Color(0XFF93B6EE),
+            unselectedItemColor: const Color(0XFF93B6EE),
             backgroundColor: const Color(0XFFF4F4F2),
-            onTap: _onItemTapped, // Função acionada ao clicar
-            showSelectedLabels: false, // Evita que a label apareça quando selecionado
-            showUnselectedLabels: false, // Evita que a label apareça quando deselecionado
+            onTap: _onItemTapped,
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
           ),
         ),
       ),
