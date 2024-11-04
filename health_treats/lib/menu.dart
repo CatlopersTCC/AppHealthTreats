@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_treats/bebidas.dart';
-import 'package:health_treats/comentarios.dart';
+import 'package:health_treats/cadastro.dart';
 import 'package:health_treats/doces.dart';
 import 'package:health_treats/massas.dart';
 import 'package:health_treats/salgados.dart';
@@ -41,8 +41,10 @@ class _MenuInicio extends State<MenuInicio> {
     Widget destination; // Criando a variável que controla o redirecionamento
     switch (index) {
       case 0:
-        destination = const ComentariosApp(); // Caso 0 acontece se clicar no 1º botão da bottomNavigationBar
-      break;
+        destination = Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => TelaCadastro()),
+        ) as Widget; //Simulando uma ação de "sair" da seção
       case 1:
         destination = const MenuApp(); // Caso 1 acontece se clicar no 2º botão da bottomNavigationBar
       break;
@@ -331,7 +333,7 @@ class _MenuInicio extends State<MenuInicio> {
         child: BottomNavigationBar (
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem( // Ícone 
-              icon: Icon(Icons.question_answer_outlined),
+              icon: Icon(Icons.exit_to_app),
               // Label não pode ser nula, se não dá erro
               label: '',
             ),

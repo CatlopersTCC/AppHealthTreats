@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:health_treats/comentarios.dart';
+import 'package:health_treats/cadastro.dart';
 import 'package:health_treats/menu.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -48,7 +48,10 @@ class _SobreMenu extends State<SobreMenu> {
     Widget destination; // Criando a variável
     switch (index) {
       case 0:
-        destination = const ComentariosApp(); // Caso 0 acontece se clicar no 1º botão da bottomNavigationBar
+        destination = Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => TelaCadastro()),
+        ) as Widget; //Simulando uma ação de "sair" da seção
       break;
       case 1:
         destination = const MenuApp(); // Caso 1 acontece se clicar no 2º botão da bottomNavigationBar
@@ -323,7 +326,7 @@ class _SobreMenu extends State<SobreMenu> {
           child: BottomNavigationBar (
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem( // Ícone 
-                icon: Icon(Icons.question_answer_outlined),
+                icon: Icon(Icons.exit_to_app),
                 //Label não pode ser nula, se não dá erro
                 label: '',
               ),
