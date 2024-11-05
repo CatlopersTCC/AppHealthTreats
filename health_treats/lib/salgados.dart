@@ -28,6 +28,22 @@ class _SalgadosState extends State<Salgados> {
   String descComent2 = '';
   int rating2 = 0;
 
+  String nomeComent3 = '';
+  String descComent3 = '';
+  int rating3 = 0;
+
+  String nomeComent4 = '';
+  String descComent4 = '';
+  int rating4 = 0;
+
+  String nomeComent5 = '';
+  String descComent5 = '';
+  int rating5 = 0;
+
+  String nomeComent6 = '';
+  String descComent6 = '';
+  int rating6 = 0;
+
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
@@ -154,15 +170,44 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Carne moída. Couve-flor. Cebola picada. Sal. Pimenta-do-reino. Salsinha. Manteiga.';
                       
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -222,15 +267,44 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -296,15 +370,44 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -364,15 +467,44 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -437,15 +569,44 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -505,15 +666,44 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
-                      );                      
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
+                      );
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(

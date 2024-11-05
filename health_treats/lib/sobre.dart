@@ -153,7 +153,7 @@ class _SobreMenu extends State<SobreMenu> {
                   Column(
                     children: [
                       Text(
-                        'Muito prazer, \nNome.', // Título
+                        'Muito prazer, \nUsuário!', // Título
                         style: TextStyle(
                           fontSize: 45.0, // Tamanho da fonte
                           color: Color(0XFF353535), // Cor da fonte

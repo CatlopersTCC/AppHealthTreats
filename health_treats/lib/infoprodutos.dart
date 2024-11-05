@@ -254,15 +254,15 @@ class _InfoState extends State<InfoProdutos> {
                         children: [
                           _buildComment(name: produtos.nomeComent, text: produtos.descComent, rating: produtos.rating), // Comentário da primeira página
                           _buildComment(name: produtos.nomeComent2, text: produtos.descComent2, rating: produtos.rating2), // Comentário da primeira página
-                          _buildComment(name: 'Gustavo Henrique', text: 'Gostei bastante, mas tive alguns problemas.', rating: 3), // Comentário da primeira página
+                          _buildComment(name: produtos.nomeComent3, text: produtos.descComent3, rating: produtos.rating3), // Comentário da primeira página
                         ],
                       ),
                     
                       Column( // Página 2 de comentários
                         children: [
-                          _buildComment(name: 'Militão da Silva', text: 'Cumpre o que promete.', rating: 4), // Comentário da segunda página
-                          _buildComment(name: 'Kevin dos Santos', text: 'Não gostei, esperava mais.', rating: 2), // Comentário da segunda página
-                          _buildComment(name: 'Daniel Biondi', text: 'Excelente! Melhor compra do ano!', rating: 5), // Comentário da segunda página
+                          _buildComment(name: produtos.nomeComent4, text: produtos.descComent4, rating: produtos.rating4), // Comentário da segunda página
+                          _buildComment(name: produtos.nomeComent5, text: produtos.descComent5, rating: produtos.rating5), // Comentário da segunda página
+                          _buildComment(name: produtos.nomeComent6, text: produtos.descComent6, rating: produtos.rating6), // Comentário da segunda página
                         ],
                       ),
                     ],

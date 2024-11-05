@@ -28,6 +28,22 @@ class _MassasState extends State<Massas> {
   String descComent2 = '';
   int rating2 = 0;
 
+  String nomeComent3 = '';
+  String descComent3 = '';
+  int rating3 = 0;
+
+  String nomeComent4 = '';
+  String descComent4 = '';
+  int rating4 = 0;
+
+  String nomeComent5 = '';
+  String descComent5 = '';
+  int rating5 = 0;
+
+  String nomeComent6 = '';
+  String descComent6 = '';
+  int rating6 = 0;
+
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
@@ -158,13 +174,33 @@ Widget build(BuildContext context) {
                       rating = 5;
 
                       nomeComent2 = 'Rodrigo Garro';
-                      descComent2 ='56';
-                      rating2 = 2;
+                      descComent2 ='Adorei!';
+                      rating2 = 4;
+
+                      nomeComent3 = 'Alexandre Araújo';
+                      descComent3 = 'Odiei';
+                      rating3 = 0;
+
+                      nomeComent4 = 'Maxwell Lima';
+                      descComent4 = 'Melhor comida do mundo';
+                      rating4 = 5;
+
+                      nomeComent5 = 'Enéias Miquéias';
+                      descComent5 = 'Sabor aceitável';
+                      rating5 = 3;
+
+                      nomeComent6 = 'Romero Guedes';
+                      descComent6 = 'Sem comentários';
+                      rating6 = 4;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
 
                       Navigator.push(
@@ -226,14 +262,42 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
 
                       Navigator.push(
@@ -301,14 +365,42 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
 
                       Navigator.push(
@@ -370,15 +462,44 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -443,14 +564,42 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
 
                       Navigator.push(
@@ -512,14 +661,42 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent = '';
+                      descComent ='';
+                      rating = 0;
+
                       nomeComent2 = '';
                       descComent2 ='';
-                      rating2 = 2;
+                      rating2 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent3 = '';
+                      descComent3 = '';
+                      rating3 = 0;
+
+                      nomeComent4 = '';
+                      descComent4 = '';
+                      rating4 = 0;
+
+                      nomeComent5 = '';
+                      descComent5 = '';
+                      rating5 = 0;
+
+                      nomeComent6 = '';
+                      descComent6 = '';
+                      rating6 = 0;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
                         nomeComent, descComent, rating,
-                        nomeComent2, descComent, rating
+                        nomeComent2, descComent2, rating2,
+                        nomeComent3, descComent3, rating3,
+                        nomeComent4, descComent4, rating4,
+                        nomeComent5, descComent5, rating5,
+                        nomeComent6, descComent6, rating6,
                       );
 
                       Navigator.push(

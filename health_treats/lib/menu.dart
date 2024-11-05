@@ -109,7 +109,7 @@ class _MenuInicio extends State<MenuInicio> {
                 crossAxisAlignment: CrossAxisAlignment.start, // Instrução para o texto se posicionar na esquerda, a posição inicial
                 children: <Widget>[
                   Text(
-                    'Olá, Nome.',
+                    'Olá, Usuário!',
                     style: TextStyle( // Estilização do texto
                       fontSize: 46.0,
                       fontFamily: 'RedHatDisplay', // Fonte utilizada no projeto
