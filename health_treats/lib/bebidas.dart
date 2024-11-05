@@ -19,9 +19,16 @@ class _BebidasState extends State<Bebidas> {
   String valorProd = '';
   String pathImg = '';
   String descProd = '';
+
   String nomeComent = '';
   String descComent = '';
   int rating = 0;
+
+  String nomeComent2 = '';
+  String descComent2 = '';
+  int rating2 = 0;
+
+
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
@@ -148,8 +155,14 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent2 = '';
+                      descComent2 ='';
+                      rating2 = 2;
+
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
+                        nomeProd, valorProd, pathImg, descProd, 
+                        nomeComent, descComent, rating,
+                        nomeComent2, descComent, rating
                       );
 
                       Navigator.push(
@@ -212,8 +225,14 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent2 = '';
+                      descComent2 ='';
+                      rating2 = 2;
+
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
+                        nomeProd, valorProd, pathImg, descProd, 
+                        nomeComent, descComent, rating,
+                        nomeComent2, descComent, rating
                       );
 
                       Navigator.push(
@@ -281,8 +300,14 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent2 = '';
+                      descComent2 ='';
+                      rating2 = 2;
+
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
+                        nomeProd, valorProd, pathImg, descProd, 
+                        nomeComent, descComent, rating,
+                        nomeComent2, descComent, rating
                       );
 
                       Navigator.push(
@@ -344,8 +369,14 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent2 = '';
+                      descComent2 ='';
+                      rating2 = 2;
+
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
+                        nomeProd, valorProd, pathImg, descProd, 
+                        nomeComent, descComent, rating,
+                        nomeComent2, descComent, rating
                       );
 
                       Navigator.push(
@@ -412,8 +443,14 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent2 = '';
+                      descComent2 ='';
+                      rating2 = 2;
+
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
+                        nomeProd, valorProd, pathImg, descProd, 
+                        nomeComent, descComent, rating,
+                        nomeComent2, descComent, rating
                       );
 
                       Navigator.push(
@@ -475,8 +512,14 @@ Widget build(BuildContext context) {
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
 
+                      nomeComent2 = '';
+                      descComent2 ='';
+                      rating2 = 2;
+
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
+                        nomeProd, valorProd, pathImg, descProd, 
+                        nomeComent, descComent, rating,
+                        nomeComent2, descComent, rating
                       );
 
                       Navigator.push(

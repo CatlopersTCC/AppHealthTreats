@@ -253,7 +253,7 @@ class _InfoState extends State<InfoProdutos> {
                       Column( // Página 1 de comentários
                         children: [
                           _buildComment(name: produtos.nomeComent, text: produtos.descComent, rating: produtos.rating), // Comentário da primeira página
-                          _buildComment(name: 'Marina Sarjani', text: 'Muito bom, mas poderia ser mais barato.', rating: 4), // Comentário da primeira página
+                          _buildComment(name: produtos.nomeComent2, text: produtos.descComent2, rating: produtos.rating2), // Comentário da primeira página
                           _buildComment(name: 'Gustavo Henrique', text: 'Gostei bastante, mas tive alguns problemas.', rating: 3), // Comentário da primeira página
                         ],
                       ),
