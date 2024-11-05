@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:health_treats/comentarios.dart';
+import 'package:health_treats/cadastro.dart';
 import 'package:health_treats/menu.dart';
 import 'package:health_treats/pesquisa.dart';
 import 'package:health_treats/produtos.dart';
@@ -27,7 +27,10 @@ class _InfoState extends State<InfoProdutos> {
     Widget destination; // Criando a variável que controla o redirecionamento
     switch (index) {
       case 0:
-        destination = const ComentariosApp(); // Caso 0 acontece se clicar no 1º botão da bottomNavigationBar
+        destination = Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => TelaCadastro()),
+        ) as Widget; //Simulando uma ação de "sair" da seção
       break;
       case 1:
         destination = const MenuApp(); // Caso 1 acontece se clicar no 2º botão da bottomNavigationBar
@@ -249,7 +252,7 @@ class _InfoState extends State<InfoProdutos> {
                     children: [
                       Column( // Página 1 de comentários
                         children: [
-                          _buildComment(name: 'Gama Russi', text: 'Ótimo produto, recomendo!', rating: 5), // Comentário da primeira página
+                          _buildComment(name: produtos.nomeComent, text: produtos.descComent, rating: produtos.rating), // Comentário da primeira página
                           _buildComment(name: 'Marina Sarjani', text: 'Muito bom, mas poderia ser mais barato.', rating: 4), // Comentário da primeira página
                           _buildComment(name: 'Gustavo Henrique', text: 'Gostei bastante, mas tive alguns problemas.', rating: 3), // Comentário da primeira página
                         ],

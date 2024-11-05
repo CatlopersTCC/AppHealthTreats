@@ -19,6 +19,9 @@ class _SalgadosState extends State<Salgados> {
   String valorProd = '';
   String pathImg = '';
   String descProd = '';
+  String nomeComent = '';
+  String descComent = ''; 
+  int rating = 0; 
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
@@ -144,8 +147,9 @@ Widget build(BuildContext context) {
                       valorProd = 'R\$20.00';
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Carne moída. Couve-flor. Cebola picada. Sal. Pimenta-do-reino. Salsinha. Manteiga.';
+                      
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -208,7 +212,7 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -277,7 +281,7 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -340,7 +344,7 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -408,7 +412,7 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -471,9 +475,9 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
-
+                      
                       Navigator.push(
                         context,
                         MaterialPageRoute(

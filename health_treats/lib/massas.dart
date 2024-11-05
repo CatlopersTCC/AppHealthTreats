@@ -19,6 +19,10 @@ class _MassasState extends State<Massas> {
   String valorProd = '';
   String pathImg = '';
   String descProd = '';
+  String nomeComent = '';
+  String descComent = '';
+  int rating = 0;
+
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
@@ -138,14 +142,17 @@ Widget build(BuildContext context) {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: (){
+                    onTap: () {
                       nomeProd = 'Produto 1';
                       valorProd = 'R\$20.00';
                       pathImg = 'assets/img/salgadinho.png';
                       descProd = 'Descrição rápida';
+                      nomeComent = 'Garnacho Vieira';
+                      descComent = 'Gostei demais! Indico.';
+                      rating = 5;
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -208,7 +215,7 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -277,7 +284,7 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -340,7 +347,7 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -408,7 +415,7 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
@@ -471,7 +478,7 @@ Widget build(BuildContext context) {
                       descProd = 'Descrição rápida';
 
                       Produtos produtos = Produtos(
-                        nomeProd, valorProd, pathImg, descProd
+                        nomeProd, valorProd, pathImg, descProd, nomeComent, descComent, rating
                       );
 
                       Navigator.push(
