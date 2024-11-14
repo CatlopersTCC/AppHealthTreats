@@ -166,38 +166,34 @@ Widget build(BuildContext context) {
                 children: [
                   InkWell(
                     onTap: (){
-                      nomeProd = 'Produto 1';
+                      nomeProd = 'Geleia de Uva';
                       valorProd = 'R\$20.00';
-                      pathImg = 'assets/img/salgadinho.png';
+                      pathImg = 'assets/img/doces/Geleia_de_uva.png';
                       descProd = 'Descrição rápida';
 
-                      nomeComent = '';
-                      descComent ='';
-                      rating = 0;
+                      nomeComent = 'Aline Domingues Cidade';
+                      descComent = 'Excelente opção para quem controla a glicemia!';
+                      rating = 4;
 
-                      nomeComent2 = '';
-                      descComent2 ='';
-                      rating2 = 0;
+                      nomeComent2 = 'André Lucas';
+                      descComent2 ='Sabor autêntico e saudável!';
+                      rating2 = 5;
 
-                      nomeComent3 = '';
-                      descComent3 = '';
-                      rating3 = 0;
+                      nomeComent3 = 'Jucilene Claudiane';
+                      descComent3 = 'Sabor um pouco amargo.';
+                      rating3 = 3;
 
-                      nomeComent3 = '';
-                      descComent3 = '';
-                      rating3 = 0;
+                      nomeComent4 = 'Wagner Botelho';
+                      descComent4 = 'O preço não favorece.';
+                      rating4 = 1;
 
-                      nomeComent4 = '';
-                      descComent4 = '';
-                      rating4 = 0;
+                      nomeComent5 = 'Barbara Vitória';
+                      descComent5 = 'Adocicado e marcante.';
+                      rating5 = 5;
 
-                      nomeComent5 = '';
-                      descComent5 = '';
-                      rating5 = 0;
-
-                      nomeComent6 = '';
-                      descComent6 = '';
-                      rating6 = 0;
+                      nomeComent6 = 'Wellington dos Prazeres';
+                      descComent6 = 'Com um toque especial de uva, recomendo muito.';
+                      rating6 = 5;
 
                       Produtos produtos = Produtos(
                         nomeProd, valorProd, pathImg, descProd, 
@@ -232,11 +228,11 @@ Widget build(BuildContext context) {
                           children: [
                             CircleAvatar(
                               radius: 70.0,
-                              backgroundImage: AssetImage('assets/img/salgadinho.png'),
+                              backgroundImage: AssetImage('assets/img/doces/Geleia_de_uva.png'),
                             ),
                             const SizedBox(height: 18.0),
                             const Text(
-                              'Doces',
+                              'Geleia de Uva',
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
@@ -263,9 +259,9 @@ Widget build(BuildContext context) {
 
                   InkWell(
                     onTap: (){
-                      nomeProd = 'Produto 2';
+                      nomeProd = 'Geleia de Framboesa';
                       valorProd = 'R\$28.00';
-                      pathImg = 'assets/img/salgadinho.png';
+                      pathImg = 'assets/img/doces/Geleia_de_framboesa.png';
                       descProd = 'Descrição longa';
 
                       nomeComent = '';
@@ -329,11 +325,11 @@ Widget build(BuildContext context) {
                           children: [
                             CircleAvatar(
                               radius: 70.0,
-                              backgroundImage: AssetImage('assets/img/salgadinho.png'),
+                              backgroundImage: AssetImage('assets/img/doces/Geleia_de_framboesa.png'),
                             ),
                             const SizedBox(height: 18.0),
                             const Text(
-                              'Doces',
+                              'Geleia de Framboesa',
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
@@ -366,9 +362,9 @@ Widget build(BuildContext context) {
                 children: [
                   InkWell(
                     onTap: (){
-                      nomeProd = 'Produto 3';
+                      nomeProd = 'Geleia de Laranja';
                       valorProd = 'R\$.00';
-                      pathImg = 'assets/img/salgadinho.png';
+                      pathImg = 'assets/img/doces/Geleia_de_laranja.png';
                       descProd = 'Descrição não';
 
                       nomeComent = '';
@@ -432,11 +428,11 @@ Widget build(BuildContext context) {
                           children: [
                             CircleAvatar(
                               radius: 70.0,
-                              backgroundImage: AssetImage('assets/img/salgadinho.png'),
+                              backgroundImage: AssetImage('assets/img/doces/Geleia_de_laranja.png'),
                             ),
                             const SizedBox(height: 18.0),
                             const Text(
-                              'Doces',
+                              'Geleia de Laranja',
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontFamily: 'RedHatDisplay',
@@ -463,9 +459,9 @@ Widget build(BuildContext context) {
 
                   InkWell(
                     onTap: (){
-                      nomeProd = 'Produto 4';
+                      nomeProd = 'Geleia de Limão';
                       valorProd = 'R\$.00';
-                      pathImg = 'assets/img/salgadinho.png';
+                      pathImg = 'assets/img/doces/Geleia_de_limao.png';
                       descProd = 'Descrição rápida';
 
                       nomeComent = '';
@@ -529,11 +525,11 @@ Widget build(BuildContext context) {
                           children: [
                             CircleAvatar(
                               radius: 70.0,
-                              backgroundImage: AssetImage('assets/img/salgadinho.png'),
+                              backgroundImage: AssetImage('assets/img/doces/Geleia_de_limao.png'),
                             ),
                             const SizedBox(height: 18.0),
                             const Text(
-                              'Doces',
+                              'Geleia de Limão',
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
@@ -565,9 +561,9 @@ Widget build(BuildContext context) {
                 children: [
                   InkWell(
                     onTap: (){
-                      nomeProd = 'Produto 5';
+                      nomeProd = 'Geleia de Morango';
                       valorProd = 'R\$.00';
-                      pathImg = 'assets/img/salgadinho.png';
+                      pathImg = 'assets/img/doces/Geleia_de_morango.png';
                       descProd = 'Descrição rápida';
 
                      nomeComent = '';
@@ -631,11 +627,11 @@ Widget build(BuildContext context) {
                           children: [
                             CircleAvatar(
                               radius: 70.0,
-                              backgroundImage: AssetImage('assets/img/salgadinho.png'),
+                              backgroundImage: AssetImage('assets/img/doces/Geleia_de_morango.png'),
                             ),
                             const SizedBox(height: 18.0),
                             const Text(
-                              'Doces',
+                              'Geleia de Morango',
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontFamily: 'RedHatDisplay',
@@ -662,9 +658,9 @@ Widget build(BuildContext context) {
 
                   InkWell(
                     onTap: (){
-                      nomeProd = 'Produto 6';
+                      nomeProd = 'Geleia de Maracujá';
                       valorProd = 'R\$.00';
-                      pathImg = 'assets/img/salgadinho.png';
+                      pathImg = 'assets/img/doces/Geleia_de_maracuja.png';
                       descProd = 'Descrição rápida';
 
                       nomeComent = '';
@@ -728,11 +724,11 @@ Widget build(BuildContext context) {
                           children: [
                             CircleAvatar(
                               radius: 70.0,
-                              backgroundImage: AssetImage('assets/img/salgadinho.png'),
+                              backgroundImage: AssetImage('assets/img/doces/Geleia_de_maracuja.png'),
                             ),
                             const SizedBox(height: 18.0),
                             const Text(
-                              'Doces',
+                              'Geleia de Maracujá',
                               style: TextStyle(
                                 fontSize: 18.0,
                                 fontFamily: 'RedHatDisplay',

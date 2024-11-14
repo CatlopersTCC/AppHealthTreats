@@ -168,13 +168,15 @@ class _InfoState extends State<InfoProdutos> {
               elevation: 5, // Sombra no card
               margin: EdgeInsets.only(top: 50.0), // Margem do topo
               child: SizedBox( // Tamanho do card
-                width: 205.0, // Largura
-                height: 205.0, // Altura
+                width: 250.0, // Largura
+                height: 275.0, // Altura
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center, // Posicionando os filhos do card no meio
                   children: [
                     Image.asset( // Chamando foto
                       produtos.foto, // Variável sendo puxada trazendo a foto
+                      width: 250.0,
+                      height: 249.0,
                     ),
                     Text(
                       produtos.nome, // Varíavel sendo puxada trazendo o nome do produto
@@ -192,7 +194,7 @@ class _InfoState extends State<InfoProdutos> {
           ),
              
           Padding( // Informações do produto
-            padding: const EdgeInsets.only(top: 280.0, left: 21.5), // Ajustando o espaçamento
+            padding: const EdgeInsets.only(top: 300.0, left: 21.5), // Ajustando o espaçamento
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start, // Posicionando o elemento no início da tela
               children: <Widget>[ // Criando um widget
