@@ -28,6 +28,7 @@ class PesquisaApp extends StatefulWidget {
   const PesquisaApp({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _PesquisaApp createState() => _PesquisaApp();
 }
 
@@ -237,7 +238,7 @@ class _PesquisaApp extends State<PesquisaApp> {
         currentIndex: _selectedIndex, // Posição
         selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
         unselectedItemColor: const Color(0XFF93B6EE), // Botão deselecionado
-        backgroundColor: const Color(0XFFF4F4F2),
+        backgroundColor: const Color(0XFFE9E9E8),
         onTap: _onItemTapped, // Função acionada ao clicar
         showSelectedLabels: false, // Evita que a label apareça quando selecionado
         showUnselectedLabels: false, // Evita que a label apareça quando deselecionado

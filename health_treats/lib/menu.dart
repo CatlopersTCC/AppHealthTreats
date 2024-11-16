@@ -26,6 +26,7 @@ class MenuInicio extends StatefulWidget {
   const MenuInicio({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _MenuInicio createState() => _MenuInicio();
 }
 
@@ -132,7 +133,7 @@ class _MenuInicio extends State<MenuInicio> {
             onTap: () { // Função executada ao clicar
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Bebidas()), // Ao clicar direciona para a página "Doces"
+                MaterialPageRoute(builder: (context) => Bebidas()), // Ao clicar direciona para a página "Bebidas"
               );
             },
 
