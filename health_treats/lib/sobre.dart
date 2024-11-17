@@ -343,7 +343,7 @@ class _SobreMenu extends State<SobreMenu> {
             currentIndex: _selectedIndex, // Posição
             selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
             unselectedItemColor: const Color(0XFF93B6EE), // Botão deselecionado
-            backgroundColor: const Color(0XFFF4F4F2),
+            backgroundColor: const Color(0XFFE9E9E8), // Cor de fundo
             onTap: _onItemTapped, // Função acionada ao clicar
             showSelectedLabels: false, // Evita que a label apareça quando selecionado
             showUnselectedLabels: false, // Evita que a label apareça quando deselecionado

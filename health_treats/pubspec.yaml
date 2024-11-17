@@ -25,7 +25,10 @@ flutter:
   assets:
     - assets/img/
     - assets/img/doces/
-  
+    - assets/img/massas/
+    - assets/img/bebidas/
+    - assets/img/salgados/
+
   fonts:
     - family: RedHatDisplay
       fonts:

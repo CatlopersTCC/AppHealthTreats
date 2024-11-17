@@ -19,8 +19,50 @@ class _DocesState extends State<Doces> {
    final List<Produtos> produtos = [
 
     Produtos(
+      nome: 'Cacau com Amêndoas',
+      valor: 'R\$8.00',
+      foto: 'assets/img/doces/chocolate _de_cacau_com_amendoas.png',
+      desc: 'Descrição rápida',
+      comentarios: [
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 3),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 1),
+      ],
+    ), 
+    Produtos(
+      nome: 'Chocolate com Frutas',
+      valor: 'R\$8.00',
+      foto: 'assets/img/doces/chocolate_de_cacau_com_frutas_vermelhas.png',
+      desc: 'Descrição rápida',
+      comentarios: [
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 3),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 1),
+      ],
+    ),  
+    Produtos(
+      nome: 'Chocolate Branco',
+      valor: 'R\$8.00',
+      foto: 'assets/img/doces/chocolate_de_chocolate_branco_com_coco.png',
+      desc: 'Descrição rápida',
+      comentarios: [
+        Comentario(nome: '', desc: '', rating: 4),
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 1),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 5),
+      ],
+    ),    
+    Produtos(
       nome: 'Geleia de Uva',
-      valor: 'R\$20.00',
+      valor: 'R\$22.00',
       foto: 'assets/img/doces/Geleia_de_uva.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -34,7 +76,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Geleia de Framboesa',
-      valor: 'R\$28.00',
+      valor: 'R\$25.00',
       foto: 'assets/img/doces/Geleia_de_framboesa.png',
       desc: 'Descrição longa',
       comentarios: [
@@ -48,16 +90,16 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Geleia de Laranja',
-      valor: 'R\$18.00',
+      valor: 'R\$18.50',
       foto: 'assets/img/doces/Geleia_de_laranja.png',
       desc: 'Descrição especial',
       comentarios: [
         Comentario(nome: 'Selma Costa', desc: 'Muito boa para um café da manhã equilibrado.', rating: 5),
         Comentario(nome: 'Junior Lima', desc: 'Gosto muito de geleia, ainda mais se for de laranja!', rating: 5),
-        Comentario(nome: 'Enzo Guilherme', desc: 'Simplesmente o melhor sabor que provei.', rating: 4),
+        Comentario(nome: 'Enzo Miguel Arantes', desc: 'Simplesmente o melhor sabor que provei.', rating: 4),
         Comentario(nome: 'Nilson Queiroz', desc: 'Não sei...falta alguma coisa.', rating: 2),
         Comentario(nome: 'Renan Mendes', desc: 'Curti o design do produto.', rating: 3),
-        Comentario(nome: 'Maria José', desc: 'Demorou pra chegar.', rating: 2),
+        Comentario(nome: 'Maria José Tomé', desc: 'Demorou pra chegar.', rating: 2),
       ],
     ),
     Produtos(
@@ -76,7 +118,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Geleia de Morango',
-      valor: 'R\$18.00',
+      valor: 'R\$22.00',
       foto: 'assets/img/doces/Geleia_de_morango.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -90,7 +132,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Geleia de Maracujá',
-      valor: 'R\$18.00',
+      valor: 'R\$21.00',
       foto: 'assets/img/doces/Geleia_de_maracuja.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -100,6 +142,76 @@ class _DocesState extends State<Doces> {
         Comentario(nome: 'Regiane Fogaça', desc: 'Excelente produto.', rating: 4),
         Comentario(nome: 'Ravi Fernandes', desc: 'O gosto é bom, só não curti muito a consistência.', rating: 3),
         Comentario(nome: 'Renan Mitsuru', desc: 'Está dentro do esperado.', rating: 3),
+      ],
+    ),
+    Produtos(
+      nome: 'Coockie de Uva',
+      valor: 'R\$5.00',
+      foto: 'assets/img/doces/cookie_de_uva.png',
+      desc: 'Descrição rápida',
+      comentarios: [
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 3),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 1),
+      ],
+    ), 
+    Produtos(
+      nome: 'Coockie de Cereja',
+      valor: 'R\$4.50',
+      foto: 'assets/img/doces/cookie_de_cereja.png',
+      desc: 'Descrição rápida',
+      comentarios: [
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 3),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 1),
+      ],
+    ),  
+    Produtos(
+      nome: 'Coockie de Baunilha',
+      valor: 'R\$8.00',
+      foto: 'assets/img/doces/cookie_de_baunilha.png',
+      desc: 'Descrição rápida',
+      comentarios: [
+        Comentario(nome: '', desc: '', rating: 4),
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 1),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 5),
+      ],
+    ),
+    Produtos(
+      nome: 'Coockie de Blueberry',
+      valor: 'R\$5.00',
+      foto: 'assets/img/doces/cookie_de_blueberry.png',
+      desc: 'Descrição rápida',
+      comentarios: [
+        Comentario(nome: '', desc: '', rating: 4),
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 1),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 5),
+      ],
+    ),
+    Produtos(
+      nome: 'Coockie Branco',
+      valor: 'R\$8.00',
+      foto: 'assets/img/doces/cookie_de_chocolate_branco.png',
+      desc: 'Descrição rápida',
+      comentarios: [
+        Comentario(nome: '', desc: '', rating: 4),
+        Comentario(nome: '', desc: '', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 5),
+        Comentario(nome: '', desc: '.', rating: 1),
+        Comentario(nome: '', desc: '.', rating: 4),
+        Comentario(nome: '', desc: '.', rating: 5),
       ],
     ),
   ];
