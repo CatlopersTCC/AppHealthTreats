@@ -291,7 +291,7 @@ class _SalgadosState extends State<Salgados> {
                           );
                         },
                         child: Card(
-                          color: const Color(0xFFD9D9D9), // Cor do card
+                          color: const Color(0xFFF0EFEF), // Cor do card
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0), // Arredondando as bordas do card
                           ),
@@ -362,7 +362,7 @@ class _SalgadosState extends State<Salgados> {
               currentIndex: _selectedIndex, // Posição
               selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
               unselectedItemColor: const Color(0XFF93B6EE), // Botão sem estar selecionado
-              backgroundColor: const Color(0XFFE9E9E8), // Cor do fundo
+              backgroundColor: const Color(0xFFF0EFEF), // Cor do fundo
               onTap: _onItemTapped, // Função acionada ao clicar
               showSelectedLabels: false, // Evita que a label apareça quando selecionado
               showUnselectedLabels: false, // Evita que a label apareça quando deselecionado

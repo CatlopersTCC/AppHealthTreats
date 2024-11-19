@@ -352,7 +352,7 @@ class _MenuInicio extends State<MenuInicio> {
         currentIndex: _selectedIndex, // Posição
         selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
         unselectedItemColor: const Color(0XFF93B6EE), // Botão deselecionado
-        backgroundColor: const Color(0XFFE9E9E8), // Cor de fundo
+        backgroundColor: const Color(0xFFF0EFEF), // Cor de fundo
         onTap: _onItemTapped, // Função acionada ao clicar
         showSelectedLabels: false, // Evita que a label apareça quando selecionado
         showUnselectedLabels: false, // Evita que a label apareça quando deselecionado

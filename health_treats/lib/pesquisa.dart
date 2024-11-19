@@ -37,7 +37,7 @@ class _PesquisaApp extends State<PesquisaApp> {
   int _selectedIndex = 0;
 
   // Lista completa de itens pesquisáveis
-  List<String> _items = ['Bebidas', 'Salgados', 'Doces', 'Massas'];
+  List<String> _items = ['Chá', 'Café', 'Refrigerante', 'Salgadinho', 'Bolacha', 'Geleia', 'Chocolate', 'Cookies', 'Panquecas', 'Pão de Queijo', 'Waffles'];
 
   // Lista que será exibida (inicialmente vazia)
   List<String> _filteredItems = [];
@@ -147,6 +147,7 @@ class _PesquisaApp extends State<PesquisaApp> {
                 itemCount: _filteredItems.length, // Conta o número de elementos para mostrar na tela
                 itemBuilder: (context, index) {
                   return Card(
+                    color: Color(0xFFF0EFEF),
                     elevation: 3, // Adiocina sombra para o elemento
                     margin: const EdgeInsets.symmetric(vertical: 10.0),
                     shape: RoundedRectangleBorder(
@@ -169,25 +170,25 @@ class _PesquisaApp extends State<PesquisaApp> {
 
                       onTap: () { // Função executada no clique
                         // Navegação dependendo de qual item for selecionado
-                        if (_filteredItems[index] == 'Bebidas') {
+                        if (_filteredItems[index] == 'Chá' || _filteredItems[index] == 'Refrigerante' || _filteredItems[index] == 'Café') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => Bebidas()), // Se o usuário selecionar "Bebidas" redireciona para a página
                           );
-                        } else if (_filteredItems[index] == 'Salgados') {
+                        } else if (_filteredItems[index] == 'Bolacha' || _filteredItems[index] == 'Salgadinho') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const Salgados()), // Se o usuário selecionar "Salgados" redireciona para a página
                           );
-                        } else if (_filteredItems[index] == 'Doces') {
+                        } else if (_filteredItems[index] == 'Chocolate' || _filteredItems[index] == 'Cookies' || _filteredItems[index] == 'Geleia') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => const Doces()), // Se o usuário selecionar "Doces" redireciona para a página
                           );
-                        } else if (_filteredItems[index] == 'Massas') {
+                        } else if (_filteredItems[index] == 'Pão de Queijo' || _filteredItems[index] == 'Waffles' || _filteredItems[index] == 'Panquecas') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -213,36 +214,35 @@ class _PesquisaApp extends State<PesquisaApp> {
         ),
       ),
       bottomNavigationBar: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0), // Coloca padding simétrico, tanto na esquerda, como na direita
-      child: ClipRRect(
-        borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(30.0), // Arredonda apenas o canto superior esquerdo
-        topRight: Radius.circular(30.0), // Arredonda apenas o canto superior direito
-      ), 
-        child: BottomNavigationBar (
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem( // Ícone 
-              icon: Icon(Icons.messenger_outline_rounded),
-              // Label não pode ser nula, se não dá erro
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined,),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.add_circle_outline), 
-              label: '',
-            ),
-          ],
-        currentIndex: _selectedIndex, // Posição
-        selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
-        unselectedItemColor: const Color(0XFF93B6EE), // Botão deselecionado
-        backgroundColor: const Color(0XFFE9E9E8),
-        onTap: _onItemTapped, // Função acionada ao clicar
-        showSelectedLabels: false, // Evita que a label apareça quando selecionado
-        showUnselectedLabels: false, // Evita que a label apareça quando deselecionado
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0), // Espaçamento interno uniforme
+        child: ClipRRect( // Estrutura para realizar o arredondamento 
+          borderRadius: const BorderRadius.only( // Arredondando da bottomNavigationBar
+            topLeft: Radius.circular(30.0), // Arredondamento superior esquerdo
+            topRight: Radius.circular(30.0), // Arredondamento superior direito
+          ),
+          child: BottomNavigationBar(
+            items: const <BottomNavigationBarItem>[ // Elementos dentro da bottomNavigationBar
+              BottomNavigationBarItem(
+                icon: Icon(Icons.exit_to_app), // Ícone para a saída
+                label: '', // Label não pode ser nula
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home_outlined), // Ícone para a home
+                label: '', // Label não pode ser nula
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.add_circle_outline), // Ícone para o sobre
+                label: '', // Label não pode ser nula
+              ),
+            ],
+            currentIndex: _selectedIndex, // Posição
+            selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
+            unselectedItemColor: const Color(0XFF93B6EE), // Botão sem estar selecionado
+            backgroundColor: const Color(0xFFF0EFEF), // Cor do fundo
+            onTap: _onItemTapped, // Função acionada ao clicar
+            showSelectedLabels: false, // Evita que a label apareça quando selecionado
+            showUnselectedLabels: false, // Evita que a label apareça quando deselecionado
+          ),
         ),
       ),
     );

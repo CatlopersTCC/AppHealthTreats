@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:health_treats/cadastro.dart';
+import 'package:health_treats/menu.dart';
 import 'package:health_treats/pesquisa.dart';
 import 'package:health_treats/produtos.dart';
+import 'package:health_treats/sobre.dart';
 
 class InfoProduto extends StatefulWidget {
   const InfoProduto({super.key});
@@ -9,17 +12,46 @@ class InfoProduto extends StatefulWidget {
   _InfoProdutoState createState() => _InfoProdutoState();
 }
 
+
 class _InfoProdutoState extends State<InfoProduto> {
   late PageController _pageController;
   int _currentPage = 0;
+
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) { //Função realizada ao clicar em qualquer item da bottomNavigationBar
+    setState(() {
+      _selectedIndex = index;
+    });
+
+    Widget destination; //Criando a variável
+    switch (index) {
+      case 0:
+        destination = Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => TelaCadastro()),
+        ) as Widget; //Simulando uma ação de "sair" da seção
+      case 1:
+        destination = const MenuApp(); //Caso 1 acontece se clicar no 2º botão da bottomNavigationBar
+      break;
+      case 2:
+        destination = const SobreApp(); //Caso 2 acontece se clicar no 3º botão da bottomNavigationBar
+      break;
+      default:
+        destination = const MenuApp(); //Se não acontecer nenhuma das opções acima
+    }
+
+    Navigator.push( //Pegando o conteúdo da variável "destination" para redirecionar pro caso ocorrido (que indica para qual tela irá) 
+      context,
+      MaterialPageRoute(builder: (context) => destination),
+    );
+  }
 
   @override
   void initState() {
     super.initState();
     _pageController = PageController(initialPage: _currentPage);
   }
-
-  
 
   @override
   
@@ -135,19 +167,20 @@ class _InfoProdutoState extends State<InfoProduto> {
             const SizedBox(height: 10.0),
             
             const Padding( // Título com espaçamento interno
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
                 'Comentários:',
                 style: TextStyle(
-                  fontSize: 18.0,
+                  fontSize: 22.0,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'RedHatDisplay',
                 ),
               ),
             ),
             
+
             SizedBox(
-              height: 200, // Altura do PageView
+              height: 330, // Altura do PageView
               child: PageView.builder(
                 controller: _pageController,
                 onPageChanged: (index) {
@@ -160,9 +193,25 @@ class _InfoProdutoState extends State<InfoProduto> {
                   return SingleChildScrollView(
                     child: Column(
                       children: pages[pageIndex].map((comentario) {
-                        return ListTile(
-                          title: Text(comentario.nome),
-                          subtitle: Text(comentario.desc),
+                        return Card(
+                        margin: EdgeInsets.only(left: 20.0, right: 20.0, top: 15.0),
+                        color: Color(0xFFF0EFEF),
+                        child: ListTile(
+                          title: Text(
+                            comentario.nome,
+                            style: TextStyle(
+                              fontFamily: 'RedHatDisplay',
+                              fontWeight: FontWeight.bold,
+                            )
+                          ),
+                          subtitle: Text(
+                            comentario.desc,
+                            style: TextStyle(
+                              fontFamily: 'RedHatDisplay',
+                              fontWeight: FontWeight.normal,
+                              fontSize: 18.0,
+                            )
+                          ),
                           trailing: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: List.generate(
@@ -175,6 +224,7 @@ class _InfoProdutoState extends State<InfoProduto> {
                               ),
                             ),
                           ),
+                        ),
                         );
                       }).toList(),
                     ),
@@ -182,7 +232,7 @@ class _InfoProdutoState extends State<InfoProduto> {
                 },
               ),
             ),
-            
+
             Padding(
               padding: const EdgeInsets.only(right: 21.5),
               child: Row(
@@ -222,6 +272,38 @@ class _InfoProdutoState extends State<InfoProduto> {
               ),
             ),
           ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0), // Espaçamento interno uniforme
+        child: ClipRRect( // Estrutura para realizar o arredondamento 
+          borderRadius: const BorderRadius.only( // Arredondando da bottomNavigationBar
+            topLeft: Radius.circular(30.0), // Arredondamento superior esquerdo
+            topRight: Radius.circular(30.0), // Arredondamento superior direito
+          ),
+          child: BottomNavigationBar(
+            items: const <BottomNavigationBarItem>[ // Elementos dentro da bottomNavigationBar
+              BottomNavigationBarItem(
+                icon: Icon(Icons.exit_to_app), // Ícone para a saída
+                label: '', // Label não pode ser nula
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home_outlined), // Ícone para a home
+                label: '', // Label não pode ser nula
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.add_circle_outline), // Ícone para o sobre
+                label: '', // Label não pode ser nula
+              ),
+            ],
+            currentIndex: _selectedIndex, // Posição
+            selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
+            unselectedItemColor: const Color(0XFF93B6EE), // Botão sem estar selecionado
+            backgroundColor: const Color(0xFFF0EFEF), // Cor do fundo
+            onTap: _onItemTapped, // Função acionada ao clicar
+            showSelectedLabels: false, // Evita que a label apareça quando selecionado
+            showUnselectedLabels: false, // Evita que a label apareça quando deselecionado
+          ),
         ),
       ),
     );
