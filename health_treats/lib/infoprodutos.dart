@@ -19,7 +19,10 @@ class _InfoProdutoState extends State<InfoProduto> {
     _pageController = PageController(initialPage: _currentPage);
   }
 
+  
+
   @override
+  
   Widget build(BuildContext context) {
     // Pegando o produto passado pela rota
     final produto = ModalRoute.of(context)?.settings.arguments as Produtos;
@@ -30,12 +33,13 @@ class _InfoProdutoState extends State<InfoProduto> {
       pages.add(produto.comentarios.skip(i).take(3).toList());
     }
 
+    
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
               child: Row(
@@ -75,12 +79,35 @@ class _InfoProdutoState extends State<InfoProduto> {
                 ],
               ),
             ),
+
+
             
-            Image.asset(
-              produto.foto, // Foto puxada do argumento da tela dos produtos
-              width: double.infinity, // Ocupa toda a largura
-              height: 350.0, // Altura da imagem
-              fit: BoxFit.cover, // Utiliza 100% da imagem
+            Center( // Imagem do produto
+              child: Card(
+                color: const Color(0xFFF8F8F8), // Cor do fundo do card
+                shape: RoundedRectangleBorder( // Arredondamento das bordas
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                elevation: 5, // Sombra no card
+                margin: EdgeInsets.only(top: 50.0), // Margem do topo
+                child: SizedBox( // Tamanho do card
+                  width: 215.0, // Largura
+                  height: 270.0, // Altura
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center, // Posicionando os filhos do card no meio
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.asset(
+                          produto.foto, // Foto puxada do argumento da tela dos produtos
+                          width: double.infinity, // Ocupa toda a largura
+                          fit: BoxFit.cover, // Utiliza 100% da imagem
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ),
             ),
             
             Padding( // Aqui tem as futuras descrições

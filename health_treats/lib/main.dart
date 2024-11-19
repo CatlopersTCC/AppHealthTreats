@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:health_treats/cadastro.dart';
+import 'package:health_treats/doces.dart';
+import 'package:health_treats/menu.dart';
 
 
 void main() {
-  runApp(const MyApp()); //Trocar para a tela de Splash
+  runApp(const MenuApp()); //Trocar para a tela de Splash
 }
 
 class MainApp extends StatelessWidget {
