@@ -89,7 +89,7 @@ class _InfoProdutoState extends State<InfoProduto> {
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 elevation: 5, // Sombra no card
-                margin: EdgeInsets.only(top: 50.0), // Margem do topo
+                margin: EdgeInsets.only(top: 10.0), // Margem do topo
                 child: SizedBox( // Tamanho do card
                   width: 215.0, // Largura
                   height: 270.0, // Altura
@@ -98,10 +98,25 @@ class _InfoProdutoState extends State<InfoProduto> {
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          produto.foto, // Foto puxada do argumento da tela dos produtos
-                          width: double.infinity, // Ocupa toda a largura
-                          fit: BoxFit.cover, // Utiliza 100% da imagem
+                        child: GestureDetector(
+                          onTap: () {
+                            // Ao clicar na imagem, exibe um diálogo com a imagem em tamanho maior
+                            showDialog(
+                              context: context,
+                              builder: (context) => Dialog(
+                                insetPadding: EdgeInsets.all(0), // Faz a imagem ocupar toda a tela
+                                child: Image.asset(
+                                  produto.foto, // Foto puxada do argumento da tela dos produtos
+                                  fit: BoxFit.contain, // Ajusta a imagem para não cortar
+                                ),
+                              ),
+                            );
+                          },
+                          child: Image.asset(
+                            produto.foto, // Foto puxada do argumento da tela dos produtos
+                            width: double.infinity, // Ocupa toda a largura
+                            fit: BoxFit.cover, // Utiliza 100% da imagem
+                          ),
                         ),
                       )
                     ],
