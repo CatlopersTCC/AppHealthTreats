@@ -112,73 +112,97 @@ class _InfoProdutoState extends State<InfoProduto> {
               ),
             ),
 
-
-            
             Center( // Imagem do produto
-              child: Card(
-                color: const Color(0xFFF8F8F8), // Cor do fundo do card
-                shape: RoundedRectangleBorder( // Arredondamento das bordas
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                elevation: 5, // Sombra no card
-                margin: EdgeInsets.only(top: 10.0), // Margem do topo
-                child: SizedBox( // Tamanho do card
-                  width: 215.0, // Largura
-                  height: 270.0, // Altura
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center, // Posicionando os filhos do card no meio
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: GestureDetector(
-                          onTap: () {
-                            // Ao clicar na imagem, exibe um diálogo com a imagem em tamanho maior
-                            showDialog(
-                              context: context,
-                              builder: (context) => Dialog(
-                                insetPadding: EdgeInsets.all(0), // Faz a imagem ocupar toda a tela
-                                child: Image.asset(
-                                  produto.foto, // Foto puxada do argumento da tela dos produtos
-                                  fit: BoxFit.contain, // Ajusta a imagem para não cortar
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center, // Posicionando os filhos do card no meio
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        // Ao clicar na imagem, exibe um diálogo com a imagem em tamanho maior
+                        showDialog(
+                          context: context,
+                          builder: (context) => Dialog(
+                            insetPadding: EdgeInsets.all(0), // Faz a imagem ocupar toda a tela
+                            child: Stack(
+                              children: [
+                                // Exibe a imagem ampliada
+                                Center(
+                                  child: Image.asset(
+                                    produto.foto, // Foto puxada do argumento da tela dos produtos
+                                    fit: BoxFit.contain, // Ajusta a imagem para não cortar
+                                  ),
                                 ),
-                              ),
-                            );
-                          },
-                          child: Image.asset(
-                            produto.foto, // Foto puxada do argumento da tela dos produtos
-                            width: double.infinity, // Ocupa toda a largura
-                            fit: BoxFit.cover, // Utiliza 100% da imagem
+                                // Botão de retorno no canto superior esquerdo
+                                Positioned(
+                                  top: 16, // Distância do topo
+                                  left: 16, // Distância da lateral
+                                  child: IconButton(
+                                    icon: Icon(Icons.close, color: Color(0xFF93B6EE), size: 30),
+                                    onPressed: () {
+                                      Navigator.of(context).pop(); // Fecha o diálogo
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      )
-                    ],
-                  ),
-                )
+                        );
+                      },
+                      child: Image.asset(
+                        produto.foto, // Foto puxada do argumento da tela dos produtos
+                        width: double.infinity, // Ocupa toda a largura
+                        height: 350.0,
+                        fit: BoxFit.cover, // Utiliza 100% da imagem
+                      ),
+                    ),
+                  )
+                ],
               ),
             ),
             
             Padding( // Aqui tem as futuras descrições
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0, bottom: 10.0),
               child: Text(
-                produto.desc,
-                style: const TextStyle(fontSize: 16.0),
+                'Ingredientes',
+                style: TextStyle(
+                  fontFamily: 'RedHatDisplay',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22.0,
+                  color: Color(0XFF353535),
+                ),
               ),
             ),
-            const SizedBox(height: 10.0),
-            
-            const Padding( // Título com espaçamento interno
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
+
+            Padding( // Aqui tem as futuras descrições
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
+                produto.desc,
+                style: TextStyle(
+                  fontFamily: 'RedHatDisplay',
+                  fontWeight: FontWeight.normal,
+                  fontSize: 18.0,
+                  color: Color(0XFF353535),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 50.0),
+            
+            Padding( // Título com espaçamento interno
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: Text(
                 'Comentários:',
                 style: TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'RedHatDisplay',
+                  color: Color(0XFF353535),
                 ),
               ),
             ),
             
-
             SizedBox(
               height: 330, // Altura do PageView
               child: PageView.builder(
@@ -202,6 +226,7 @@ class _InfoProdutoState extends State<InfoProduto> {
                             style: TextStyle(
                               fontFamily: 'RedHatDisplay',
                               fontWeight: FontWeight.bold,
+                              color: Color(0XFF353535),
                             )
                           ),
                           subtitle: Text(
@@ -209,6 +234,7 @@ class _InfoProdutoState extends State<InfoProduto> {
                             style: TextStyle(
                               fontFamily: 'RedHatDisplay',
                               fontWeight: FontWeight.normal,
+                              color: Color(0XFF353535),
                               fontSize: 18.0,
                             )
                           ),

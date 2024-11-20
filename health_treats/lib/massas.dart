@@ -60,6 +60,20 @@ class _MassasState extends State<Massas> {
         Comentario(nome: 'Lúcia Maria', desc: 'Não gostei tanto deste sabor, prefiro os outros da mesma linha.', rating: 3),
       ],
     ),
+    Produtos(
+      nome: 'Mini Tortinhas',
+      valor: 'R\$11.00',
+      foto: 'assets/img/massas/massas_tortinhas.png',
+      desc: 'Descrição especial',
+      comentarios: [
+        Comentario(nome: 'Armando Batista', desc: 'Chegou bem rápido, gostei do atendimento e do produto.', rating: 5),
+        Comentario(nome: 'Geralda Santana', desc: 'O difícil mesmo é parar de comer, qualidade pura!', rating: 5),
+        Comentario(nome: 'Jackson Pereira Nunes', desc: 'Para lanches da tarde é maravilhoso!', rating: 4),
+        Comentario(nome: 'Patrícia Motta', desc: 'Ideal para beliscar fazendo qualquer atividade, mas acaba rápido.', rating: 3),
+        Comentario(nome: 'Elias Lopes Neves', desc: 'Prático pra comer, embalagem abre facilmente, curti.', rating: 4),
+        Comentario(nome: 'Vanessa Ambrosio', desc: 'Não se tornou um dos meus favoritos, mas ainda sim é bom.', rating: 3),
+      ],
+    ),
   ];
 
   int _selectedIndex = 0;
