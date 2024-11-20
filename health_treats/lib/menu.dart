@@ -3,6 +3,7 @@ import 'package:health_treats/bebidas.dart';
 import 'package:health_treats/cadastro.dart';
 import 'package:health_treats/doces.dart';
 import 'package:health_treats/massas.dart';
+import 'package:health_treats/pesquisa.dart';
 import 'package:health_treats/salgados.dart';
 import 'package:health_treats/sobre.dart';
 
@@ -95,10 +96,16 @@ class _MenuInicio extends State<MenuInicio> {
                   ),
                   contentPadding: const EdgeInsets.symmetric(vertical: 10.0), // Centralizando texto verticalmente dentro da TextField
                 ),
-                onChanged: (value) { // Atualiza simultaneamente à entrada de dados
-                  //Lógica de pesquisa pode ser adicionada aqui
-                  print('Texto digitado: $value');
+                onTap: () { // Ao clicar, aciona a função dentro do Navigator
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PesquisaApp()),
+                  );
                 },
+                // onChanged: (value) { // Atualiza simultaneamente à entrada de dados
+                //   //Lógica de pesquisa pode ser adicionada aqui
+                //   print('Texto digitado: $value');
+                // },
               ),
             ),
             

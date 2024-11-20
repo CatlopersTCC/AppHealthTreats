@@ -7,6 +7,7 @@ import 'package:health_treats/menu.dart';
 import 'package:health_treats/salgados.dart';
 import 'package:health_treats/sobre.dart';
 
+
 class Pesquisa extends StatelessWidget {
   const Pesquisa({super.key});
 
@@ -37,7 +38,7 @@ class _PesquisaApp extends State<PesquisaApp> {
   int _selectedIndex = 0;
 
   // Lista completa de itens pesquisáveis
-  List<String> _items = ['Chá', 'Café', 'Refrigerante', 'Salgadinho', 'Bolacha', 'Geleia', 'Chocolate', 'Cookies', 'Panquecas', 'Pão de Queijo', 'Waffles'];
+  List<String> _items = ['Chá', 'Café', 'Refrigerante', 'Salgadinho', 'Bolacha', 'Geleia', 'Chocolate', 'Cookies', 'Panquecas', 'Pão de Queijo', 'Waffles', 'Tortinhas','Sobre'];
 
   // Lista que será exibida (inicialmente vazia)
   List<String> _filteredItems = [];
@@ -146,6 +147,45 @@ class _PesquisaApp extends State<PesquisaApp> {
                 shrinkWrap: true, // A visualização de rolagem se ajusta ao tamanho do conteúdo
                 itemCount: _filteredItems.length, // Conta o número de elementos para mostrar na tela
                 itemBuilder: (context, index) {
+
+                  //Determinando o Icon selecionado atráves de uma variável
+                  Icon leadingIcon;
+
+                  //Condicional de Icones
+                  if (_filteredItems[index] == 'Chá' || _filteredItems[index] == 'Refrigerante' || _filteredItems[index] == 'Café'){
+                    leadingIcon = const Icon(
+                      Icons.local_drink_rounded, // Caso um item do tipo "bebida" for escolhida, a seção do produto terá esse icon
+                      color: Color(0xff93B6EE),
+                    );
+                  } else if(_filteredItems[index] == 'Bolacha' || _filteredItems[index] == 'Salgadinho'){
+                    leadingIcon = const Icon(
+                      Icons.fastfood_rounded, // Caso um item do tipo "salgado" for escolhida, a seção do produto terá esse icon
+                      color: Color(0xff93B6EE),
+                    );
+                  } else if(_filteredItems[index] == 'Chocolate' || _filteredItems[index] == 'Cookies' || _filteredItems[index] == 'Geleia'){
+                    leadingIcon = const Icon(
+                      Icons.cake_rounded, //Caso um item do tipo "Doce" for escolhida, a seção do produto terá esse icon
+                      color: Color(0xff93B6EE),
+                    );
+                  } else if(_filteredItems[index] == 'Pão de Queijo' || _filteredItems[index] == 'Waffles' || _filteredItems[index] == 'Panquecas' || _filteredItems[index] == 'Tortinhas'){
+                    leadingIcon = const Icon(
+                      Icons.breakfast_dining_rounded, //Caso um item do tipo "Massas" for escolhida, a seção do produto terá esse icon
+                      color: Color(0xff93B6EE),
+                    );
+                  } else if(_filteredItems[index] == 'Sobre'){
+                    leadingIcon = const Icon(
+                      Icons.info, //Caso a opção "Sobre" for pesquisada, a seção terá esse icon
+                      color: Color(0xff93B6EE),
+                    );
+                  }
+                  else {
+                    leadingIcon = const Icon(
+                      Icons.error_outline, //Caso dê erro, a seção terá esse icon
+                      color: Colors.red,
+                    );
+                  }
+
+                                  
                   return Card(
                     color: Color(0xFFF0EFEF),
                     elevation: 3, // Adiocina sombra para o elemento
@@ -154,10 +194,9 @@ class _PesquisaApp extends State<PesquisaApp> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: ListTile( // Estrutura que organiza os elementos dentro de uma única linha
-                      leading: Icon( // Ícone antes do texto, principal
-                        Icons.fastfood_outlined,
-                        color: Colors.blueAccent.shade100,
-                      ),
+
+                      leading: leadingIcon, // Ícone apropriado para cada item
+
                       title: Text(
                         _filteredItems[index], // Posições da index, ou seja, todos os itens 
                         style: const TextStyle(
@@ -174,25 +213,36 @@ class _PesquisaApp extends State<PesquisaApp> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => Bebidas()), // Se o usuário selecionar "Bebidas" redireciona para a página
+                              builder: (context) => Bebidas() // Se o usuário selecionar algum produto pertencente a categoria "Bebidas", ele será redirecionado para a página de bebidas
+                            ),
                           );
                         } else if (_filteredItems[index] == 'Bolacha' || _filteredItems[index] == 'Salgadinho') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Salgados()), // Se o usuário selecionar "Salgados" redireciona para a página
+                              builder: (context) => const Salgados() // Se o usuário selecionar algum produto pertencente a categoria "Salgados", ele será redirecionado para a página de salgados
+                            ),
                           );
                         } else if (_filteredItems[index] == 'Chocolate' || _filteredItems[index] == 'Cookies' || _filteredItems[index] == 'Geleia') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Doces()), // Se o usuário selecionar "Doces" redireciona para a página
+                              builder: (context) => const Doces() // Se o usuário selecionar algum produto pertencente a categoria "Doces", ele será redirecionado para a página de doces
+                            ),
                           );
                         } else if (_filteredItems[index] == 'Pão de Queijo' || _filteredItems[index] == 'Waffles' || _filteredItems[index] == 'Panquecas') {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Massas()), // Se o usuário selecionar "Massas" redireciona para a página
+                              builder: (context) => const Massas() // Se o usuário selecionar algum produto pertencente a categoria "Massas", ele será redirecionado para a página de massas
+                            ),
+                          );
+                        } else if (_filteredItems[index] == 'Sobre'){
+                          Navigator.push(
+                            context, 
+                            MaterialPageRoute(
+                              builder: (context) => const SobreApp() // Se o usuário selecionar "Sobre", ele será redirecionado para a página Sobre
+                            ),
                           );
                         }
                       },

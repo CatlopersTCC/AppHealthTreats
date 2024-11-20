@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_treats/cadastro.dart';
 import 'package:health_treats/menu.dart';
+import 'package:health_treats/pesquisa.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // Método que abre o site da empresa
@@ -102,10 +103,16 @@ class _SobreMenu extends State<SobreMenu> {
                   ),
                   contentPadding: EdgeInsets.symmetric(vertical: 10.0), // Centralizando texto verticalmente dentro da TextField
                 ),
-                onChanged: (value) { // Atualiza enquanto o usuário digita
-                  //Lógica de pesquisa pode ser adicionada aqui
-                  print('Texto digitado: $value');
+                onTap: () { // Ao clicar, aciona a função dentro do Navigator
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PesquisaApp()),
+                  );
                 },
+                // onChanged: (value) { // Atualiza enquanto o usuário digita
+                //   //Lógica de pesquisa pode ser adicionada aqui
+                //   print('Texto digitado: $value');
+                // },
               ),
             ),
 
