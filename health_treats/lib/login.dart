@@ -142,17 +142,24 @@ class _LoginState extends State<Login> {
                             ),
                           ),
                         ), // Fim da decoração do input
+                        //Colocando uma validação (regex) de email
                         validator: (value) {
                           RegExp emailRegex = RegExp(
-                            r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
+                            //Valor da Regex
+                            r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+                          );
+                          //Se o valor for nulo -> mensagem de erro será exibida
                           if (value == null || value.isEmpty) {
                             return 'Por favor, insira um email.';
-                          } else if (!emailRegex.hasMatch(value)) {
+                          }
+                          //Se o valor for diferente da regex -> mensagem de erro será exibida 
+                          else if (!emailRegex.hasMatch(value)) {
                             return 'Email inválido.';
                           }
+                          //Se tudo ocorrer bem, o processo seguirá
                           return null;
                         },
-                      ), // Fim do forms
+                      ),
                       
                       const SizedBox(height: 20.0), // Comando utilizado para dar quebras de pixels na tela
 
@@ -206,7 +213,7 @@ class _LoginState extends State<Login> {
                           ),
                           suffixIcon: IconButton( // Ícone para ocultar ou mostrar a senha
                             icon: Icon(
-                              _obscureText ? Icons.visibility_off_outlined : Icons.visibility_outlined, // Mudar ícone de acordo com o estado
+                              _obscureText ? Icons.visibility_off_outlined : Icons.visibility_outlined, // Mudar ícone de acordo com o opção escolhida (vísivel ou não)
                               color: const Color(0xFF93B6EE),
                             ),
                             onPressed: () {
@@ -216,15 +223,21 @@ class _LoginState extends State<Login> {
                             },
                           ),
                         ),
+                         //Validação de senha
                         validator: (value) { // Validação do campo de senha
+
+                          //Se a senha for nula -> mensagem de erro exibida 
                           if (value == null || value.isEmpty) {
                             return 'Por favor, insira uma senha.';
-                          } else if (value.length < 6) {
-                            return 'A senha deve conter ao menos 6 caracteres.';
                           }
+                          //Se a senha não tiver o número de caracteres necessários -> mensagem de erro exibida 
+                          else if (value.length < 6) {
+                            return 'A senha deve ter pelo menos 6 caracteres.';
+                          }
+                          //Se tudo ocorrer bem, o processo seguirá
                           return null;
                         },
-                      ), // Fim do forms
+                      ),
 
                     const SizedBox(height: 25.0), // Comando utilizado para dar quebras de pixels na tela
 
@@ -291,6 +304,7 @@ class _LoginState extends State<Login> {
                                 color: Color(0xff93B6EE), // Cor do texto
                                 decoration: TextDecoration.underline, // Colocando o sublinhado
                               ),
+                              //Quando for pressionado -> o usuário é enviado para a tela de menu
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
                                   Navigator.push(

@@ -12,7 +12,7 @@ class TelaCadastro extends StatefulWidget {
 }
 
 class _TelaCadastroState extends State<TelaCadastro> {
-    bool _obscureText = true; // Controla a visibilidade da senha
+  bool _obscureText = true; // Controla a visibilidade da senha
   final _formKey = GlobalKey<FormState>();  // Chave para o formulário
 
   @override
@@ -56,7 +56,9 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           'Bem vindo!',
                           //Estilizando o texto
                           style: TextStyle(
+                            //Definido o tamanho da fonte
                             fontSize: 50.0,
+                            //Definido a família da fonte
                             fontFamily: 'RedHatDisplay',
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -196,6 +198,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                       ),
                       const SizedBox(height: 2.0),
 
+                      //Criação do campos de email
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
                         inputFormatters: <TextInputFormatter>[
@@ -235,14 +238,21 @@ class _TelaCadastroState extends State<TelaCadastro> {
                             ),
                           ),
                         ),
+                        //Colocando uma validação (regex) de email
                         validator: (value) {
                           RegExp emailRegex = RegExp(
-                            r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
+                            //Valor da Regex
+                            r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+                          );
+                          //Se o valor for nulo -> mensagem de erro será exibida
                           if (value == null || value.isEmpty) {
                             return 'Por favor, insira um email.';
-                          } else if (!emailRegex.hasMatch(value)) {
+                          }
+                          //Se o valor for diferente da regex -> mensagem de erro será exibida 
+                          else if (!emailRegex.hasMatch(value)) {
                             return 'Email inválido.';
                           }
+                          //Se tudo ocorrer bem, o processo seguirá
                           return null;
                         },
                       ),
@@ -260,7 +270,8 @@ class _TelaCadastroState extends State<TelaCadastro> {
                       ),
 
                       const SizedBox(height: 2.0),
-
+                      
+                      //Criação do campo de senha
                       TextFormField( // Comando utilizado para a criação de um campo de um formulário de senha
                         obscureText: _obscureText, // Ocultar ou exibir o texto da senha
                         decoration: InputDecoration( // Decoração da caixa de entrada de dados
@@ -284,7 +295,6 @@ class _TelaCadastroState extends State<TelaCadastro> {
                             borderRadius: BorderRadius.circular(80.0), // Arredondamento das bordas
                           ),
                            errorBorder: const OutlineInputBorder(
-                            
                             borderSide: BorderSide(
                               color: Color.fromARGB(255, 27, 115, 255),  // Alterar a cor do erro para azul
                               width: 1.5,
@@ -299,7 +309,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
                           ),
                           suffixIcon: IconButton( // Ícone para ocultar ou mostrar a senha
                             icon: Icon(
-                              _obscureText ? Icons.visibility_off_outlined : Icons.visibility_outlined, // Mudar ícone de acordo com o estado
+                              _obscureText ? Icons.visibility_off_outlined : Icons.visibility_outlined, // Mudar ícone de acordo com o opção escolhida (vísivel ou não)
                               color: const Color(0xFF93B6EE),
                             ),
                             onPressed: () {
@@ -309,12 +319,17 @@ class _TelaCadastroState extends State<TelaCadastro> {
                             },
                           ),
                         ),
+                        //Validação de senha
                         validator: (value) { // Validação do campo de senha
+                          //Se a senha for nula -> mensagem de erro exibida 
                           if (value == null || value.isEmpty) {
                             return 'Por favor, insira uma senha.';
-                          } else if (value.length < 6) {
+                          }
+                          //Se a senha não tiver o número de caracteres necessários -> mensagem de erro exibida 
+                          else if (value.length < 6) {
                             return 'A senha deve ter pelo menos 6 caracteres.';
                           }
+                          //Se tudo ocorrer bem, o processo seguirá
                           return null;
                         },
                       ),
