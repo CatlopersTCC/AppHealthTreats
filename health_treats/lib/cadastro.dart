@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:health_treats/login.dart';  // Certifique-se que este caminho está correto
-import 'package:health_treats/menu.dart';   // Certifique-se que este caminho está correto
+import 'package:health_treats/login.dart';
+import 'package:health_treats/menu.dart';
 
 class TelaCadastro extends StatefulWidget {
   const TelaCadastro({super.key});

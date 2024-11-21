@@ -239,73 +239,73 @@ class _LoginState extends State<Login> {
                         },
                       ),
 
-                    const SizedBox(height: 25.0), // Comando utilizado para dar quebras de pixels na tela
+                      const SizedBox(height: 25.0), // Comando utilizado para dar quebras de pixels na tela
 
-                    SizedBox( // Definição de um espaço que servirá como botão
-                      width: double.infinity, // Ocupa toda a largura disponível
-                      child: ElevatedButton( // Criando o botão de entrar
-                        onPressed: () {
-                            // Verifica se o formulário é válido
-                            if (_formKey.currentState?.validate() ?? false) {
+                      SizedBox( // Definição de um espaço que servirá como botão
+                        width: double.infinity, // Ocupa toda a largura disponível
+                        child: ElevatedButton( // Criando o botão de entrar
+                          onPressed: () {
+                              // Verifica se o formulário é válido
+                              if (_formKey.currentState?.validate() ?? false) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const MenuApp(),
+                                  ),
+                                );
+                              }
+                            },
+                          style: ElevatedButton.styleFrom( // Estilizando o botão
+                            backgroundColor: const Color(0xff93B6EE), // Cor de fundo do botão
+                            padding: const EdgeInsets.symmetric(vertical: 15), // Ajusta o padding
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.0), // Definindo o arredondamento da borda
+                            ),
+                          ),
+                          child: const Text( // Comando para a criação de texto
+                            'Entrar', // Texto a ser exibido dentro do botão
+                            style: TextStyle( // Estilização do botão
+                              fontSize: 18.0, // Tamanho do texto
+                              fontFamily: 'RedHatDisplay',
+                              fontWeight: FontWeight.normal,
+                              color: Colors.white, // Cor do texto
+                            ), // Fim do TextStyle
+                          ), // Fim do Text
+                        ), // Fim Elevated Button
+                      ), // Fim do Sized Box
+
+                      const SizedBox(height: 110.0), // Comando utilizado para dar quebras de pixels na tela
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween, // Distribui os elementos para as extremidades
+                        children: <Widget>[
+                          GestureDetector( // Captação de gesto para o ícone
+                            onTap: () { // Método chamado ao clicar no ícone
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => const MenuApp(),
-                                ),
+                                MaterialPageRoute(builder: (context) => const TelaCadastro()),
                               );
-                            }
-                          },
-                        style: ElevatedButton.styleFrom( // Estilizando o botão
-                          backgroundColor: const Color(0xff93B6EE), // Cor de fundo do botão
-                          padding: const EdgeInsets.symmetric(vertical: 15), // Ajusta o padding
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5.0), // Definindo o arredondamento da borda
+                            },
+                            child: const Icon( // Chamando um ícone
+                              Icons.arrow_back, // Definindo o ícone
+                              size: 30.0, // Tamanho do ícone
+                              color: Color(0xff93B6EE), // Cor do ícone
+                            ),
                           ),
-                        ),
-                        child: const Text( // Comando para a criação de texto
-                          'Entrar', // Texto a ser exibido dentro do botão
-                          style: TextStyle( // Estilização do botão
-                            fontSize: 18.0, // Tamanho do texto
-                            fontFamily: 'RedHatDisplay',
-                            fontWeight: FontWeight.normal,
-                            color: Colors.white, // Cor do texto
-                          ), // Fim do TextStyle
-                        ), // Fim do Text
-                      ), // Fim Elevated Button
-                    ), // Fim do Sized Box
-
-                  const SizedBox(height: 110.0), // Comando utilizado para dar quebras de pixels na tela
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween, // Distribui os elementos para as extremidades
-                      children: <Widget>[
-                        GestureDetector( // Captação de gesto para o ícone
-                          onTap: () { // Método chamado ao clicar no ícone
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => const TelaCadastro()),
-                            );
-                          },
-                          child: const Icon( // Chamando um ícone
-                            Icons.arrow_back, // Definindo o ícone
-                            size: 30.0, // Tamanho do ícone
-                            color: Color(0xff93B6EE), // Cor do ícone
-                          ),
-                        ),
-                        Align( // Comando para a definição de alinhamento
-                          alignment: Alignment.centerRight, // Alinhando a posição do elemento
-                          child: RichText(
-                            text: TextSpan( // Comando de texto clicável
-                              text: 'Entrar sem cadastro', // Texto a ser exibido na tela
-                              style: const TextStyle( // Estilização do texto
-                                fontSize: 16, // Definindo o tamanho da fonte
-                                fontFamily: 'RedHatDisplay',
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xff93B6EE), // Cor do texto
-                                decoration: TextDecoration.underline, // Colocando o sublinhado
-                              ),
-                              //Quando for pressionado -> o usuário é enviado para a tela de menu
-                              recognizer: TapGestureRecognizer()
+                          Align( // Comando para a definição de alinhamento
+                            alignment: Alignment.centerRight, // Alinhando a posição do elemento
+                            child: RichText(
+                              text: TextSpan( // Comando de texto clicável
+                                text: 'Entrar sem cadastro', // Texto a ser exibido na tela
+                                style: const TextStyle( // Estilização do texto
+                                  fontSize: 16, // Definindo o tamanho da fonte
+                                  fontFamily: 'RedHatDisplay',
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff93B6EE), // Cor do texto
+                                  decoration: TextDecoration.underline, // Colocando o sublinhado
+                                ),
+                                //Quando for pressionado -> o usuário é enviado para a tela de menu
+                                recognizer: TapGestureRecognizer()
                                 ..onTap = () {
                                   Navigator.push(
                                   context,
@@ -313,9 +313,6 @@ class _LoginState extends State<Login> {
                                       builder: (context) => const MenuApp(),
                                     ),
                                   );
-                                  // Método ao clicar no texto
-                                  // Ação a ser executada quando o texto for clicado
-                                  // Colocar o caminho das outras páginas
                                 },
                               ),
                             ),

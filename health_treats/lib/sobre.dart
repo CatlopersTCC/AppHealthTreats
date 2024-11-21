@@ -287,7 +287,7 @@ class _SobreMenu extends State<SobreMenu> {
                   alignment: Alignment.center,
                   child: Center(
                     child: Image.asset( // Comando que chama a imagem
-                      'assets/img/LogoDev2.png', // Caminho da Imagem de fundo que ocupará determinado espaço
+                      'assets/img/logo_black.png', // Caminho da Imagem de fundo que ocupará determinado espaço
                       fit: BoxFit.cover, // Expande a imagem por todo espaço definido
                         width: double.infinity, // Utilizado para usar 100% do tamanho determinado
                     ),
