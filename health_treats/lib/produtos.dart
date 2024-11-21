@@ -1,3 +1,5 @@
+//Criação da classe Produtos
+
 class Produtos {
   final String nome;
   final String valor;
@@ -14,6 +16,7 @@ class Produtos {
   });
 }
 
+//Criação da classe Cpmentários
 class Comentario {
   final String nome;
   final String desc;

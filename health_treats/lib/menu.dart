@@ -102,10 +102,6 @@ class _MenuInicio extends State<MenuInicio> {
                     MaterialPageRoute(builder: (context) => const PesquisaApp()),
                   );
                 },
-                // onChanged: (value) { // Atualiza simultaneamente à entrada de dados
-                //   //Lógica de pesquisa pode ser adicionada aqui
-                //   print('Texto digitado: $value');
-                // },
               ),
             ),
             
@@ -131,147 +127,144 @@ class _MenuInicio extends State<MenuInicio> {
 
             const SizedBox(height: 10.0,),
           
-          Center(
-            child: Row( // Deixando um card ao lado do outro
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espaçando um card do outro
-              children: [
-            // Tornando card clicável
-            InkWell(
-            onTap: () { // Função executada ao clicar
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Bebidas()), // Ao clicar direciona para a página "Bebidas"
-              );
-            },
+            Center(
+              child: Row( // Deixando um card ao lado do outro
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espaçando um card do outro
+                children: [
+                  // Tornando card clicável
+                  InkWell(
+                    onTap: () { // Função executada ao clicar
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Bebidas()), // Ao clicar direciona para a página "Bebidas"
+                      );
+                    },
 
-           // Card das bebidas
-           child: Card(
-              shape: RoundedRectangleBorder( // Arredondando as bordas do card
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: const EdgeInsets.all(10.0),   
-              child: SizedBox(
-                width: 200.0, // Largura do card
-                height: 126.0, // Altura do card            
-                  child: ClipRRect( // Recorta os cantos de um widget filho
-                    borderRadius: BorderRadius.circular(10.0),
-                      child: Image.asset(
-                        'assets/img/bebidasMenu.png',
-                      fit: BoxFit.cover, // Expande a imagem para ocupar o elemento pai inteiro
-                      width: 200.0, // Largura da imagem
-                      height: 127.0, // Altura da imagem
+                    // Card das bebidas
+                    child: Card(
+                    shape: RoundedRectangleBorder( // Arredondando as bordas do card
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    elevation: 5,
+                    margin: const EdgeInsets.all(10.0),   
+                    child: SizedBox(
+                      width: 200.0, // Largura do card
+                      height: 126.0, // Altura do card            
+                        child: ClipRRect( // Recorta os cantos de um widget filho
+                          borderRadius: BorderRadius.circular(10.0),
+                            child: Image.asset(
+                              'assets/img/bebidasMenu.png',
+                            fit: BoxFit.cover, // Expande a imagem para ocupar o elemento pai inteiro
+                            width: 200.0, // Largura da imagem
+                            height: 127.0, // Altura da imagem
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            ),
 
-            InkWell(
-            onTap: () { // Função executada ao clicar
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Salgados()), // Ao clicar envia para a página "Salgados"
-              );
-            },
+                  InkWell(
+                  onTap: () { // Função executada ao clicar
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Salgados()), // Ao clicar envia para a página "Salgados"
+                    );
+                  },
 
-            //Card dos salgados
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: const EdgeInsets.all(10.0),   
-              child: SizedBox(
-                width: 200.0, 
-                height: 126.0,            
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0),
-                      child: Image.asset(
-                        'assets/img/salgadosMenu.png',
-                      fit: BoxFit.cover,
+                  //Card dos salgados
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    elevation: 5,
+                    margin: const EdgeInsets.all(10.0),   
+                    child: SizedBox( 
                       width: 200.0, 
-                      height: 127.0,
+                      height: 126.0,            
+                        child: ClipRRect( 
+                          borderRadius: BorderRadius.circular(10.0),
+                            child: Image.asset(
+                              'assets/img/salgadosMenu.png',
+                            fit: BoxFit.cover,
+                            width: 200.0, 
+                            height: 127.0,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ]
               ),
             ),
 
-              ]
-            ),
-          ),
+            Center( // Centraliza todos os elementos dentro da estrutura
+              child: Row( 
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espaça um card do outro
+                children: [
+                  InkWell(
+                    onTap: () { // Função executada ao clicar
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Doces()), // Ao clicar envia para a página "Doces"
+                      );
+                    },
 
-          Center( // Centraliza todos os elementos dentro da estrutura
-            child: Row( 
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Espaça um card do outro
-              children: [
-
-            InkWell(
-            onTap: () { // Função executada ao clicar
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Doces()), // Ao clicar envia para a página "Doces"
-              );
-            },
-
-            // Card dos doces
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              margin: const EdgeInsets.all(10.0),   
-              child: SizedBox(
-                width: 200.0, 
-                height: 126.0,            
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0),
-                      child: Image.asset(
-                        'assets/img/docesMenu.png',
-                      fit: BoxFit.cover,
-                      width: 200.0,
-                      height: 127.0,
+                    // Card dos doces
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      elevation: 5,
+                      margin: const EdgeInsets.all(10.0),   
+                      child: SizedBox(
+                        width: 200.0, 
+                        height: 126.0,            
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                            child: Image.asset(
+                              'assets/img/docesMenu.png',
+                            fit: BoxFit.cover,
+                            width: 200.0,
+                            height: 127.0,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ),
-            ),
 
-            InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Massas()), // Ao clicar envia para a página "Massas"
-              );
-            },
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Massas()), // Ao clicar envia para a página "Massas"
+                    );
+                  },
 
-            // Card das massas
-            child: Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5, // Adiciona sombra ao elemento
-              margin: const EdgeInsets.all(10.0),   
-              child: SizedBox(
-                width: 200.0, // Largura do card
-                height: 126.0, // Altura do card            
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0),
-                      child: Image.asset(
-                        'assets/img/massasMenu.png',
-                      fit: BoxFit.cover,
-                      width: 200.0, // Largura da imagem
-                      height: 127.0, // Altura da imagem
+                  // Card das massas
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    elevation: 5, // Adiciona sombra ao elemento
+                    margin: const EdgeInsets.all(10.0),   
+                    child: SizedBox(
+                      width: 200.0, // Largura do card
+                      height: 126.0, // Altura do card            
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10.0),
+                            child: Image.asset(
+                              'assets/img/massasMenu.png',
+                            fit: BoxFit.cover,
+                            width: 200.0, // Largura da imagem
+                            height: 127.0, // Altura da imagem
+                          ),
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ]
               ),
             ),
-
-              ]
-            ),
-          ),
 
           const SizedBox(height: 40.0,),
 
@@ -285,45 +278,44 @@ class _MenuInicio extends State<MenuInicio> {
                   children: [
                     const Text(
                       'Conheça mais sobre nós!', // Título acima do card
-                    style: TextStyle(
-                      fontFamily: 'RedHatDisplay',
-                      fontWeight: FontWeight.w500,
-                      fontSize: 22.0,
-                      color: Color(0XFF353535),
+                      style: TextStyle(
+                        fontFamily: 'RedHatDisplay',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 22.0,
+                        color: Color(0XFF353535),
+                      ),
                     ),
-                  ),
 
-            InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const SobreApp()), // Redireciona o usuário para a tela "Sobre"
-              );
-            },
-            
-            // Card Sobre Health Treats
-            child: Card( 
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              elevation: 5,
-              child: SizedBox(
-                width: 425.0, 
-                height: 262.0,            
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0),
-                      child: Image.asset(
-                        'assets/img/sobreMenu.png',
-                      fit: BoxFit.cover,
-                      width: 402.0,
-                      height: 242.0,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const SobreApp()), // Redireciona o usuário para a tela "Sobre"
+                      );
+                    },
+                  
+                    // Card Sobre Health Treats
+                    child: Card( 
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      elevation: 5,
+                      child: SizedBox(
+                        width: 425.0, 
+                        height: 262.0,            
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10.0),
+                              child: Image.asset(
+                                'assets/img/sobreMenu.png',
+                              fit: BoxFit.cover,
+                              width: 402.0,
+                              height: 242.0,
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
-            ),
-
-                  ]
+                  ] 
                 ),
               ]
             ),
