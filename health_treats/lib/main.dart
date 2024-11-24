@@ -4,7 +4,7 @@ import 'package:health_treats/menu.dart';
 
 
 void main() {
-  runApp(const MenuApp()); //Trocar para a tela de Splash
+  runApp(const MenuApp()); // Rodando o aplicativo
 }
 
 class MainApp extends StatelessWidget {
@@ -13,8 +13,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Splash Screen',
+      debugShowCheckedModeBanner: false, // Tira a bandeira de debug
+      title: 'Splash Screen', // Título da página
       home: SplashScreen(), // Defina a tela de splash como a tela inicial
     );
   }
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: SplashScreen(), // Defina a tela de splash como a tela inicial
+      home: SplashScreen(), // Defina a tela inicial como a SplashScreen
     );
   }
 }
@@ -43,10 +43,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Simula um atraso para a tela de splash
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () { // Simula um atraso para a tela de splash
       // ignore: use_build_context_synchronously
-      Navigator.of(context).pushReplacement(
+      Navigator.of(context).pushReplacement( // Redirecionamento
         MaterialPageRoute(builder: (context) => const TelaCadastro()), // Navega para a tela de cadastro
       );
     });
@@ -54,12 +53,12 @@ class _SplashScreenState extends State<SplashScreen> {
   
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( // Corpo do aplicativo
       backgroundColor: Color(0XFF93B6EE), // Cor de fundo da tela de splash
-      body: Center(
-        child: Column(
+      body: Center( // Centraliza todos os filhos
+        child: Column( // Dispõe em colunas os filhos
           mainAxisAlignment: MainAxisAlignment.center, // Centralizando a coluna e seus filhos
-          children: <Widget>[
+          children: <Widget>[ // Permite a construção de vários widgets
             Image.asset(
               'assets/img/HealthTreatsLogo.png', // Caminho da Imagem de fundo que ocupará determinado espaço
               fit: BoxFit.cover, // Expande a imagem por todo espaço definido

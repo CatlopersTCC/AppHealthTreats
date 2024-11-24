@@ -16,7 +16,7 @@ class Doces extends StatefulWidget {
 // Classe que contém todo o conteúdo a ser exibido na tela
 class _DocesState extends State<Doces> {
 
-   final List<Produtos> produtos = [
+   final List<Produtos> produtos = [ // Lista dos produtos
 
     Produtos(
       nome: 'Cacau com Amêndoas',
@@ -249,12 +249,12 @@ class _DocesState extends State<Doces> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Doces | Page',
-      home: Scaffold(
-        body: SingleChildScrollView(
+      debugShowCheckedModeBanner: false, // Tira a bandeira de debug
+      title: 'Doces | Page', // título do aplicativo ao ser emulado
+      home: Scaffold( // Corpo do aplicativo
+        body: SingleChildScrollView( // Scroll de tela
           child: Stack(
-            children: <Widget>[
+            children: <Widget>[ // Permite a construção de vários widgets
               Image.asset(
                 'assets/img/docesPage.png', // Imagem de fundo
                 fit: BoxFit.cover, // Utiliza 100% da imagem
@@ -346,7 +346,7 @@ class _DocesState extends State<Doces> {
                             ),
                           );
                         },
-                        child: Card(
+                        child: Card( // Card dos produtos
                           color: const Color(0xFFF0EFEF), // Cor do card
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0), // Arredondando as bordas do card

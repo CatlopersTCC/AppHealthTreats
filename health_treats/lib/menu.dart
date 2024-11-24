@@ -268,10 +268,10 @@ class _MenuInicio extends State<MenuInicio> {
 
           const SizedBox(height: 40.0,),
 
-          Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+          Center( // Centralizando os elementos internos
+            child: Row( // Dispõe os filhos em linhas
+              mainAxisAlignment: MainAxisAlignment.center, // Centraliza
+              children: [ // Permite a construção de vários widgets
                  Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -279,14 +279,14 @@ class _MenuInicio extends State<MenuInicio> {
                     const Text(
                       'Conheça mais sobre nós!', // Título acima do card
                       style: TextStyle(
-                        fontFamily: 'RedHatDisplay',
-                        fontWeight: FontWeight.w500,
-                        fontSize: 22.0,
-                        color: Color(0XFF353535),
+                        fontFamily: 'RedHatDisplay', // Fonte estilizada
+                        fontWeight: FontWeight.w500, // Estilo da fonte
+                        fontSize: 22.0, // Tamanho da fonte
+                        color: Color(0XFF353535), // Cor da fonte
                       ),
                     ),
 
-                  InkWell(
+                  InkWell( // Ação ao clicar no Card
                     onTap: () {
                       Navigator.push(
                         context,
@@ -295,21 +295,21 @@ class _MenuInicio extends State<MenuInicio> {
                     },
                   
                     // Card Sobre Health Treats
-                    child: Card( 
-                      shape: RoundedRectangleBorder(
+                    child: Card(
+                      shape: RoundedRectangleBorder( // Arredonddamento do card
                         borderRadius: BorderRadius.circular(10.0),
                       ),
-                      elevation: 5,
-                      child: SizedBox(
-                        width: 425.0, 
-                        height: 262.0,            
-                          child: ClipRRect(
+                      elevation: 5, // Sombra
+                      child: SizedBox( // Definindo tamanho
+                        width: 425.0, // Largura
+                        height: 262.0, // Altura  
+                          child: ClipRRect( // Arredondamento da foto
                             borderRadius: BorderRadius.circular(10.0),
                               child: Image.asset(
-                                'assets/img/sobreMenu.png',
-                              fit: BoxFit.cover,
-                              width: 402.0,
-                              height: 242.0,
+                                'assets/img/sobreMenu.png', // Caminho da imagem
+                              fit: BoxFit.cover, // Cobrindo todo o SizedBox
+                              width: 402.0, // Largura
+                              height: 242.0, // Altura
                             ),
                           ),
                         ),
@@ -324,39 +324,36 @@ class _MenuInicio extends State<MenuInicio> {
         ),
       ),
       bottomNavigationBar: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0), //Coloca padding simétrico, tanto na esquerda, como na direita
-      child: ClipRRect(
-        borderRadius: const BorderRadius.only(
-        topLeft: Radius.circular(30.0), // Arredonda apenas o canto superior esquerdo
-        topRight: Radius.circular(30.0), // Arredonda apenas o canto superior direito
-      ), 
-        child: BottomNavigationBar (
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem( // Ícone 
-              icon: Icon(Icons.exit_to_app),
-              // Label não pode ser nula, se não dá erro
-              label: '',
-            ),
-          
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home_rounded,),
-              label: '',
-            ),
-          
-            BottomNavigationBarItem(
-              icon: Icon(Icons.add_circle_outline), 
-              label: '',
-            ),
-          ],
-        currentIndex: _selectedIndex, // Posição
-        selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
-        unselectedItemColor: const Color(0XFF93B6EE), // Botão deselecionado
-        backgroundColor: const Color(0xFFF0EFEF), // Cor de fundo
-        onTap: _onItemTapped, // Função acionada ao clicar
-        showSelectedLabels: false, // Evita que a label apareça quando selecionado
-        showUnselectedLabels: false, // Evita que a label apareça quando deselecionado
+        padding: const EdgeInsets.symmetric(horizontal: 20.0), // Espaçamento interno uniforme
+        child: ClipRRect( // Estrutura para realizar o arredondamento 
+          borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(30.0), // Arredonda apenas o canto superior esquerdo
+          topRight: Radius.circular(30.0), // Arredonda apenas o canto superior direito
+        ), 
+          child: BottomNavigationBar (
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.exit_to_app), // Ícone para a saída
+                label: '', // Label não pode ser nula
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home_outlined), // Ícone para a home
+                label: '', // Label não pode ser nula
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.add_circle_outline), // Ícone para o sobre
+                label: '', // Label não pode ser nula
+              ),
+            ],
+          currentIndex: _selectedIndex, // Posição
+          selectedItemColor: const Color(0XFF93B6EE), // Botão selecionado
+          unselectedItemColor: const Color(0XFF93B6EE), // Botão deselecionado
+          backgroundColor: const Color(0xFFF0EFEF), // Cor de fundo
+          onTap: _onItemTapped, // Função acionada ao clicar
+          showSelectedLabels: false, // Evita que a label apareça quando selecionado
+          showUnselectedLabels: false, // Evita que a label apareça quando deselecionado
+          ),
         ),
-      ),
       )
     );
   }

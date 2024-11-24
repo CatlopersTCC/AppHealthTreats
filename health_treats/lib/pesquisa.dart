@@ -7,20 +7,15 @@ import 'package:health_treats/menu.dart';
 import 'package:health_treats/salgados.dart';
 import 'package:health_treats/sobre.dart';
 
-
 class Pesquisa extends StatelessWidget {
   const Pesquisa({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Pesquisar...',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: const Color(0xFFF1F1F1),
-      ),
-      home: const PesquisaApp(),
+      debugShowCheckedModeBanner: false, // Tira a bandeira de debug
+      title: 'Pesquisar...', // Título do aplicativo ao ser rodado no navegador 
+      home: const PesquisaApp(), // Inicia a classe PesquisaApp como corpo da página
     );
   }
 }
@@ -78,17 +73,17 @@ class _PesquisaApp extends State<PesquisaApp> {
     );
   }
 
-  void _filterItems(String query) {
+  void _filterItems(String query) { // Filtragem do que é pesquisado
     setState(() {
       _filteredItems = _items
-          .where((item) => item.toLowerCase().contains(query.toLowerCase()))
+          .where((item) => item.toLowerCase().contains(query.toLowerCase())) // Faz com que o aplicativo entenda minúsculo ou maiúsculo como a mesma coisa
           .toList();
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( // Corpo do aplicativo
       body: SingleChildScrollView( // Código para adicionar a barra de rolagem lateral
         padding: const EdgeInsets.all(20.0), // Espaçamento interno
         child: Column( // Organiza os filhos em coluna
@@ -103,7 +98,7 @@ class _PesquisaApp extends State<PesquisaApp> {
                     Icons.search,
                     color: Color(0xFF353535),
                   ),
-                  hintText: 'Pesquisar...', // Texto de dentro da barra de pesquisa
+                  hintText: 'Qual categoria deseja procurar?', // Texto de dentro da barra de pesquisa
                   filled: true,
                   fillColor: Colors.white,
                   enabledBorder: OutlineInputBorder(
@@ -180,13 +175,12 @@ class _PesquisaApp extends State<PesquisaApp> {
                   }
                   else {
                     leadingIcon = const Icon(
-                      Icons.error_outline, //Caso dê erro, a seção terá esse icon
+                      Icons.error_outline, // Caso dê erro, a seção terá esse icon
                       color: Colors.red,
                     );
                   }
-
                                   
-                  return Card(
+                  return Card( // Card das categorias
                     color: Color(0xFFF0EFEF),
                     elevation: 3, // Adiocina sombra para o elemento
                     margin: const EdgeInsets.symmetric(vertical: 10.0),
@@ -194,15 +188,13 @@ class _PesquisaApp extends State<PesquisaApp> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: ListTile( // Estrutura que organiza os elementos dentro de uma única linha
-
                       leading: leadingIcon, // Ícone apropriado para cada item
-
                       title: Text(
                         _filteredItems[index], // Posições da index, ou seja, todos os itens 
                         style: const TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'RedHatDisplay',
-                          fontWeight: FontWeight.w500,
+                          fontSize: 18, // Tamanho da fonte
+                          fontFamily: 'RedHatDisplay', // Fonte estilizada
+                          fontWeight: FontWeight.w500, // Estilo da fonte
                         ),
                       ),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 16), // Definindo ícone de seta para ao final do widget, utilizado dentro da estrutura de um ListTile
@@ -216,28 +208,28 @@ class _PesquisaApp extends State<PesquisaApp> {
                               builder: (context) => Bebidas() // Se o usuário selecionar algum produto pertencente a categoria "Bebidas", ele será redirecionado para a página de bebidas
                             ),
                           );
-                        } else if (_filteredItems[index] == 'Bolacha' || _filteredItems[index] == 'Salgadinho') {
+                        } else if (_filteredItems[index] == 'Bolacha' || _filteredItems[index] == 'Salgadinho') { // Caso não seja nenhum dos casos anteriores, cai nesse caso
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => const Salgados() // Se o usuário selecionar algum produto pertencente a categoria "Salgados", ele será redirecionado para a página de salgados
                             ),
                           );
-                        } else if (_filteredItems[index] == 'Chocolate' || _filteredItems[index] == 'Cookies' || _filteredItems[index] == 'Geleia') {
+                        } else if (_filteredItems[index] == 'Chocolate' || _filteredItems[index] == 'Cookies' || _filteredItems[index] == 'Geleia') { // Caso não seja nenhum dos casos anteriores, cai nesse caso
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => const Doces() // Se o usuário selecionar algum produto pertencente a categoria "Doces", ele será redirecionado para a página de doces
                             ),
                           );
-                        } else if (_filteredItems[index] == 'Pão de Queijo' || _filteredItems[index] == 'Waffles' || _filteredItems[index] == 'Panquecas') {
+                        } else if (_filteredItems[index] == 'Pão de Queijo' || _filteredItems[index] == 'Waffles' || _filteredItems[index] == 'Panquecas') { // Caso não seja nenhum dos casos anteriores, cai nesse caso
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (context) => const Massas() // Se o usuário selecionar algum produto pertencente a categoria "Massas", ele será redirecionado para a página de massas
                             ),
                           );
-                        } else if (_filteredItems[index] == 'Sobre'){
+                        } else if (_filteredItems[index] == 'Sobre'){ // Caso não seja nenhum dos casos anteriores, cai nesse caso
                           Navigator.push(
                             context, 
                             MaterialPageRoute(

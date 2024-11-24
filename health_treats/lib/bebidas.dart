@@ -16,7 +16,7 @@ class Bebidas extends StatefulWidget {
 // Classe que contém todo o conteúdo a ser exibido na tela
 class _BebidasState extends State<Bebidas> {
 
-   final List<Produtos> produtos = [
+   final List<Produtos> produtos = [ // Lista dos produtos
 
     Produtos(
       nome: 'Café Natural',
@@ -249,12 +249,12 @@ class _BebidasState extends State<Bebidas> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Bebidas | Page',
-      home: Scaffold(
-        body: SingleChildScrollView(
+      debugShowCheckedModeBanner: false, // Tira a bandeira de debug
+      title: 'Bebidas | Page', // // Título do aplicativo ao ser emulado
+      home: Scaffold( // Corpo do aplicativo
+        body: SingleChildScrollView( // Scroll de tela
           child: Stack(
-            children: <Widget>[
+            children: <Widget>[ // Permite a construção de vários widgets
               Image.asset(
                 'assets/img/bebidasPage.png', // Imagem de fundo
                 fit: BoxFit.cover, // Utiliza 100% da imagem
@@ -346,7 +346,7 @@ class _BebidasState extends State<Bebidas> {
                             ),
                           );
                         },
-                        child: Card(
+                        child: Card( // Card dos produtos
                           color: const Color(0xFFF0EFEF), // Cor do card
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0), // Arredondando as bordas do card
@@ -358,7 +358,7 @@ class _BebidasState extends State<Bebidas> {
                             height: 230.0, // Altura do card
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center, // Alinhando todos os filhos no centro do card 
-                              children: [
+                              children: [ // Permite a construção de vários widgets
                                 CircleAvatar( // Torna a imagem redonda
                                   radius: 70.0, // Arredondando foto do produto
                                   backgroundImage: AssetImage(produto.foto), // Resgatando foto do produto da classe Produto

@@ -14,7 +14,7 @@ class Massas extends StatefulWidget {
 }
 
 // Classe que contém todo o conteúdo a ser exibido na tela
-class _MassasState extends State<Massas> {
+class _MassasState extends State<Massas> { // Lista de produtos
 
    final List<Produtos> produtos = [
 

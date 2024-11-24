@@ -16,7 +16,7 @@ class Salgados extends StatefulWidget {
 // Classe que contém todo o conteúdo a ser exibido na tela
 class _SalgadosState extends State<Salgados> {
 
-   final List<Produtos> produtos = [
+   final List<Produtos> produtos = [ // Lista de produtos
 
     Produtos(
       nome: 'Salgadinho de Tomate',
@@ -193,12 +193,12 @@ class _SalgadosState extends State<Salgados> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Salgados | Page',
-      home: Scaffold(
-        body: SingleChildScrollView(
+      debugShowCheckedModeBanner: false, // Tira a bandeira de debug
+      title: 'Salgados | Page', // Título ao ser emulado
+      home: Scaffold( // Corpo do aplicativo
+        body: SingleChildScrollView( // Scroll da tela
           child: Stack(
-            children: <Widget>[
+            children: <Widget>[ // Permite a construção de vários widgets
               Image.asset(
                 'assets/img/salgadosPage.png', // Imagem de fundo
                 fit: BoxFit.cover, // Utiliza 100% da imagem

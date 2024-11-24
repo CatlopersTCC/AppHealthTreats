@@ -20,12 +20,9 @@ class SobreApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Health Treats | Sobre',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const SobreMenu(),
+      debugShowCheckedModeBanner: false, // Tira a bandeira de debug
+      title: 'Health Treats | Sobre', // Título do aplicativo ao ser emulado
+      home: const SobreMenu(), // Roda como corpo da página
     );
   }
 }
@@ -109,10 +106,6 @@ class _SobreMenu extends State<SobreMenu> {
                     MaterialPageRoute(builder: (context) => const PesquisaApp()),
                   );
                 },
-                // onChanged: (value) { // Atualiza enquanto o usuário digita
-                //   //Lógica de pesquisa pode ser adicionada aqui
-                //   print('Texto digitado: $value');
-                // },
               ),
             ),
 
@@ -236,32 +229,32 @@ class _SobreMenu extends State<SobreMenu> {
             ),
           ),
             
-            const SizedBox(height: 20.0,), // Espaçamento entre o Card e a Row
+          const SizedBox(height: 20.0,), // Espaçamento entre o Card e a Row
 
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start, // Indica que a Row se posicione no início, na margem esquerda
-              children: [
-                // Coluna para título e texto à esquerda
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start, // Indica ao texto que ele começe na margem esquerda, considerado o início
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: 21.5), // Margem esquerda
-                        child: const Text(
-                          'Ouviu um Miau?', // Título
-                          style: TextStyle(
-                            fontSize: 35.0, // Tamanho da fonte
-                            color: Color(0XFF353535), // Cor da fonte
-                            fontFamily: 'RedHatDisplay', // Fonte estilizada
-                            fontWeight: FontWeight.bold, // Estilo da fonte
-                          ),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start, // Indica que a Row se posicione no início, na margem esquerda
+            children: [
+              // Coluna para título e texto à esquerda
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start, // Indica ao texto que ele começe na margem esquerda, considerado o início
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 21.5), // Margem esquerda
+                      child: const Text(
+                        'Ouviu um Miau?', // Título
+                        style: TextStyle(
+                          fontSize: 35.0, // Tamanho da fonte
+                          color: Color(0XFF353535), // Cor da fonte
+                          fontFamily: 'RedHatDisplay', // Fonte estilizada
+                          fontWeight: FontWeight.bold, // Estilo da fonte
                         ),
                       ),
+                    ),
 
-                      const SizedBox(height: 15.0), // espaçamento entre título e texto
+                    const SizedBox(height: 15.0), // espaçamento entre título e texto
 
-                      Container(
+                    Container(
                       margin: EdgeInsets.only(left: 21.5), // Margem esquerda
                       child: const Text(
                         'A CatLopers é uma empresa com o objetivo de fornecer sistemas de qualidade e de alta durabilidade.', // Texto
@@ -274,40 +267,40 @@ class _SobreMenu extends State<SobreMenu> {
                         ),
                       ),
                     )
-                    ],
-                  ),
+                  ],
                 ),
+              ),
                 
-                const SizedBox(width: 20.0), // Divisão horizontal
+              const SizedBox(width: 20.0), // Divisão horizontal
 
-                Container(
-                  width: 140, // Largura do contâiner que envolve a imagem
-                  height: 160, // Altura do contâiner que envolve a imagem
-                  margin: EdgeInsets.only(right: 21.5, top: 78.0), // Margem esquerda
-                  alignment: Alignment.center,
-                  child: Center(
-                    child: Image.asset( // Comando que chama a imagem
-                      'assets/img/logo_black.png', // Caminho da Imagem de fundo que ocupará determinado espaço
-                      fit: BoxFit.cover, // Expande a imagem por todo espaço definido
-                        width: double.infinity, // Utilizado para usar 100% do tamanho determinado
-                    ),
+              Container(
+                width: 140, // Largura do contâiner que envolve a imagem
+                height: 160, // Altura do contâiner que envolve a imagem
+                margin: EdgeInsets.only(right: 11.5, top: 78.0), // Margem esquerda
+                alignment: Alignment.center, // Alinhando os elementos filhos dentro do contâiner
+                child: Center(
+                  child: Image.asset( // Comando que chama a imagem
+                    'assets/img/logo_black.png', // Caminho da Imagem de fundo que ocupará determinado espaço
+                    fit: BoxFit.cover, // Expande a imagem por todo espaço definido
+                      width: double.infinity, // Utilizado para usar 100% do tamanho determinado
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
+          ),
 
-            SizedBox(height: 30.0), // Espaço entre o texto e o botão
+          SizedBox(height: 30.0), // Espaço entre o texto e o botão
 
-            Center(
-              child: ElevatedButton( // Criação do botão
-                onPressed: _launchURL, // Leva ao site da empresa
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 35.0, vertical: 20.0), // Definindo o tamanho vertical e horizontal do botão
-                  backgroundColor: Color(0XFF93B6EE), // Cor do botão
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0), // Arredondamento do botão
-                  ),
+          Center(
+            child: ElevatedButton( // Criação do botão
+              onPressed: _launchURL, // Leva ao site da empresa
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 35.0, vertical: 20.0), // Definindo o tamanho vertical e horizontal do botão
+                backgroundColor: Color(0XFF93B6EE), // Cor do botão
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0), // Arredondamento do botão
                 ),
+              ),
                 child: const Text(
                   "Saiba mais!", // Texto dentro do botão
                   style: TextStyle(
@@ -321,7 +314,6 @@ class _SobreMenu extends State<SobreMenu> {
             ),
           ]
         ),
-
       ),
       bottomNavigationBar: Padding( // Espaçamento interno entre os elementos
         padding: const EdgeInsets.symmetric(horizontal: 20.0), // Coloca padding simétrico, tanto na esquerda, como na direita
@@ -331,20 +323,18 @@ class _SobreMenu extends State<SobreMenu> {
             topRight: Radius.circular(30.0), // Arredonda apenas o canto superior direito
           ), 
           child: BottomNavigationBar (
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem( // Ícone 
-                icon: Icon(Icons.exit_to_app),
-                //Label não pode ser nula, se não dá erro
-                label: '',
+            items: const <BottomNavigationBarItem>[ // Elementos dentro da bottomNavigationBar
+              BottomNavigationBarItem(
+                icon: Icon(Icons.exit_to_app), // Ícone para a saída
+                label: '', // Label não pode ser nula
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined),
-                label: '',
+                icon: Icon(Icons.home_outlined), // Ícone para a home
+                label: '', // Label não pode ser nula
               ),
-          
               BottomNavigationBarItem(
-                icon: Icon(Icons.add_circle_rounded), 
-                label: '',
+                icon: Icon(Icons.add_circle_outline), // Ícone para o sobre
+                label: '', // Label não pode ser nula
               ),
             ],
             currentIndex: _selectedIndex, // Posição
