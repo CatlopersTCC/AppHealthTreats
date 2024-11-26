@@ -22,7 +22,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Salgadinho de Tomate',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_tomate_e_manjericão.png',
-      desc: 'O Salgadinho de Tomate é feito com tomates frescos (50%) e temperado com azeite de oliva e ervas naturais. Adoçado com eritritol, um adoçante sem calorias e de baixo índice glicêmico, é ideal para diabéticos. Contém farinha de grão-de-bico para uma textura crocante e vinagre de maçã para realçar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é uma opção saudável e saborosa.',
+      desc: 'O Salgadinho de Tomate com Manjericão é feito com tomates frescos (50%) e temperado com manjericão natural, proporcionando um sabor fresco e aromático. Adoçado com eritritol, um adoçante sem calorias e de baixo índice glicêmico, é ideal para diabéticos. Não contém açúcar refinado, glúten, lactose ou conservantes artificiais, oferecendo uma opção saudável e saborosa para quem busca controlar a ingestão de açúcar.',
       comentarios: [
         Comentario(nome: 'David Battaglia', desc: 'Ta aí uma combinação que nunca imaginei que seria boa.', rating: 5),
         Comentario(nome: 'Herbert Clemente', desc: 'É um salgadinho exótico, claro que no bom sentido!', rating: 5),
@@ -50,7 +50,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Salgadinho de Queijo',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_queijo_e_cebola.png',
-      desc: 'O Salgadinho de Queijo é feito com queijo fresco de alta qualidade (50%) e temperado com azeite de oliva e especiarias naturais. Adoçado com eritritol, um adoçante sem calorias e de baixo índice glicêmico, é ideal para diabéticos. Contém farinha de grão-de-bico para uma textura crocante e um toque de vinagre de maçã para dar equilíbrio ao sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é uma opção saudável e deliciosa.',
+      desc: 'O Salgadinho de Queijo e Cebola é feito com queijo de alta qualidade e cebola natural, combinados para criar um sabor marcante e delicioso. Adoçado com eritritol, um adoçante sem calorias e de baixo índice glicêmico, ele é ideal para diabéticos. Livre de açúcar refinado, glúten, lactose e conservantes artificiais, oferece uma opção saudável e saborosa para quem precisa controlar a ingestão de açúcar.',
       comentarios: [
         Comentario(nome: 'Melinda Gonçalves', desc: 'O sabor de queijo é simplesmente VICIANTE!', rating: 5),
         Comentario(nome: 'José Maria de Jesus', desc: 'Os amantes de queijo vão adorar!', rating: 5),
