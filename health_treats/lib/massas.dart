@@ -22,7 +22,7 @@ class _MassasState extends State<Massas> { // Lista de produtos
       nome: 'Mini Panquecas',
       valor: 'R\$10,00',
       foto: 'assets/img/massas/massas_panqueca.png',
-      desc: 'Descrição rápida',
+      desc: 'As Mini Panquecas são feitas com ingredientes naturais (50%) e adoçadas com eritritol, um adoçante sem calorias e de baixo índice glicêmico, ideal para diabéticos. Contêm farinha de aveia para uma textura macia e são realçadas com um toque de baunilha. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, são uma opção saudável e saborosa.',
       comentarios: [
         Comentario(nome: 'Rosangela Gomes', desc: 'De todo o catálogo, as mini panquecas são o melhor!', rating: 5),
         Comentario(nome: 'Jeferson Araújo', desc: 'Gostei, o preço está ótimo também.', rating: 4),
@@ -36,7 +36,7 @@ class _MassasState extends State<Massas> { // Lista de produtos
       nome: 'Mini Pães de Queijo',
       valor: 'R\$23,00',
       foto: 'assets/img/massas/massas_pao_de_queijo.png',
-      desc: 'Descrição longa',
+      desc: 'Os Mini Pães de Queijo são feitos com queijo de alta qualidade (50%) e temperados com azeite de oliva. Adoçados com eritritol, são ideais para diabéticos. Contêm farinha de grão-de-bico para uma textura crocante e um toque de vinagre de maçã para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais.',
       comentarios: [
         Comentario(nome: 'Eloá Vasconcelos', desc: 'Superou todas as expectativas que eu tinha!', rating: 5),
         Comentario(nome: 'José Cruz Pereira', desc: 'Compraria mais.', rating: 4),
@@ -50,7 +50,7 @@ class _MassasState extends State<Massas> { // Lista de produtos
       nome: 'Mini Waffles',
       valor: 'R\$13,00',
       foto: 'assets/img/massas/massas_waffles.png',
-      desc: 'Descrição especial',
+      desc: 'Os Mini Waffles são feitos com ingredientes naturais (50%) e adoçados com eritritol, um adoçante sem calorias e de baixo índice glicêmico, ideal para diabéticos. Contêm farinha de aveia para uma textura leve e um toque de baunilha para realçar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, são uma opção saudável e deliciosa.',
       comentarios: [
         Comentario(nome: 'Solimar Gomes Morais', desc: 'Nunca tinha visto algo parecido no Brasil, me surpreendeu.', rating: 5),
         Comentario(nome: 'Rosimeire França', desc: 'Ótimo complemento para um café da tarde.', rating: 4),
@@ -64,7 +64,7 @@ class _MassasState extends State<Massas> { // Lista de produtos
       nome: 'Mini Tortinhas',
       valor: 'R\$17,00',
       foto: 'assets/img/massas/massas_tortinhas.png',
-      desc: 'Descrição especial',
+      desc: 'As Mini Tortinhas são feitas com ingredientes naturais (50%) e recheadas com opções saudáveis, como frutas frescas ou queijos. Adoçadas com eritritol, são ideais para diabéticos. Contêm farinha de grão-de-bico para crocância e um toque de vinagre de maçã para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, são uma opção saudável e saborosa.',
       comentarios: [
         Comentario(nome: 'Armando Batista', desc: 'Chegou bem rápido, gostei do atendimento e do produto.', rating: 5),
         Comentario(nome: 'Geralda Santana', desc: 'O difícil mesmo é parar de comer, qualidade pura!', rating: 5),
