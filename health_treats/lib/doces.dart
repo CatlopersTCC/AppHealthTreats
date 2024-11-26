@@ -20,7 +20,7 @@ class _DocesState extends State<Doces> {
 
     Produtos(
       nome: 'Cacau com Amêndoas',
-      valor: 'R\$8.00',
+      valor: 'R\$13,00',
       foto: 'assets/img/doces/chocolate _de_cacau_com_amendoas.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -34,7 +34,7 @@ class _DocesState extends State<Doces> {
     ), 
     Produtos(
       nome: 'Chocolate com Frutas',
-      valor: 'R\$8.00',
+      valor: 'R\$13,00',
       foto: 'assets/img/doces/chocolate_de_cacau_com_frutas_vermelhas.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -48,7 +48,7 @@ class _DocesState extends State<Doces> {
     ),  
     Produtos(
       nome: 'Chocolate Branco',
-      valor: 'R\$8.00',
+      valor: 'R\$13,00',
       foto: 'assets/img/doces/chocolate_de_chocolate_branco_com_coco.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -62,7 +62,7 @@ class _DocesState extends State<Doces> {
     ),    
     Produtos(
       nome: 'Geleia de Uva',
-      valor: 'R\$22.00',
+      valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_uva.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -76,7 +76,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Geleia de Framboesa',
-      valor: 'R\$25.00',
+      valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_framboesa.png',
       desc: 'Descrição longa',
       comentarios: [
@@ -90,7 +90,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Geleia de Laranja',
-      valor: 'R\$18.50',
+      valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_laranja.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -104,7 +104,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Geleia de Limão',
-      valor: 'R\$18.00',
+      valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_limao.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -118,7 +118,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Geleia de Morango',
-      valor: 'R\$22.00',
+      valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_morango.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -132,7 +132,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Geleia de Maracujá',
-      valor: 'R\$21.00',
+      valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_maracuja.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -146,7 +146,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Coockie de Uva',
-      valor: 'R\$5.00',
+      valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_uva.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -160,7 +160,7 @@ class _DocesState extends State<Doces> {
     ), 
     Produtos(
       nome: 'Coockie de Cereja',
-      valor: 'R\$4.50',
+      valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_cereja.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -174,7 +174,7 @@ class _DocesState extends State<Doces> {
     ),  
     Produtos(
       nome: 'Coockie de Baunilha',
-      valor: 'R\$8.00',
+      valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_baunilha.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -188,7 +188,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Coockie de Blueberry',
-      valor: 'R\$5.00',
+      valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_blueberry.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -202,7 +202,7 @@ class _DocesState extends State<Doces> {
     ),
     Produtos(
       nome: 'Coockie Branco',
-      valor: 'R\$8.00',
+      valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_chocolate_branco.png',
       desc: 'Descrição rápida',
       comentarios: [

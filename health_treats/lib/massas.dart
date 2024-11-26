@@ -20,7 +20,7 @@ class _MassasState extends State<Massas> { // Lista de produtos
 
     Produtos(
       nome: 'Mini Panquecas',
-      valor: 'R\$10.00',
+      valor: 'R\$10,00',
       foto: 'assets/img/massas/massas_panqueca.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -34,7 +34,7 @@ class _MassasState extends State<Massas> { // Lista de produtos
     ),
     Produtos(
       nome: 'Mini Pães de Queijo',
-      valor: 'R\$9.00',
+      valor: 'R\$23,00',
       foto: 'assets/img/massas/massas_pao_de_queijo.png',
       desc: 'Descrição longa',
       comentarios: [
@@ -48,7 +48,7 @@ class _MassasState extends State<Massas> { // Lista de produtos
     ),
     Produtos(
       nome: 'Mini Waffles',
-      valor: 'R\$10.00',
+      valor: 'R\$13,00',
       foto: 'assets/img/massas/massas_waffles.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -62,7 +62,7 @@ class _MassasState extends State<Massas> { // Lista de produtos
     ),
     Produtos(
       nome: 'Mini Tortinhas',
-      valor: 'R\$11.00',
+      valor: 'R\$17,00',
       foto: 'assets/img/massas/massas_tortinhas.png',
       desc: 'Descrição especial',
       comentarios: [

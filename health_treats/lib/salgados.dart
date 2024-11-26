@@ -20,7 +20,7 @@ class _SalgadosState extends State<Salgados> {
 
     Produtos(
       nome: 'Salgadinho de Tomate',
-      valor: 'R\$6.50',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_tomate_e_manjericão.png',
       desc: 'Descrição rápida',
       comentarios: [
@@ -34,7 +34,7 @@ class _SalgadosState extends State<Salgados> {
     ),
     Produtos(
       nome: 'Salgadinho Natural',
-      valor: 'R\$6.50',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_natural.png',
       desc: 'Descrição longa',
       comentarios: [
@@ -48,7 +48,7 @@ class _SalgadosState extends State<Salgados> {
     ),
     Produtos(
       nome: 'Salgadinho de Queijo',
-      valor: 'R\$7.50',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_queijo_e_cebola.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -62,7 +62,7 @@ class _SalgadosState extends State<Salgados> {
     ),
     Produtos(
       nome: 'Salgadinho de Ervas',
-      valor: 'R\$7.00',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_ervas_finas.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -76,7 +76,7 @@ class _SalgadosState extends State<Salgados> {
     ),
     Produtos(
       nome: 'Salgadinho de Alho',
-      valor: 'R\$7.50',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_alho_e_azeite.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -90,7 +90,7 @@ class _SalgadosState extends State<Salgados> {
     ),
     Produtos(
       nome: 'Salgadinho de Limão',
-      valor: 'R\$6.50',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_pimenta_e_limão.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -104,7 +104,7 @@ class _SalgadosState extends State<Salgados> {
     ),
     Produtos(
       nome: 'Bolacha Tradicional',
-      valor: 'R\$3.50',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/bolacha_tradicional.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -118,7 +118,7 @@ class _SalgadosState extends State<Salgados> {
     ),
     Produtos(
       nome: 'Bolacha de Requeijão',
-      valor: 'R\$4.00',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/bolacha_de_requeijao.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -132,7 +132,7 @@ class _SalgadosState extends State<Salgados> {
     ),
     Produtos(
       nome: 'Bolacha de Manteiga',
-      valor: 'R\$3.00',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/bolacha_de_manteiga.png',
       desc: 'Descrição especial',
       comentarios: [
@@ -146,7 +146,7 @@ class _SalgadosState extends State<Salgados> {
     ),
     Produtos(
       nome: 'Bolacha de Cebola',
-      valor: 'R\$3.50',
+      valor: 'R\$6,00',
       foto: 'assets/img/salgados/bolacha_de_cebola.png',
       desc: 'Descrição especial',
       comentarios: [
