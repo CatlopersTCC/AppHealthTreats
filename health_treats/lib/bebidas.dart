@@ -22,7 +22,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Café Natural',
       valor: 'R\$28,00',
       foto: 'assets/img/bebidas/cafe.png',
-      desc: 'Descrição rápida',
+      desc: 'O Pacote de Café Natural contém grãos 100% selecionados, torrados na medida certa para garantir um sabor encorpado e aroma marcante. Adoçado com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico, é ideal para diabéticos ou para quem busca um estilo de vida saudável. Livre de açúcar refinado, glúten, lactose e conservantes artificiais, oferece uma experiência autêntica e equilibrada a cada xícara.',
       comentarios: [
         Comentario(nome: 'Suelen Garcia', desc: 'O gostinho espeicial me ganhou!', rating: 4),
         Comentario(nome: 'Jefferson Douglas', desc:  'Repleto de cafeína, acorda bem pela manhã', rating: 4),
@@ -36,7 +36,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Chá de Canela',
       valor: 'R\$23,00',
       foto: 'assets/img/bebidas/cha_de_canela_e_hibisco.png',
-      desc: 'Descrição longa',
+      desc: 'O Chá de Canela com Hibisco é feito com canela em pau e hibisco de alta qualidade e adoçado com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico, ideal para diabéticos. Proporciona um sabor aromático e reconfortante, sem açúcar refinado, glúten, lactose ou conservantes artificiais. Uma escolha saudável e funcional para quem controla a ingestão de açúcar.',
       comentarios: [
         Comentario(nome: 'Adiel Lopes', desc: 'Adorei esse sabor tão inovador no mercado.', rating: 4),
         Comentario(nome: 'Giovane Severino', desc: 'Canela combina com tudo, impressionante.', rating: 4),
@@ -50,7 +50,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Chá de Laranja',
       valor: 'R\$23,00',
       foto: 'assets/img/bebidas/cha_de_laranja.png',
-      desc: 'Descrição especial',
+      desc: 'O Chá de Laranja é preparado com cascas de laranja desidratadas e adoçado com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico. Rico em vitamina C e com um sabor cítrico equilibrado, é livre de açúcar refinado, glúten, lactose e conservantes artificiais. Ideal para uma bebida leve e saudável.',
       comentarios: [
         Comentario(nome: 'Gilma Neilma', desc: 'Dentre todos os sabores de chá, o de laranja é o mais relaxante...', rating: 4),
         Comentario(nome: 'Laércio Mendes', desc: 'Faz muito tempo que não via algo tão bom!', rating: 5),
@@ -64,7 +64,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Chá de Limão',
       valor: 'R\$23,00',
       foto: 'assets/img/bebidas/cha_de_limao.png',
-      desc: 'Descrição especial',
+      desc: 'O Chá de Limão é elaborado com limões desidratados e adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose. Rico em vitamina C, possui um sabor cítrico e refrescante. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é ideal para quem busca uma opção saudável e saborosa.',
       comentarios: [
         Comentario(nome: 'Carla Botelho', desc: 'Tudo que possua limão na composição, me conquista!', rating: 5),
         Comentario(nome: 'Zico Santos Freire', desc: 'Têm me auxiliado a controlar a glicemia.', rating: 4),
@@ -78,7 +78,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Chá de Morango',
       valor: 'R\$23,00',
       foto: 'assets/img/bebidas/cha_de_morango.png',
-      desc: 'Descrição especial',
+      desc: 'O Chá de Morango é feito com pedaços de morango desidratados e adoçado com eritritol, um adoçante de baixo índice glicêmico. Rico em antioxidantes, tem um sabor frutado e delicado, perfeito para quem busca uma bebida saudável e saborosa. Sem açúcar refinado, glúten, lactose ou conservantes artificiais.',
       comentarios: [
         Comentario(nome: 'Marcela de Oliveira', desc: 'Já virou rotina fazer um chá de morango pra relaxar.', rating: 5),
         Comentario(nome: 'Michelly Moreno', desc: 'Primeira vez que vejo um chá sabor morango.', rating: 4),
@@ -92,7 +92,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Chá de Gengibre',
       valor: 'R\$23,00',
       foto: 'assets/img/bebidas/cha_de_limao_e_gengibre.png',
-      desc: 'Descrição especial',
+      desc: 'O Chá de Gengibre com Hortelã é preparado com gengibre desidratado e Hortelã e adoçado com eritritol, mantendo o baixo índice glicêmico. Oferece um sabor picante e propriedades digestivas e anti-inflamatórias. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é ideal para momentos de bem-estar.',
       comentarios: [
         Comentario(nome: 'Ana Carolina', desc: 'Simplesmente um sabor único.', rating: 4),
         Comentario(nome: 'Fernando Moura', desc: 'O equilíbrio do limão com o gengibre deixa tudo melhor.', rating: 4),
@@ -106,7 +106,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Chá de Maracujá',
       valor: 'R\$23,00',
       foto: 'assets/img/bebidas/cha_de_maracuja.png',
-      desc: 'Descrição especial',
+      desc: 'O Chá de Maracujá é feito com pedaços de maracujá desidratados e adoçado com eritritol, um adoçante natural sem calorias. Traz um sabor tropical e relaxante, perfeito para momentos tranquilos. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é uma opção equilibrada e saudável.',
       comentarios: [
         Comentario(nome: 'Paulo Fernando', desc: 'Ótimo para relaxar um pouco depois do trabalho.', rating: 5),
         Comentario(nome: 'Sérgio Domingos', desc: 'Têm me ajudado a controlar a diabete comendo sem abdicar de bons alimentos.', rating: 5),
@@ -120,7 +120,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Chá Verde',
       valor: 'R\$23,00',
       foto: 'assets/img/bebidas/cha_verde_com_hortela.png',
-      desc: 'Descrição especial',
+      desc: 'O Chá Verde é feito com folhas selecionadas de Camellia sinensis e adoçado com eritritol, mantendo um baixo índice glicêmico, perfeito para diabéticos. Rico em antioxidantes e com um sabor suave, é livre de açúcar refinado, glúten, lactose e conservantes artificiais, oferecendo saúde e equilíbrio em cada xícara.',
       comentarios: [
         Comentario(nome: 'Jeremias Augusto', desc: 'Incrivelmente Incrível.', rating: 5),
         Comentario(nome: 'Luís de Jesus', desc: 'Comprei e todos de casa não param de elogiar!.', rating: 4),
@@ -134,7 +134,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Refri de Abacaxi',
       valor: 'R\$7,00',
       foto: 'assets/img/bebidas/refri_de_abacaxi_com_gengibre.png',
-      desc: 'Descrição especial',
+      desc: 'O Refrigerante de Abacaxi é preparado com suco natural de abacaxi (50%) e adoçado com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico. Refrescante e tropical, é livre de açúcar refinado, glúten, lactose ou conservantes artificiais, oferecendo sabor e saúde em uma bebida.',
       comentarios: [
         Comentario(nome: 'Camila Ricci Viana', desc: 'Apenas comprem, é tudo de bom!', rating: 5),
         Comentario(nome: 'Clayton Colombo', desc: 'Compensa comprar pelas propriedades que o gengibre possui.', rating: 5),
@@ -148,7 +148,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Refri de Blueberry',
       valor: 'R\$7.00',
       foto: 'assets/img/bebidas/refri_de_blueberry.png',
-      desc: 'Descrição especial',
+      desc: 'O Refrigerante de Blueberry é feito com suco natural de blueberry (50%) e adoçado com eritritol, perfeito para diabéticos. Rico em antioxidantes e com sabor frutado, é uma bebida livre de açúcar refinado, glúten, lactose e conservantes artificiais.',
       comentarios: [
         Comentario(nome: 'Jorge Cardoso Braga', desc: 'Entrou pra lista de refrigerantes favoritos!', rating: 5),
         Comentario(nome: 'Ester Guimarães', desc: 'Um dos melhores que já pude experimentar.', rating: 4),
@@ -162,7 +162,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Refri de Frutas',
       valor: 'R\$7.00',
       foto: 'assets/img/bebidas/refri_de_frutas_vermelhas.png',
-      desc: 'Descrição especial',
+      desc: 'O Refrigerante de Frutas Vermelhas combina sucos naturais de morango, amora e framboesa (50%) e é adoçado com eritritol. Rico em antioxidantes, oferece um sabor equilibrado e efervescente, sem açúcar refinado, glúten, lactose ou conservantes artificiais.',
       comentarios: [
         Comentario(nome: 'Beatriz Bragança', desc: 'Nunca vi um produto de frutas vermelhas ser ruim, bom produto!.', rating: 5),
         Comentario(nome: 'Felipe Batista', desc: 'Estão muito de parabéns, ótimo alimento.', rating: 5),
@@ -176,7 +176,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Refri de Laranja',
       valor: 'R\$7,00',
       foto: 'assets/img/bebidas/refri_de_laranja.png',
-      desc: 'Descrição especial',
+      desc: 'O Refrigerante de Laranja é preparado com suco natural de laranja (50%) e adoçado com eritritol, ideal para diabéticos. Rico em vitamina C, tem um sabor cítrico e refrescante. Livre de açúcar refinado, glúten, lactose ou conservantes artificiais.',
       comentarios: [
         Comentario(nome: 'Nayara Barbosa', desc: 'Delicioso e autêntico, compraria mais vezes com certeza.', rating: 5),
         Comentario(nome: 'Antônio Carvalho', desc: 'O frescor para dias ensolarados é sensacional.', rating: 4),
@@ -190,7 +190,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Refri de Limão',
       valor: 'R\$7,00',
       foto: 'assets/img/bebidas/refri_de_limao.png',
-      desc: 'Descrição especial',
+      desc: 'O Refrigerante de Limão é feito com suco natural de limão (50%) e adoçado com eritritol, oferecendo um sabor ácido e refrescante. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é perfeito para dias quentes e saudáveis.',
       comentarios: [
         Comentario(nome: 'Renato Teixeira', desc: 'Impressionante como a marca faz até o simples ficar incrível!', rating: 5),
         Comentario(nome: 'Estephani Correia', desc: 'Fiquei CHOCADA com a qualidade.', rating: 4),
@@ -204,7 +204,7 @@ class _BebidasState extends State<Bebidas> {
       nome: 'Refri de Kiwi',
       valor: 'R\$7,00',
       foto: 'assets/img/bebidas/refri_de_kiwi.png',
-      desc: 'Descrição especial',
+      desc: 'O Refrigerante de Kiwi é elaborado com suco natural de kiwi (50%) e adoçado com eritritol, mantendo o sabor tropical e exótico. Rico em antioxidantes, é livre de açúcar refinado, glúten, lactose e conservantes artificiais, ideal para momentos de frescor.',
       comentarios: [
         Comentario(nome: 'Luiza Miranda', desc: 'Incrível como a marca é ousada e acerta!', rating: 5),
         Comentario(nome: 'Fábio Mendonça', desc: 'Até que bom, sem críticas e sem elogios.', rating: 3),
