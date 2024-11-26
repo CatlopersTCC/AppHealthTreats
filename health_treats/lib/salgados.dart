@@ -22,7 +22,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Salgadinho de Tomate',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_tomate_e_manjericão.png',
-      desc: 'Descrição rápida',
+      desc: 'O Salgadinho de Tomate é feito com tomates frescos (50%) e temperado com azeite de oliva e ervas naturais. Adoçado com eritritol, um adoçante sem calorias e de baixo índice glicêmico, é ideal para diabéticos. Contém farinha de grão-de-bico para uma textura crocante e vinagre de maçã para realçar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é uma opção saudável e saborosa.',
       comentarios: [
         Comentario(nome: 'David Battaglia', desc: 'Ta aí uma combinação que nunca imaginei que seria boa.', rating: 5),
         Comentario(nome: 'Herbert Clemente', desc: 'É um salgadinho exótico, claro que no bom sentido!', rating: 5),
@@ -36,7 +36,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Salgadinho Natural',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_natural.png',
-      desc: 'Descrição longa',
+      desc: 'O Salgadinho Natural é feito com ingredientes frescos e naturais e temperado com azeite de oliva e ervas frescas. Adoçado com eritritol, um adoçante sem calorias e de baixo índice glicêmico, é ideal para diabéticos. Contém farinha de grão-de-bico para uma textura crocante e um toque de vinagre de maçã para realçar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é uma opção saudável e saborosa.',
       comentarios: [
         Comentario(nome: 'Ricardo Mesquita', desc: 'Se você busca um salgadinho bom e saudável, achou!', rating: 4),
         Comentario(nome: 'Helen Amaral Muniz', desc: 'O design me atraiu, mas o que me ganhou foi o sabor!', rating: 4),
@@ -50,7 +50,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Salgadinho de Queijo',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_queijo_e_cebola.png',
-      desc: 'Descrição especial',
+      desc: 'O Salgadinho de Queijo é feito com queijo fresco de alta qualidade (50%) e temperado com azeite de oliva e especiarias naturais. Adoçado com eritritol, um adoçante sem calorias e de baixo índice glicêmico, é ideal para diabéticos. Contém farinha de grão-de-bico para uma textura crocante e um toque de vinagre de maçã para dar equilíbrio ao sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é uma opção saudável e deliciosa.',
       comentarios: [
         Comentario(nome: 'Melinda Gonçalves', desc: 'O sabor de queijo é simplesmente VICIANTE!', rating: 5),
         Comentario(nome: 'José Maria de Jesus', desc: 'Os amantes de queijo vão adorar!', rating: 5),
@@ -64,7 +64,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Salgadinho de Ervas',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_ervas_finas.png',
-      desc: 'Descrição especial',
+      desc: 'Os Salgadinho de Ervas Finas são feitos com uma mistura de ervas frescas (50%) e temperados com azeite de oliva. Adoçados com eritritol, um adoçante sem calorias e de baixo índice glicêmico, são ideais para diabéticos. Contêm farinha de grão-de-bico para garantir crocância e um toque de vinagre de maçã para realçar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, são uma opção saudável e saborosa.',
       comentarios: [
         Comentario(nome: 'Alan Patrick Reis', desc: 'Excelente, diferente e bom.', rating: 5),
         Comentario(nome: 'Thiago Carvalho', desc: 'Ideal para acompanhar uma cerveja gelada!', rating: 5),
@@ -78,7 +78,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Salgadinho de Alho',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_alho_e_azeite.png',
-      desc: 'Descrição especial',
+      desc: 'O Salgadinho de Alho e Azeite é feito com alho fresco (50%) e azeite de oliva extravirgem. Adoçado com eritritol, um adoçante sem calorias e de baixo índice glicêmico, é ideal para diabéticos. Contém farinha de grão-de-bico para uma textura crocante e vinagre de maçã para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é uma opção saudável e saborosa.',
       comentarios: [
         Comentario(nome: 'Antonella Alencar', desc: 'Sensacional, acabou em segundos aqui em casa!', rating: 5),
         Comentario(nome: 'Cecília Gutierrez', desc: 'Delicioso! O alho e azeite são bem harmonizados.', rating: 4),
@@ -92,7 +92,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Salgadinho de Limão',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/salgadinho_de_pimenta_e_limão.png',
-      desc: 'Descrição especial',
+      desc: 'O Salgadinho de Pimenta e Limão é feito com pimenta fresca (50%) e temperado com azeite de oliva e limão. Adoçado com eritritol, um adoçante sem calorias e de baixo índice glicêmico, é ideal para diabéticos. Contém farinha de grão-de-bico para uma textura crocante e um toque de vinagre de maçã para realçar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, é uma opção saudável e saborosa.',
       comentarios: [
         Comentario(nome: 'Geraldo Cavalcante', desc: 'A pimenta é o equilíbrio de tudo, muito bom!', rating: 5),
         Comentario(nome: 'Valentina Thompson', desc: 'O salgadinho gourmet mais diferente que provei e não me decepcionou.', rating: 5),
@@ -106,7 +106,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Bolacha Tradicional',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/bolacha_tradicional.png',
-      desc: 'Descrição especial',
+      desc: 'A Bolacha Tradicional é feita com farinha de aveia ou trigo integral (50%) e temperada com azeite de oliva. Adoçada com eritritol, é ideal para diabéticos. Contém farinha de grão-de-bico para crocância e vinagre de maçã para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais.',
       comentarios: [
         Comentario(nome: 'Douglas Regatto', desc: 'Para dividir com os amigos é ideal!', rating: 4),
         Comentario(nome: 'Pedro Alves Ventura', desc: 'A crocância basicamente é surreal...', rating: 5),
@@ -120,7 +120,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Bolacha de Requeijão',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/bolacha_de_requeijao.png',
-      desc: 'Descrição especial',
+      desc: 'A Bolacha de Requeijão é feita com requeijão cremoso (50%) e temperada com azeite de oliva. Adoçada com eritritol, é ideal para diabéticos. Contém farinha de grão-de-bico para crocância e vinagre de maçã para balancear o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais.',
       comentarios: [
         Comentario(nome: 'Vitor Pereira Ortiz', desc: 'O requeijão encaixou perfeitamente nos biscoitos!', rating: 5),
         Comentario(nome: 'Milena da Cunha', desc: 'Chegou bem rapidinho, amei!', rating: 5),
@@ -134,7 +134,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Bolacha de Manteiga',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/bolacha_de_manteiga.png',
-      desc: 'Descrição especial',
+      desc: 'A Bolacha de Manteiga é feita com manteiga de qualidade (50%) e temperada com especiarias naturais. Adoçada com eritritol, é ideal para diabéticos. Contém farinha de grão-de-bico para crocância e vinagre de maçã para realçar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais.',
       comentarios: [
         Comentario(nome: 'Sílvio Granada', desc: 'Impressionante como a Health Treats inova!', rating: 5),
         Comentario(nome: 'Letícia Vasconcelos', desc: 'Esse é o tipo de produto simple e eficaz.', rating: 4),
@@ -148,7 +148,7 @@ class _SalgadosState extends State<Salgados> {
       nome: 'Bolacha de Cebola',
       valor: 'R\$6,00',
       foto: 'assets/img/salgados/bolacha_de_cebola.png',
-      desc: 'Descrição especial',
+      desc: 'A Bolacha de Cebola é feita com cebola fresca (50%) e temperada com azeite de oliva. Adoçada com eritritol, é ideal para diabéticos. Contém farinha de grão-de-bico para crocância e vinagre de maçã para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais.',
       comentarios: [
         Comentario(nome: 'Fernanda Dias', desc: 'Me agradou em tudo, entrega, design e sabor!', rating: 5),
         Comentario(nome: 'Hortência Queirós', desc: 'Uma delícia, garanto que vão amar.', rating: 4),
