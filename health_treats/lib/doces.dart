@@ -22,7 +22,7 @@ class _DocesState extends State<Doces> {
       nome: 'Cacau com Amêndoas',
       valor: 'R\$13,00',
       foto: 'assets/img/doces/chocolate _de_cacau_com_amendoas.png',
-      desc: 'O Chocolate com Amêndoas é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com cacau de alta qualidade, combina o sabor intenso do chocolate com o crocante e nutritivo das amêndoas, oferecendo uma experiência saborosa e rica em nutrientes. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão do prazer de um chocolate com amêndoas sofisticado e saudável.',
+      desc: 'O Chocolate de Cacau com Amêndoas é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com cacau de alta qualidade, combina o sabor intenso do chocolate com o crocante e nutritivo das amêndoas, oferecendo uma experiência saborosa e rica em nutrientes. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão do prazer de um chocolate com amêndoas sofisticado e saudável.',
       comentarios: [
         Comentario(nome: 'Reginaldo Garcia', desc: 'O gosto das nozes estava incrível', rating: 5),
         Comentario(nome: 'Erika Spazzapan', desc: 'A textura do produto agradou-me.', rating: 5),
@@ -36,7 +36,7 @@ class _DocesState extends State<Doces> {
       nome: 'Chocolate com Frutas',
       valor: 'R\$13,00',
       foto: 'assets/img/doces/chocolate_de_cacau_com_frutas_vermelhas.png',
-      desc: 'O Chocolate com Frutas Vermelhas é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com cacau de alta qualidade, oferece o sabor intenso do chocolate, combinado com o frescor e a acidez das frutas vermelhas, como morango, framboesa e amora. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão de um sabor sofisticado e frutado. Ideal para quem deseja um doce saboroso e saudável.',
+      desc: 'O Chocolate Cacau com Frutas Vermelhas é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com cacau de alta qualidade, oferece o sabor intenso do chocolate, combinado com o frescor e a acidez das frutas vermelhas, como morango, framboesa e amora. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão de um sabor sofisticado e frutado. Ideal para quem deseja um doce saboroso e saudável.',
       comentarios: [
         Comentario(nome: 'Clayson Carillo', desc: 'Saboroso e marcante. O produto dos sonhos!', rating: 5),
         Comentario(nome: 'Adriel Russi', desc: 'O toque cítrico o levou a perfeição!', rating: 5),
@@ -50,7 +50,7 @@ class _DocesState extends State<Doces> {
       nome: 'Chocolate Branco',
       valor: 'R\$13,00',
       foto: 'assets/img/doces/chocolate_de_chocolate_branco_com_coco.png',
-      desc: 'O Chocolate Branco é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com manteiga de cacau de alta qualidade, ele oferece a cremosidade característica do chocolate branco, sem adição de açúcar refinado. Livre de lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão do sabor doce e suave do chocolate branco. Ideal para quem deseja um doce saboroso e saudável',
+      desc: 'O Chocolate Branco com coco é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com manteiga de cacau de alta qualidade, ele oferece a cremosidade característica do chocolate branco, sem adição de açúcar refinado. Livre de lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão do sabor doce e suave do chocolate branco. Ideal para quem deseja um doce saboroso e saudável.',
       comentarios: [
         Comentario(nome: 'Philippe Vincenzzo', desc: 'Como dizem na minha terra natal: magnífico', rating: 4),
         Comentario(nome: 'Juan Fernandes Dias', desc: 'Como amante de chocolate, amei esse sabor.', rating: 5),
@@ -204,7 +204,7 @@ class _DocesState extends State<Doces> {
       nome: 'Coockie Branco',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_chocolate_branco.png',
-      desc: 'O Cookie de Chocolate Branco diet é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com farinha integral ou sem glúten, o cookie possui uma textura crocante e o sabor doce e cremoso do chocolate branco, sem comprometer a saúde. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é uma alternativa perfeita para diabéticos ou para quem busca um lanche saboroso e equilibrado.',
+      desc: 'O Cookie de Chocolate Branco é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com farinha integral ou sem glúten, o cookie possui uma textura crocante e o sabor doce e cremoso do chocolate branco, sem comprometer a saúde. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é uma alternativa perfeita para diabéticos ou para quem busca um lanche saboroso e equilibrado.',
       comentarios: [
         Comentario(nome: 'Thaís Magalhães', desc: '#adoravel', rating: 4),
         Comentario(nome: 'Millenna Lira', desc: 'Melhor tipo de sabor na face da terra!', rating: 5),
