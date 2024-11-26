@@ -22,7 +22,7 @@ class _DocesState extends State<Doces> {
       nome: 'Cacau com Amêndoas',
       valor: 'R\$13,00',
       foto: 'assets/img/doces/chocolate _de_cacau_com_amendoas.png',
-      desc: 'Descrição rápida',
+      desc: 'O Chocolate com Amêndoas é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com cacau de alta qualidade, combina o sabor intenso do chocolate com o crocante e nutritivo das amêndoas, oferecendo uma experiência saborosa e rica em nutrientes. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão do prazer de um chocolate com amêndoas sofisticado e saudável.',
       comentarios: [
         Comentario(nome: 'Reginaldo Garcia', desc: 'O gosto das nozes estava incrível', rating: 5),
         Comentario(nome: 'Erika Spazzapan', desc: 'A textura do produto agradou-me.', rating: 5),
@@ -36,7 +36,7 @@ class _DocesState extends State<Doces> {
       nome: 'Chocolate com Frutas',
       valor: 'R\$13,00',
       foto: 'assets/img/doces/chocolate_de_cacau_com_frutas_vermelhas.png',
-      desc: 'Descrição rápida',
+      desc: 'O Chocolate com Frutas Vermelhas é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com cacau de alta qualidade, oferece o sabor intenso do chocolate, combinado com o frescor e a acidez das frutas vermelhas, como morango, framboesa e amora. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão de um sabor sofisticado e frutado. Ideal para quem deseja um doce saboroso e saudável.',
       comentarios: [
         Comentario(nome: 'Clayson Carillo', desc: 'Saboroso e marcante. O produto dos sonhos!', rating: 5),
         Comentario(nome: 'Adriel Russi', desc: 'O toque cítrico o levou a perfeição!', rating: 5),
@@ -50,7 +50,7 @@ class _DocesState extends State<Doces> {
       nome: 'Chocolate Branco',
       valor: 'R\$13,00',
       foto: 'assets/img/doces/chocolate_de_chocolate_branco_com_coco.png',
-      desc: 'Descrição rápida',
+      desc: 'O Chocolate Branco é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com manteiga de cacau de alta qualidade, ele oferece a cremosidade característica do chocolate branco, sem adição de açúcar refinado. Livre de lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão do sabor doce e suave do chocolate branco. Ideal para quem deseja um doce saboroso e saudável',
       comentarios: [
         Comentario(nome: 'Philippe Vincenzzo', desc: 'Como dizem na minha terra natal: magnífico', rating: 4),
         Comentario(nome: 'Juan Fernandes Dias', desc: 'Como amante de chocolate, amei esse sabor.', rating: 5),
@@ -64,7 +64,7 @@ class _DocesState extends State<Doces> {
       nome: 'Geleia de Uva',
       valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_uva.png',
-      desc: 'Descrição rápida',
+      desc: 'A Geleia de Uva é feita com uvas frescas (50%) e adoçada com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico, ideal para diabéticos. Contém pectina para dar a consistência e suco de limão para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, oferece uma opção saudável e saborosa para quem controla a ingestão de açúcar.',
       comentarios: [
         Comentario(nome: 'Aline Domingues Cidade', desc: 'Excelente opção para quem controla a glicemia!', rating: 4),
         Comentario(nome: 'André Lucas', desc: 'Sabor autêntico e saudável!', rating: 5),
@@ -78,7 +78,7 @@ class _DocesState extends State<Doces> {
       nome: 'Geleia de Framboesa',
       valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_framboesa.png',
-      desc: 'Descrição longa',
+      desc: 'A Geleia de Framboesa é feita com framboesas frescas (50%) e adoçada com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico, ideal para diabéticos. Contém pectina para dar a consistência e suco de limão para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, oferece uma opção saudável e saborosa para quem controla a ingestão de açúcar.',
       comentarios: [
         Comentario(nome: 'Matheus Militão', desc: 'Quando comprei, não sabia que ia gostar tanto!', rating: 4),
         Comentario(nome: 'João Lucas Santos', desc: 'Muito bom.', rating: 5),
@@ -92,7 +92,7 @@ class _DocesState extends State<Doces> {
       nome: 'Geleia de Laranja',
       valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_laranja.png',
-      desc: 'Descrição especial',
+      desc: 'A Geleia de Laranja é feita com laranjas frescas (50%) e adoçada com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico, ideal para diabéticos. Contém pectina para dar a consistência e suco de limão para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, oferece uma opção saudável e saborosa para quem controla a ingestão de açúcar.',
       comentarios: [
         Comentario(nome: 'Selma Costa', desc: 'Muito boa para um café da manhã equilibrado.', rating: 5),
         Comentario(nome: 'Junior Lima', desc: 'Gosto muito de geleia, ainda mais se for de laranja!', rating: 5),
@@ -106,7 +106,7 @@ class _DocesState extends State<Doces> {
       nome: 'Geleia de Limão',
       valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_limao.png',
-      desc: 'Descrição especial',
+      desc: 'A Geleia de Limão é feita com limões frescos (50%) e adoçada com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico, ideal para diabéticos. Contém pectina para dar a consistência e suco de limão para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, oferece uma opção saudável e saborosa para quem controla a ingestão de açúcar.',
       comentarios: [
         Comentario(nome: 'Maria Aparecida', desc: 'Tudo de limão fica bom.', rating: 4),
         Comentario(nome: 'Matheus Gama', desc: 'É impressionante como essa marca não erra em nenhum produto!', rating: 5),
@@ -120,7 +120,7 @@ class _DocesState extends State<Doces> {
       nome: 'Geleia de Morango',
       valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_morango.png',
-      desc: 'Descrição especial',
+      desc: 'A geleia de morango é feita com morangos frescos (50%) e adoçada com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico, ideal para diabéticos. Contém pectina para dar a consistência e suco de limão para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, oferece uma opção saudável e saborosa para quem controla a ingestão de açúcar.',
       comentarios: [
         Comentario(nome: 'Anthony Oliveira', desc: 'A melhor geleia que provei na vida, real oficial.', rating: 5),
         Comentario(nome: 'Carla Souza', desc: 'Me surpreendi com o gosto único do morango.', rating: 4),
@@ -134,7 +134,7 @@ class _DocesState extends State<Doces> {
       nome: 'Geleia de Maracujá',
       valor: 'R\$28,00',
       foto: 'assets/img/doces/Geleia_de_maracuja.png',
-      desc: 'Descrição especial',
+      desc: 'A Geleia de Maracujá é feita com maracujás frescos (50%) e adoçada com eritritol, um adoçante natural sem calorias e de baixo índice glicêmico, ideal para diabéticos. Contém pectina para dar a consistência e suco de limão para equilibrar o sabor. Sem açúcar refinado, glúten, lactose ou conservantes artificiais, oferece uma opção saudável e saborosa para quem controla a ingestão de açúcar.',
       comentarios: [
         Comentario(nome: 'Ana Clara', desc: 'Incrivelmente Incrível.', rating: 5),
         Comentario(nome: 'Laura Helena', desc: 'Comprei para minha vó e ela não para de elogiar!.', rating: 3),
@@ -148,7 +148,7 @@ class _DocesState extends State<Doces> {
       nome: 'Coockie de Uva',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_uva.png',
-      desc: 'Descrição rápida',
+      desc: 'O Cookie de Uva é uma opção deliciosa e saudável, feito com uvas desidratadas e adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Preparado com farinha integral ou sem glúten, o cookie oferece uma textura crocante e um sabor suave, com pedaços de uva que adicionam frescor. Sem açúcar refinado, lactose, glúten ou conservantes artificiais, é uma alternativa perfeita para diabéticos ou para quem busca um lanche saboroso e equilibrado.',
       comentarios: [
         Comentario(nome: 'Whindersson Gouveia', desc: 'A criançada daqui de casa amou.', rating: 5),
         Comentario(nome: 'Jailson Leite', desc: 'O produto foi entregue no prazo!', rating: 5),
@@ -162,7 +162,7 @@ class _DocesState extends State<Doces> {
       nome: 'Coockie de Cereja',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_cereja.png',
-      desc: 'Descrição rápida',
+      desc: 'O Cookie de Cereja é uma opção deliciosa e saudável, feito com cerejas desidratadas e adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Preparado com farinha integral ou sem glúten, o cookie possui uma textura crocante e um sabor doce e frutado, com pedaços de cereja que adicionam um toque de frescor. Sem açúcar refinado, lactose, glúten ou conservantes artificiais, é ideal para diabéticos ou para quem busca um lanche saboroso e equilibrado.',
       comentarios: [
         Comentario(nome: 'Rosita de Alencar', desc: 'O gosto de cereja trouxe a sensação do natal. Adorei!', rating: 5),
         Comentario(nome: 'Audálio Dantas', desc: 'O produto tem uma textura estranha, mas um gosto muito bom!', rating: 4),
@@ -176,7 +176,7 @@ class _DocesState extends State<Doces> {
       nome: 'Coockie de Baunilha',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_baunilha.png',
-      desc: 'Descrição rápida',
+      desc: 'O Cookie de Baunilha é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não afeta os níveis de glicose no sangue. Feito com farinha integral ou sem glúten, o cookie apresenta uma textura crocante e o delicioso sabor suave de baunilha. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca um lanche equilibrado, sem abrir mão do sabor.',
       comentarios: [
         Comentario(nome: 'Nivia Furtado', desc: 'O sabor de baunilha estava aceitável.', rating: 4),
         Comentario(nome: 'Ivonete de Naziazeno', desc: 'A baunilha caiu como uma pluma nesse cookie.', rating: 5),
@@ -190,7 +190,7 @@ class _DocesState extends State<Doces> {
       nome: 'Coockie de Blueberry',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_blueberry.png',
-      desc: 'Descrição rápida',
+      desc: 'O Cookie de Blueberry é uma opção deliciosa e saudável, feito com mirtilos desidratados e adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Preparado com farinha integral ou sem glúten, o cookie oferece uma textura crocante e um sabor doce e frutado, com pedaços de blueberry que adicionam frescor. Sem açúcar refinado, lactose, glúten ou conservantes artificiais, é ideal para diabéticos ou para quem busca um lanche equilibrado e saboroso.',
       comentarios: [
         Comentario(nome: 'Marcos Vieira', desc: 'Fiquei embasbacado com tamanha saborosidade!', rating: 5),
         Comentario(nome: 'Jorlan Barros', desc: 'Sabor maravilhosamente incrível!', rating: 5),
@@ -204,7 +204,7 @@ class _DocesState extends State<Doces> {
       nome: 'Coockie Branco',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_chocolate_branco.png',
-      desc: 'Descrição rápida',
+      desc: 'O Cookie de Chocolate Branco diet é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com farinha integral ou sem glúten, o cookie possui uma textura crocante e o sabor doce e cremoso do chocolate branco, sem comprometer a saúde. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é uma alternativa perfeita para diabéticos ou para quem busca um lanche saboroso e equilibrado.',
       comentarios: [
         Comentario(nome: 'Thaís Magalhães', desc: '#adoravel', rating: 4),
         Comentario(nome: 'Millenna Lira', desc: 'Melhor tipo de sabor na face da terra!', rating: 5),

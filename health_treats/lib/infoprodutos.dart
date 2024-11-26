@@ -179,6 +179,7 @@ class _InfoProdutoState extends State<InfoProduto> {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Text(
                 produto.desc,
+                textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontFamily: 'RedHatDisplay',
                   fontWeight: FontWeight.normal,
