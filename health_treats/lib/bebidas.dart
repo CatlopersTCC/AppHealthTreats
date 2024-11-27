@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:health_treats/cadastro.dart';
+import 'package:health_treats/main.dart';
 import 'package:health_treats/menu.dart';
 import 'package:health_treats/pesquisa.dart';
 import 'package:health_treats/sobre.dart';
@@ -228,7 +228,7 @@ class _BebidasState extends State<Bebidas> {
       case 0:
         destination = Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => TelaCadastro()),
+          MaterialPageRoute(builder: (context) => MyApp()),
         ) as Widget; //Simulando uma ação de "sair" da seção
       case 1:
         destination = const MenuApp(); //Caso 1 acontece se clicar no 2º botão da bottomNavigationBar

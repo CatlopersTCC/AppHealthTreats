@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_treats/bebidas.dart';
-import 'package:health_treats/cadastro.dart';
 import 'package:health_treats/doces.dart';
+import 'package:health_treats/main.dart';
 import 'package:health_treats/massas.dart';
 import 'package:health_treats/menu.dart';
 import 'package:health_treats/salgados.dart';
@@ -55,7 +55,7 @@ class _PesquisaApp extends State<PesquisaApp> {
       case 0:
         destination = Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => TelaCadastro()),
+          MaterialPageRoute(builder: (context) => MyApp()),
         ) as Widget; //Simulando uma ação de "sair" da seção
       break;
       case 1:

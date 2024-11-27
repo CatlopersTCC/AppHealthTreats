@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:health_treats/cadastro.dart';
+import 'package:health_treats/login.dart';
 import 'package:health_treats/menu.dart';
+import 'package:health_treats/user_form.dart';
+import 'package:health_treats/user_provider.dart';
 
 
 void main() {
-  runApp(const MenuApp()); // Rodando o aplicativo
+  runApp(const MyApp()); // Rodando o aplicativo
 }
 
 class MainApp extends StatelessWidget {
@@ -25,8 +27,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SplashScreen(), // Defina a tela inicial como a SplashScreen
+    return UserProvider(
+      child: MaterialApp(
+        home: SplashScreen(), // Defina a tela inicial como a SplashScreen
+        routes: {
+          "/create": (_) => UserForm(),
+          "/menu": (context) => MenuApp(),
+          "/login": (context) => Login(),
+        },
+      ),
     );
   }
 }
@@ -46,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3), () { // Simula um atraso para a tela de splash
       // ignore: use_build_context_synchronously
       Navigator.of(context).pushReplacement( // Redirecionamento
-        MaterialPageRoute(builder: (context) => const TelaCadastro()), // Navega para a tela de cadastro
+        MaterialPageRoute(builder: (context) => const UserForm()), // Navega para a tela de cadastro
       );
     });
   }
