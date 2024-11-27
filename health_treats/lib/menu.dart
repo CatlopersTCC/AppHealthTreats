@@ -6,7 +6,7 @@ import 'package:health_treats/massas.dart';
 import 'package:health_treats/pesquisa.dart';
 import 'package:health_treats/salgados.dart';
 import 'package:health_treats/sobre.dart';
-import 'package:health_treats/user_form.dart';
+// import 'package:health_treats/user_form.dart';
 
 class MenuApp extends StatelessWidget {
   const MenuApp({super.key});
