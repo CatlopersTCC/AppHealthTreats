@@ -32,16 +32,39 @@ class _LoginState extends State<Login> {
       // Caso o usuário não seja encontrado, exibimos a mensagem de erro
       showDialog(
         context: context,
-        builder: (context) => AlertDialog(
-          title: const Text("Erro"),
-          content: const Text("Email ou senha inválidos."),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text("Ok"),
-            )
-          ],
-        ),
+        builder: (context) { 
+          return AlertDialog(
+            
+            backgroundColor: Color(0XFFFFFFFF),
+
+            title: const Text(
+              "Usuário Invalido!",
+              style: TextStyle(
+                fontFamily: 'RedHatDisplay',
+                fontWeight: FontWeight.bold,
+                fontSize: 24.0,
+                color: Colors.black,
+              ),
+            ),
+
+            content: const Text(
+              "Usuário não encontrado! \nInsira seus dados novamente.",
+              style: TextStyle(
+                fontFamily: 'RedHatDisplay',
+                fontWeight: FontWeight.normal,
+                fontSize: 18.0,
+                color: Colors.black,
+              ),
+            ),
+
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text("Ok"),
+              )
+            ],
+          );
+        }
       );
     }
   }
