@@ -275,8 +275,8 @@ class _SobreMenu extends State<SobreMenu> {
 
               Container(
                 width: 140, // Largura do contâiner que envolve a imagem
-                height: 160, // Altura do contâiner que envolve a imagem
-                margin: EdgeInsets.only(right: 11.5, top: 78.0), // Margem esquerda
+                height: 180, // Altura do contâiner que envolve a imagem
+                margin: EdgeInsets.only(right: 11.5, top: 67.0), // Margem esquerda
                 alignment: Alignment.center, // Alinhando os elementos filhos dentro do contâiner
                 child: Center(
                   child: Image.asset( // Comando que chama a imagem

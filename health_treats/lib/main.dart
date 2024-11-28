@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return UserProvider(
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: SplashScreen(), // Defina a tela inicial como a SplashScreen
         routes: {
           "/create": (_) => UserForm(),
