@@ -27,9 +27,9 @@ class _DocesState extends State<Doces> {
         Comentario(nome: 'Reginaldo Garcia', desc: 'O gosto das nozes estava incrível', rating: 5),
         Comentario(nome: 'Erika Spazzapan', desc: 'A textura do produto agradou-me.', rating: 5),
         Comentario(nome: 'Márcio de Sá', desc: 'Atendeu as minhas expectativas.', rating: 5),
-        Comentario(nome: 'Héctor Satiro', desc: 'Gostei, mas o sabor da amêndoa é fraco', rating: 3),
-        Comentario(nome: 'Evellyn Paixão', desc: 'Gostei da qualidade, entretanto, o produto chegou amassado', rating: 4),
-        Comentario(nome: 'Julio Cariani', desc: 'Péssimo para quem faz academia', rating: 1),
+        Comentario(nome: 'Héctor Satiro', desc: 'Gostei, mas o sabor da amêndoa é fraco.', rating: 3),
+        Comentario(nome: 'Evellyn Paixão', desc: 'Gostei da qualidade, entretanto, o produto chegou amassado.', rating: 4),
+        Comentario(nome: 'Julio Cariani', desc: 'Péssimo para quem faz academia.', rating: 1),
       ],
     ), 
     Produtos(
@@ -52,7 +52,7 @@ class _DocesState extends State<Doces> {
       foto: 'assets/img/doces/chocolate_de_chocolate_branco_com_coco.png',
       desc: 'O Chocolate Branco com coco é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com manteiga de cacau de alta qualidade, ele oferece a cremosidade característica do chocolate branco, sem adição de açúcar refinado. Livre de lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca uma alternativa equilibrada, sem abrir mão do sabor doce e suave do chocolate branco. Ideal para quem deseja um doce saboroso e saudável.',
       comentarios: [
-        Comentario(nome: 'Philippe Vincenzzo', desc: 'Como dizem na minha terra natal: magnífico', rating: 4),
+        Comentario(nome: 'Philippe Vincenzzo', desc: 'Como dizem na minha terra natal: magnífico.', rating: 4),
         Comentario(nome: 'Juan Fernandes Dias', desc: 'Como amante de chocolate, amei esse sabor.', rating: 5),
         Comentario(nome: 'Andressa Barrosa', desc: 'Levei para o trabalho e todes adoraram.', rating: 5),
         Comentario(nome: 'Agamenon Romeu', desc: 'O produto veio fora da validade, nem pude provar!', rating: 1),
@@ -145,7 +145,7 @@ class _DocesState extends State<Doces> {
       ],
     ),
     Produtos(
-      nome: 'Coockie de Uva',
+      nome: 'Cookie de Uva',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_uva.png',
       desc: 'O Cookie de Uva é uma opção deliciosa e saudável, feito com uvas desidratadas e adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Preparado com farinha integral ou sem glúten, o cookie oferece uma textura crocante e um sabor suave, com pedaços de uva que adicionam frescor. Sem açúcar refinado, lactose, glúten ou conservantes artificiais, é uma alternativa perfeita para diabéticos ou para quem busca um lanche saboroso e equilibrado.',
@@ -159,7 +159,7 @@ class _DocesState extends State<Doces> {
       ],
     ), 
     Produtos(
-      nome: 'Coockie de Cereja',
+      nome: 'Cookie de Cereja',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_cereja.png',
       desc: 'O Cookie de Cereja é uma opção deliciosa e saudável, feito com cerejas desidratadas e adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Preparado com farinha integral ou sem glúten, o cookie possui uma textura crocante e um sabor doce e frutado, com pedaços de cereja que adicionam um toque de frescor. Sem açúcar refinado, lactose, glúten ou conservantes artificiais, é ideal para diabéticos ou para quem busca um lanche saboroso e equilibrado.',
@@ -173,7 +173,7 @@ class _DocesState extends State<Doces> {
       ],
     ),  
     Produtos(
-      nome: 'Coockie de Baunilha',
+      nome: 'Cookie de Baunilha',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_baunilha.png',
       desc: 'O Cookie de Baunilha é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não afeta os níveis de glicose no sangue. Feito com farinha integral ou sem glúten, o cookie apresenta uma textura crocante e o delicioso sabor suave de baunilha. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é perfeito para diabéticos ou para quem busca um lanche equilibrado, sem abrir mão do sabor.',
@@ -187,7 +187,7 @@ class _DocesState extends State<Doces> {
       ],
     ),
     Produtos(
-      nome: 'Coockie de Blueberry',
+      nome: 'Cookie de Blueberry',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_blueberry.png',
       desc: 'O Cookie de Blueberry é uma opção deliciosa e saudável, feito com mirtilos desidratados e adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Preparado com farinha integral ou sem glúten, o cookie oferece uma textura crocante e um sabor doce e frutado, com pedaços de blueberry que adicionam frescor. Sem açúcar refinado, lactose, glúten ou conservantes artificiais, é ideal para diabéticos ou para quem busca um lanche equilibrado e saboroso.',
@@ -201,7 +201,7 @@ class _DocesState extends State<Doces> {
       ],
     ),
     Produtos(
-      nome: 'Coockie Branco',
+      nome: 'Cookie Branco',
       valor: 'R\$7,00',
       foto: 'assets/img/doces/cookie_de_chocolate_branco.png',
       desc: 'O Cookie de Chocolate Branco é uma opção deliciosa e saudável, adoçado com eritritol, um adoçante natural que não eleva os níveis de glicose no sangue. Feito com farinha integral ou sem glúten, o cookie possui uma textura crocante e o sabor doce e cremoso do chocolate branco, sem comprometer a saúde. Livre de açúcar refinado, lactose, glúten e conservantes artificiais, é uma alternativa perfeita para diabéticos ou para quem busca um lanche saboroso e equilibrado.',
