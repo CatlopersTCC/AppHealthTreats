@@ -4,23 +4,15 @@
 
 ---
 
-<h3>Seja Bem-vindo ao catálago mobile Health Treats! O aplicativo tem como função, exibir os produtos disponiveis no sistema ecommerce, tal qual como seus preços, informações e avaliações. Aproveite!</h3>
+Seja Bem-vindo ao catálago mobile Health Treats! O aplicativo tem como função, exibir os produtos disponiveis no sistema ecommerce, tal qual como seus preços, informações e avaliações. Aproveite!
 
-## Tela de Splash
-![WhatsApp Image 2024-11-30 at 09 39 35](https://github.com/user-attachments/assets/42ce733d-3dfd-498e-a9db-5d26d487c243)
+O aplicativo é um catálogo digital que tem como objetivo exibir os produtos presentes no ecommerce da empresa Health Treats. <br>
+Bem como informações de cada produto, como ingredientes e avaliações, e também sobre a empresa responsável pela criação de ambos aplicativo e ecommerce, a Catlopers.
 
+## Lista de Links da Wiki
+Nossa wiki contém informações sobre o desenvolvimento do aplicativo, bem como um vídeo de demosntração do mesmo:
 
-> Uma tela com um curto tempo de duração. Seu principal intuito é fornecer uma transição visual entre o carregamento do aplicativo e a interface principal. Tal como, apresentatar a identidade visual da empresa
-
-## Tela de Cadastro
-![Cadastro](https://github.com/user-attachments/assets/4886be81-a8a3-4179-a5ba-0f73bb332d08)
-
-
-> Uma tela de "Boas Vindas", onde o usuário fará seu cadastro do aplicativo, fornecendo seu nome, email e senha. Essas informações serão armazenadas dentro do banco de dados.
-
- 
-## Tela de Login
-![Login](https://github.com/user-attachments/assets/d1ebbd21-2685-468a-b755-d4f2889c9f1d)
-
-
-> Uma tela saudando o usuário, que libera acesso ao aplicativo se ele fornecer o email e a senha corretamente. Localizado no canto direito inferior, "Não lembro a senha" funciona para alterar a senha dos usuários que quiserem altrerá-la.
+- #### Aplicativo em funcionamento - https://github.com/CatlopersTCC/AppHealthTreats/wiki/Aplicativo-em-funcionamento
+- #### Modelagem de dados - https://github.com/CatlopersTCC/AppHealthTreats/wiki/Modelagem-de-dados
+- #### Protótipo do aplicativo - https://github.com/CatlopersTCC/AppHealthTreats/wiki/Protótipo-do-Aplicativo
+- #### Vídeo de demonstração - https://github.com/CatlopersTCC/AppHealthTreats/wiki/Vídeo-de-funcionamento
